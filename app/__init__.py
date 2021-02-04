@@ -31,13 +31,13 @@ def create_app(config_name="default"):
     # application.logger.addHandler(db_handler)
 
     # CONTROLLERS
-    # from .controllers import register_all_controllers  # noqa: F401
+    from .controllers import register_all_controllers  # noqa: F401
 
-    # register_all_controllers(application)
+    register_all_controllers(application)
 
-    # from .controllers import register_error_handlers  # noqa: F401
+    from .controllers import register_error_handlers  # noqa: F401
 
-    # register_error_handlers(application)
+    register_error_handlers(application)
 
     # MODULES
 

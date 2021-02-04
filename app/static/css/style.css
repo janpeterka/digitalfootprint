@@ -1,0 +1,28 @@
+/* colors */
+@import "colors.css";
+
+/* icons */
+@import "icons.css";
+
+/* icons */
+@import "atomic.css";
+
+/* Footer */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: var(--info);
+    font-size: 0.7rem;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.dev-badge {
+  margin-left: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--logo-light-green);
+}
