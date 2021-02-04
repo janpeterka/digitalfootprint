@@ -13,19 +13,20 @@ class FacebookView(FlaskView):
 
         user = FacebookUser(full_name="Jan Peterka")
 
-        posts = []
         post = FacebookPost(
             author=user,
             text="Nějaký příspěvek na facebooku",
             created_at=datetime.datetime.today(),
         )
-        posts.append(post)
 
         post1 = FacebookPost(
             author=user, text="Další příspěvek", created_at=datetime.datetime.today(),
         )
-        posts.append(post1)
+        post1.comments = [
+            FacebookComment(text="Jóó!", author=user),
+            FacebookComment(text="první!", author=user),
+        ]
 
-        comment = FacebookComment(text="Jóó!", author=user)
-        post1.comments = [comment]
+        posts = [post, post1]
+
         return template("data_sources/facebook/facebook.html.j2", posts=posts)

@@ -6,7 +6,7 @@ from flask import url_for
 
 
 class FacebookUser(db.Model, BaseMixin):
-    __tablename__ = "facebook_users"
+    __tablename__ = "data_facebook_users"
 
     id = db.Column(db.Integer, primary_key=True)
     full_name = db.Column(db.String(255), nullable=False)
