@@ -1,26 +1,31 @@
-from flask import url_for
 from flask import render_template as template
 
 from flask_classful import FlaskView
+
+from app.models.data_sources.facebook.posts import FacebookPost
+from app.models.data_sources.facebook.users import FacebookUser
+from app.models.data_sources.facebook.comments import FacebookComment
 
 
 class FacebookView(FlaskView):
     def index(self):
         import datetime
-        import copy
+
+        user = FacebookUser(full_name="Jan Peterka")
 
         posts = []
-        post = type("", (), {})()
-        post.author = type("", (), {})()
-        post.author.profile_picture = type("", (), {})()
-        post.author.profile_picture.src = url_for(
-            "static", filename="images/profile_picture.jpg"
+        post = FacebookPost(
+            author=user,
+            text="Nějaký příspěvek na facebooku",
+            created_at=datetime.datetime.today(),
         )
-        post.author.full_name = "Jan Peterka"
-        post.text = "Nějaký příspěvek na facebooku"
-        post.created_at = datetime.datetime.today()
         posts.append(post)
-        post1 = copy.deepcopy(post)
-        post1.text = "Další příspěvek"
+
+        post1 = FacebookPost(
+            author=user, text="Další příspěvek", created_at=datetime.datetime.today(),
+        )
         posts.append(post1)
+
+        comment = FacebookComment(text="Jóó!", author=user)
+        post1.comments = [comment]
         return template("data_sources/facebook/facebook.html.j2", posts=posts)

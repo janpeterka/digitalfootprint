@@ -1,12 +1,14 @@
 from flask import Flask
+
 # from flask_mail import Mail
-# from flask_sqlalchemy import SQLAlchemy
-# from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+
 # from flask_caching import Cache
 
 # mail = Mail()
-# db = SQLAlchemy(session_options={"autoflush": False, "autocommit": False})
-# migrate = Migrate()
+db = SQLAlchemy(session_options={"autoflush": False, "autocommit": False})
+migrate = Migrate()
 # cache = Cache(config={"CACHE_TYPE": "simple"})
 
 
@@ -20,8 +22,8 @@ def create_app(config_name="default"):
 
     # APPS
     # mail.init_app(application)
-    # db.init_app(application)
-    # migrate.init_app(application, db)
+    db.init_app(application)
+    migrate.init_app(application, db)
     # cache.init_app(application)
 
     # LOGGING
