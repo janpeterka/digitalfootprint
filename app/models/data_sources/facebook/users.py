@@ -15,5 +15,13 @@ class FacebookUser(db.Model, BaseMixin):
     @property
     def profile_picture(self):
         picture = type("", (), {})()
-        picture.src = url_for("static", filename="images/profile_picture.jpg")
+        if self.profile_picture_path:
+            picture.src = url_for(
+                "static",
+                filename=f"data/facebook/users/images/{self.profile_picture_path}.jpg",
+            )
+        else:
+            picture.src = url_for(
+                "static", filename="images/profile_picture_placeholder.jpg"
+            )
         return picture
