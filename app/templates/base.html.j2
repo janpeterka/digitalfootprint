@@ -52,14 +52,14 @@
     {% endblock %}
     #}
 
-    {% block top %}
+{#     {% block top %}
         {% include('_flashing.html.j2') %}
-    {% endblock %}
+    {% endblock %} #}
 
-    {% if config.APP_STATE == "development" %}
+{#     {% if config.APP_STATE == "development" %}
         <span class="dev-badge"><strong>DEV</strong></span>
     {% endif %}
-
+ #}
     <div id="content">{% block content %}{% endblock %}</div>
     <div class="footer">
         {% block footer %}
