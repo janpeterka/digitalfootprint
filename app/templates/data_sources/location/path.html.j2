@@ -1,0 +1,105 @@
+{% extends "base.html.j2" %}
+{% block title %}Location path{% endblock %}
+
+{% block script %}
+	<script src="https://api.mapy.cz/loader.js"></script>
+	<script>Loader.load()</script>
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col hidden">
+			<ul id="location_path">
+				{% for location_point in location_points %}	
+				<li data-name="{{ location_point.name }}"
+					data-created_by="{{ location_point.user.full_name }}"
+					data-created_at="{{ location_point.created_at }}"
+					data-latitude="{{ location_point.latitude }}"
+					data-longitude="{{ location_point.longitude }}"
+					>
+				</li>			
+				{% endfor %}	
+			</ul>
+		</div>
+	
+		<div class="col">
+			<div id="map" style="width: 100%; height: 200rem; margin-top: 1.5rem;"></div>
+		</div>
+	
+	</div>
+		
+	<script type="text/javascript">
+      	/* Create map */
+		var center = SMap.Coords.fromWGS84(14.41, 50.08);
+		map = new SMap(JAK.gel("map"), center, 10);
+		map.addDefaultLayer(SMap.DEF_BASE).enable();
+		map.addDefaultControls();
+		map.addControl(new SMap.Control.Sync()); /* Aby mapa reagovala na změnu velikosti průhledu */
+		var mouse = new SMap.Control.Mouse(SMap.MOUSE_PAN | SMap.MOUSE_WHEEL | SMap.MOUSE_ZOOM); /* Ovládání myší */
+		map.addControl(mouse);
+		map.getSignals().addListener(window, "map-click", this.click); /* Při signálu kliknutí volat tuto funkci */  
+
+
+		marker_layer = add_marker_layer(map);
+		add_all_markers(marker_layer);
+
+		geometry_layer = add_geometry_layer(map);
+		add_path(geometry_layer, get_coord_list());
+
+    function add_marker_layer(map){
+		var layer = new SMap.Layer.Marker();
+		map.addLayer(layer);
+		layer.enable();
+		return layer;
+    }
+
+    function add_geometry_layer(map){
+    	var layer = new SMap.Layer.Geometry();
+		map.addLayer(layer);
+		layer.enable();
+		return layer;
+    }
+
+    function add_path(layer, coord_list){
+		var options1 = {
+		    color: "#f00",
+		    width: 3
+		};
+		var polyline = new SMap.Geometry(SMap.GEOMETRY_POLYLINE, null, coord_list, options1);
+		layer.addGeometry(polyline);
+	}
+
+    function add_marker(layer, coords, name){
+    	var card = new SMap.Card();
+		card.getHeader().innerHTML = "<strong>" + name + "</strong>";
+
+		var options = { 
+		    title: name
+		};
+
+		var marker = new SMap.Marker(coords, name, options);
+		marker.decorate(SMap.Marker.Feature.Card, card);
+		layer.addMarker(marker);
+		// return marker
+    }
+
+    function add_all_markers(layer) {
+    	var list = document.getElementById('location_path').getElementsByTagName('li');
+    	for (var i = list.length - 1; i >= 0; i--) {
+    		coords = SMap.Coords.fromWGS84(list[i].dataset.latitude, list[i].dataset.longitude)
+    		add_marker(layer, coords, list[i].dataset.name)
+	    }
+	}
+
+	function get_coord_list(layer) {
+		var list = document.getElementById('location_path').getElementsByTagName('li');
+    	var coord_list = []
+    	for (var i = list.length - 1; i >= 0; i--) {
+    		coords = SMap.Coords.fromWGS84(list[i].dataset.latitude, list[i].dataset.longitude)
+    		coord_list.push(coords)
+	    }
+	    return coord_list
+	}
+	</script>
+{% endblock %}
+

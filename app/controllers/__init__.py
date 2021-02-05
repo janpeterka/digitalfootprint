@@ -1,13 +1,15 @@
 from .index import IndexView
 from .data_sources.facebook import FacebookView
+from .data_sources.location import LocationView
 
 
-__all__ = ["IndexView", "FacebookView"]
+__all__ = ["IndexView", "FacebookView", "LocationView"]
 
 
 def register_all_controllers(application):
     IndexView.register(application)
     FacebookView.register(application)
+    LocationView.register(application)
 
 
 def register_error_handlers(application):
