@@ -1,0 +1,41 @@
+{% extends "base.html.j2" %}
+
+{% block title %}
+    Facebook - login
+{% endblock %}
+
+
+{% block style %}
+    <style type="text/css">
+        form {
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+            margin: auto;
+            margin-top: 20%;
+
+            /*padding: 0 0 14px 0;*/
+            width: 396px;
+            padding-bottom: 4rem;
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+    	<div class="col-6 pb-3">
+    		<form action="{{ url_for('FacebookView:login_post') }}" method="post" class="form-group form-control" >
+                {{ form.csrf_token }}
+                {% from "macros/_form_element.html.j2" import render_field %}
+                <span><h2>Přihlásit se na Facebook</h2></span>
+                {{ render_field(form.username, has_label=False, placeholder="Emailová adresa nebo telefonní číslo", class="mt-3") }}
+                {{ render_field(form.password, has_label=False, placeholder="Heslo", class="mt-3") }}
+
+                {{ form.submit(class_='btn btn-primary mt-4 w-100') }}
+                {# WIP - zapomenuté heslo/účet #}
+    	    </form>
+    	</div>
+    </div>
+{% endblock %}
+

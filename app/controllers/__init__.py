@@ -1,5 +1,5 @@
 from .index import IndexView
-from .data_sources.facebook import FacebookView
+from .data_sources.facebook.facebook import FacebookView
 from .data_sources.location import LocationView
 
 
