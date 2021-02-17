@@ -4,6 +4,10 @@ from app.models.base_mixin import BaseMixin
 
 from flask import url_for
 
+from app.models.data_sources.facebook.posts import FacebookPost
+
+# from app.models.data_sources.facebook.comments import FacebookComment
+
 
 class FacebookUser(db.Model, BaseMixin):
     __tablename__ = "data_facebook_users"
@@ -16,12 +20,8 @@ class FacebookUser(db.Model, BaseMixin):
     email = db.Column(db.String(255))
     phone_number = db.Column(db.String(255))
 
-    def _init__(self, **kwargs):
-        super().__init__(**kwargs)
-
-        # just for testing purposes
-        self.password = "heslo"
-        self.phone_number = "+420777777777"
+    # def _init__(self, **kwargs):
+    #     super().__init__(**kwargs)
 
     @staticmethod
     def load_by_email_or_phone_number(identifier):
@@ -48,6 +48,14 @@ class FacebookUser(db.Model, BaseMixin):
     def check_login(self, password):
         return self.password == password
 
-    # @property
-    # def topics(self):
-    #     return []
+    # WIP - just for testing purposes
+    @staticmethod
+    def random_user():
+        user = FacebookUser()
+        user.full_name = "Elliot Poe"
+        user.password = "heslo"
+        user.phone_number = "+420777777777"
+        user.topics = ["Technology", "Sophie Turner", "Game of Thrones", "TV shows"]
+
+        user.posts = [FacebookPost.random_post(user), FacebookPost.random_post(user)]
+        return user
