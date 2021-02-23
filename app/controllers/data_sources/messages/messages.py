@@ -10,9 +10,6 @@ from app.models.data_sources.users import User
 
 
 class MessageView(FlaskView):
-    def index(self):
-        return template("data_sources/messages/index.html.j2")
-
     def show_conversation(self, sender=None, reciever=None):
         if not sender:
             sender = User.random_user()

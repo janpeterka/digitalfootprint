@@ -1,6 +1,6 @@
 <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="/">Digital footprint</a>
+    <a class="navbar-brand" href="/">Digitální stopa</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,10 +9,6 @@
     <div id="navbarNav" class="collapse navbar-collapse">
 
         <ul class="nav navbar-nav navbar-center">
-          
-            {# <li class="nav-item"> #}
-              {# <a class="nav-link" href="/portfolio">Portfolio</a> #}
-            {# </li> #}
 
           <li class="nav-item">
             <a class="nav-link" href="/">Index</a>
@@ -23,23 +19,11 @@
               	Messages
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ url_for('MessageView:index') }}">Index</a> 
               <a class="dropdown-item" href="{{ url_for('MessageView:show_conversation') }}">Conversation</a> 
             </div>
           </li>
-          
-          {#        
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Users
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ url_for('UserView:index') }}">Index</a> 
-            </div>
-          </li>
-          #}
 
-           <li class="nav-item dropdown">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Facebook
             </a>
@@ -57,22 +41,7 @@
               <a class="dropdown-item" href="{{ url_for('LocationView:index') }}">Index</a> 
             </div>
           </li>
-
-
-
-{#           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Ostatní
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/songbooks">Zpěvníky</a>
-              <!-- <a class="dropdown-item" href="/bunkrs">Bunkrs</a> -->
-            </div>
-          </li> #}
-
         </ul>
-
     </div>
-
   </div>
 </nav>

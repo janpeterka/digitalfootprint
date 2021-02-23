@@ -7,12 +7,12 @@
 	 >
 	
 	<span class="{% if message.sender == sender %}
-					bg-dark	text-light
+					bg-primary text-light
 				 {% else %}
-					bg-light 
+					bg-info 
 				 {% endif %} mt-4 p-1"
 		  style="width: 40rem; border-radius: 0.5rem;">
 		{{ message.text }}
-		{{ message.created_at }}
+		{# {{ message.created_at }} #}
 	</span>
 </div>

@@ -36,6 +36,9 @@ class User(db.Model, BaseMixin):
         return User(id=random.randint(1, 200), full_name=fake.name())
 
     # WIP - just for testing purposes
-    def add_sent_messages(self, reciever, count=random.randint(1, 15)):
+    def add_sent_messages(self, reciever, count=None):
+        if not count:
+            count = random.randint(1, 10)
+
         for i in range(count):
-            message = Message.random_message(sender=self, reciever=reciever)
+            Message.random_message(sender=self, reciever=reciever)
