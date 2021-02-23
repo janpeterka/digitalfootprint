@@ -12,6 +12,7 @@ flask-classful = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-wtf = "*"
+faker = "*"
 gunicorn = "*"
 
 [requires]
