@@ -5,6 +5,9 @@ class Config(object):
     SECRET_KEY = os.urandom(24)
     APP_STATE = os.environ.get("APP_STATE")  # production, development, debug, shutdown
 
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
+    SQLALCHEMY_DATABASE_URI = "sqlite://"
+
 
 class TestConfig(Config):
     TESTING = True

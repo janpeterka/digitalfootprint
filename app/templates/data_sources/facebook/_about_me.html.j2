@@ -1,0 +1,18 @@
+<div class="mt-2 ml-2">
+	<div class="row mt-2" >
+		<img src="{{ user.profile_picture.src }}" style='width: 3rem; height: 3rem; border-radius: 50%'>
+		<span class="ml-1">{{ user.full_name }}</span>
+	</div>
+	<div>
+		<h2>Témata</h2>
+		<span>Sbírka témat, které určuje vaše aktivita na Facebooku a na jejímž základě se vytvářejí doporučení pro vás v různých částech Facebooku, jako je třeba kanál vybraých příspěvků, Zpravodajství nebo Watch.</span>
+		<ul>
+			{% for topic in user.topics %}
+				<li>{{ topic }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div>
+		<h2></h2>
+	</div>
+</div>
