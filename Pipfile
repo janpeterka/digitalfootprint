@@ -12,6 +12,7 @@ flask-classful = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-wtf = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
