@@ -1,4 +1,4 @@
-from flask import redirect, url_for, request
+from flask import redirect, url_for, request, flash
 from flask import render_template as template
 
 from flask_classful import FlaskView, route
@@ -29,7 +29,8 @@ class FacebookView(FlaskView):
 
     def login(self):
         form = create_form(FacebookLoginForm)
-        return template("data_sources/facebook/login.html.j2", form=form)
+        user = FacebookUser.random_user()
+        return template("data_sources/facebook/login.html.j2", form=form, user=user)
 
     @route("/login_post", methods=["POST"])
     def login_post(self):
@@ -40,10 +41,12 @@ class FacebookView(FlaskView):
             return redirect(url_for("FacebookView:login"))
         pass
 
-        user = FacebookUser(full_name="Jan Peterka")
+        # user = FacebookUser(full_name="Jan Peterka")
+        user = FacebookUser.random_user()
         # user = FacebookUser.load_by_email_or_phone_number(form.email.data)
 
         if user.check_login(form.password.data):
             return redirect(url_for("FacebookView:account", id=user.id))
         else:
+            flash("Špatné heslo")
             return redirect(url_for("FacebookView:login"))

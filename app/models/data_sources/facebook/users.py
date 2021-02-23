@@ -52,6 +52,7 @@ class FacebookUser(db.Model, BaseMixin):
     @staticmethod
     def random_user():
         user = FacebookUser()
+        user.id = 1
         user.full_name = "Elliot Poe"
         user.password = "heslo"
         user.phone_number = "+420777777777"
