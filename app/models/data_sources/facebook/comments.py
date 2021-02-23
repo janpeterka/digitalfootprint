@@ -1,8 +1,6 @@
-from app import db
+from app import db, fake
 
 from app.models.base_mixin import BaseMixin
-
-from app.helpers.date_utils import random_datetime
 
 
 class FacebookComment(db.Model, BaseMixin):
@@ -22,13 +20,11 @@ class FacebookComment(db.Model, BaseMixin):
 
     def random_comment(post):
         import datetime
-        import random
 
-        comment = FacebookComment()
-        comment.author = post.author
-        comment.text = random.choice(  # nosec
-            ["Nějaký komentář na facebooku", "Další komentář", "první!"]
+        comment = FacebookComment(
+            author=post.author,
+            text=fake.text(),
+            created_at=fake.date_time_between(post.created_at, datetime.datetime.now()),
         )
-        comment.created_at = random_datetime(post.created_at, datetime.datetime.now())
 
         return comment

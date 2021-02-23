@@ -1,10 +1,10 @@
-from app import db
+from app import db, fake
 
 from app.models.base_mixin import BaseMixin
 
 from app.models.data_sources.facebook.comments import FacebookComment
 
-from app.helpers.date_utils import random_datetime, datetime_days_ago
+from app.helpers.date_utils import datetime_days_ago
 
 
 class FacebookPost(db.Model, BaseMixin):
@@ -25,14 +25,12 @@ class FacebookPost(db.Model, BaseMixin):
     # WIP - only for testing
     @staticmethod
     def random_post(author=None):
-        import random
-
         post = FacebookPost()
         post.author = author
-        post.text = random.choice(  # nosec
-            ["Nějaký příspěvek na facebooku", "Další příspěvek"]
+        post.text = fake.text()
+        post.created_at = fake.date_time_between(
+            datetime_days_ago(14), datetime_days_ago(1)
         )
-        post.created_at = random_datetime(datetime_days_ago(14), datetime_days_ago(1))
 
         post.comments = [
             FacebookComment.random_comment(post),

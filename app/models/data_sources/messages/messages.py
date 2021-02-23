@@ -1,7 +1,7 @@
 from app import db, fake
 from app.models.base_mixin import BaseMixin
 
-from app.helpers.date_utils import random_datetime, datetime_days_ago
+from app.helpers.date_utils import datetime_days_ago
 
 # from app.helpers.random_data import message_texts
 
@@ -32,7 +32,9 @@ class Message(db.Model, BaseMixin):
             text=fake.text(),
             sender=sender,
             reciever=reciever,
-            created_at=random_datetime(datetime_days_ago(14), datetime_days_ago(1)),
+            created_at=fake.date_time_between(
+                datetime_days_ago(14), datetime_days_ago(1)
+            ),
         )
 
         return message

@@ -1,4 +1,4 @@
-from app import db
+from app import db, fake
 
 from app.models.base_mixin import BaseMixin
 
@@ -53,10 +53,10 @@ class FacebookUser(db.Model, BaseMixin):
     def random_user():
         user = FacebookUser()
         user.id = 1
-        user.full_name = "Elliot Poe"
+        user.full_name = fake.name()
         user.password = "heslo"
         user.phone_number = "+420777777777"
-        user.topics = ["Technology", "Sophie Turner", "Game of Thrones", "TV shows"]
+        user.topics = [fake.language_name(), fake.name(), fake.job()]
 
         user.posts = [FacebookPost.random_post(user), FacebookPost.random_post(user)]
         return user
