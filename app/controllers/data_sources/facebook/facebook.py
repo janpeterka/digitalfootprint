@@ -21,8 +21,6 @@ class FacebookView(FlaskView):
     def index(self):
 
         user = FacebookUser.random_user()
-        print(user)
-        print(user.topics)
         posts = user.posts
 
         return template(
