@@ -1,0 +1,24 @@
+
+
+
+
+
+{% extends "base.html.j2" %}
+
+{% block title %}
+    Conversation
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+		<div>
+			<h2>Messages between {{ sender.full_name }} and {{ reciever.full_name }}</h2>
+		</div>
+			<hr>
+		<div>
+			{% for message in messages %}
+				{% include('data_sources/messages/_message.html.j2') %}
+			{% endfor %}
+		</div>
+    </div>
+{% endblock %}
