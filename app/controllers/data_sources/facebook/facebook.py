@@ -48,5 +48,5 @@ class FacebookView(FlaskView):
         if user.check_login(form.password.data):
             return redirect(url_for("FacebookView:account", id=user.id))
         else:
-            flash("Špatné heslo")
+            flash("Špatné heslo", "error")
             return redirect(url_for("FacebookView:login"))
