@@ -1,0 +1,6 @@
+div.browser.url {
+	height: 2rem;
+	border: 2px solid black;
+	padding-left: 2rem;
+	color: grey;
+}
