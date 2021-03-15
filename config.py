@@ -6,7 +6,7 @@ class Config(object):
     APP_STATE = os.environ.get("APP_STATE")  # production, development, debug, shutdown
 
     SQLALCHEMY_TRACK_MODIFICATIONS = True
-    SQLALCHEMY_DATABASE_URI = "sqlite://digitalfootprint.db"
+    SQLALCHEMY_DATABASE_URI = "sqlite://"
 
 
 class TestConfig(Config):
