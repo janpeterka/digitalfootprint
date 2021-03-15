@@ -1,0 +1,19 @@
+{% extends "base.html.j2" %}
+
+{% block title %}
+    Mission - {{ mission.info }}
+{% endblock %}
+
+{% block content %}
+    <div class="row ml-2 mr-2">
+    	<div class="col-2">
+    		{% include('missions/_mission_navbar.html.j2') %}
+    	</div>
+    	
+    	<div class="col-10">
+			{{ content }}
+    	</div>
+    </div>
+{% endblock %}
+
+

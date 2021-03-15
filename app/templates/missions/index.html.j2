@@ -1,0 +1,14 @@
+{% extends "base.html.j2" %}
+
+{% block title %}
+    Mission control
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    	<ul>
+    		<li><a href="{{ url_for('MissionView:show', id=1) }}">Mission 1</a></li>
+    	</ul>
+    	
+    </div>
+{% endblock %}
