@@ -5,11 +5,13 @@
 	</div>
 	<div>
 		<h2>Témata</h2>
-		<span>Sbírka témat, které určuje vaše aktivita na Facebooku a na jejímž základě se vytvářejí doporučení pro vás v různých částech Facebooku, jako je třeba kanál vybraých příspěvků, Zpravodajství nebo Watch.</span>
+		<span class="font-italic font-small">Sbírka témat, které určuje vaše aktivita na Facebooku a na jejímž základě se vytvářejí doporučení pro vás v různých částech Facebooku, jako je třeba kanál vybraých příspěvků, Zpravodajství nebo Watch.</span>
 		<ul>
-			{% for topic in user.topics %}
-				<li>{{ topic }}</li>
-			{% endfor %}
+			{% if user.topics is not none %}
+				{% for topic in user.topics %}
+					<li>{{ topic }}</li>
+				{% endfor %}
+			{% endif %}
 		</ul>
 	</div>
 	<div>

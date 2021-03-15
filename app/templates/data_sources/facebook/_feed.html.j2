@@ -1,5 +1,11 @@
 <div>
-	{% for post in posts %}
-		{% include('data_sources/facebook/_post.html.j2') %}
-	{% endfor %}
+{# 	{% if posts is not none %}
+		{% for post in posts %}
+			{% include('data_sources/facebook/_post.html.j2') %}
+		{% endfor %} #}
+	{% if user.posts is not none %}
+		{% for post in user.posts %}
+			{% include('data_sources/facebook/_post.html.j2') %}
+		{% endfor %}
+	{% endif %}
 </div>
