@@ -8,12 +8,8 @@ from faker import Faker
 
 fake = Faker("cs_CZ")
 
-# from flask_caching import Cache
-
-# mail = Mail()
 db = SQLAlchemy(session_options={"autoflush": False, "autocommit": False})
 migrate = Migrate()
-# cache = Cache(config={"CACHE_TYPE": "simple"})
 
 
 def create_app(config_name="default"):
@@ -25,16 +21,8 @@ def create_app(config_name="default"):
     application.config.from_object(configs[config_name])
 
     # APPS
-    # mail.init_app(application)
     db.init_app(application)
     migrate.init_app(application, db)
-    # cache.init_app(application)
-
-    # LOGGING
-    # from .config.config_logging import db_handler, gunicorn_logger
-
-    # application.logger.addHandler(gunicorn_logger)
-    # application.logger.addHandler(db_handler)
 
     # CONTROLLERS
     from .controllers import register_all_controllers  # noqa: F401
