@@ -70,3 +70,42 @@ div.flashes ul li.warning{
 div.flashes ul li.debug{
     color: var(--debug);
 }
+
+/* Mission vertical navbar */
+ul.navbar-vertical {
+  list-style-type: none;
+  background-color: #f1f1f1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+ul.navbar-vertical li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+ul.navbar-vertical li span {
+  display: block;
+  color: #000;
+  font-weight: bold;
+  padding-left: 1rem;
+  /*padding: 0.5rem 1rem;*/
+}
+
+ul.navbar-vertical li a {
+  display: block;
+  color: #000;
+  padding-left: 4rem;
+  /*padding: 0.5rem 4rem;*/
+  text-decoration: none;
+}
+
+ul.navbar-vertical li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul.navbar-vertical li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
