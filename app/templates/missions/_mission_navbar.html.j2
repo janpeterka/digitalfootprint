@@ -1,14 +1,16 @@
 <div>
 <ul class="navbar-vertical">
-	<li><span>Overview</span></li>
-	<li><a href="{{ url_for('MissionView:show', id=mission.id, page='info')}}">Mission info</a></li>
+	<li><span>Přehled</span></li>
+	<li><a href="{{ url_for('MissionView:show', id=mission.id, page='info')}}">Info</a></li>
 	<hr>
-	<li><span>Data sources</span></li>
-	<li><a href="{{ url_for('MissionView:show', id=mission.id, page='data_facebook')}}">Facebook</a></li>
-	<li><a href="{{ url_for('MissionView:show', id=mission.id, page='data_location')}}">Location</a></li>
-	<li><a href="{{ url_for('MissionView:show', id=mission.id, page='data_browser')}}">Browser</a></li>
+	<li><span>Zdroje dat</span></li>
+	{% for source in mission.data_sources %}
+		<li><a href="{{ url_for('MissionView:show', id=mission.id, page='data_' + source) }}">{{ source|capitalize }}</a></li>
+	{% endfor %}
 	<hr>
-	<li><span>Action</span></li>
-	<li><a href="{{ url_for('MissionView:show', id=mission.id, page='action')}}">Login</a></li>
+	<li><span>Aktivity</span></li>
+	{% for action in mission.actions %}
+		<li><a href="{{ url_for('MissionView:show', id=mission.id, page='action_' + action)}}">{{ action|capitalize }}</a></li>
+	{% endfor %}
 </ul>
 </div>
