@@ -27,10 +27,9 @@ class FacebookView(FlaskView):
             "data_sources/facebook/facebook.html.j2", posts=posts, user=user
         )
 
-    def login(self):
+    def login(self, user=None):
         form = create_form(FacebookLoginForm)
-        user = FacebookUser.random_user()
-        return template("data_sources/facebook/login.html.j2", form=form, user=user)
+        return template("data_sources/facebook/_login.html.j2", form=form, user=user)
 
     @route("/login_post", methods=["POST"])
     def login_post(self):
