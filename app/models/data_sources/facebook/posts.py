@@ -4,6 +4,7 @@ from app.models.base_mixin import BaseMixin
 
 from app.models.data_sources.facebook.comments import FacebookComment
 
+
 from app.helpers.date_utils import datetime_days_ago
 
 
@@ -25,8 +26,12 @@ class FacebookPost(db.Model, BaseMixin):
     # WIP - only for testing
     @staticmethod
     def random_post(author=None):
+        from app.models.data_sources.facebook.users import FacebookUser
+
         post = FacebookPost()
         post.author = author
+        if post.author is None:
+            post.author = FacebookUser.random_user()
         post.text = fake.text()
         post.created_at = fake.date_time_between(
             datetime_days_ago(14), datetime_days_ago(1)

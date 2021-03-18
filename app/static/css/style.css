@@ -80,11 +80,15 @@ ul.navbar-vertical {
   background-color: #f1f1f1;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  /*height: 100%;*/
+  position: fixed;
+  /*overflow: auto;*/
 }
 
 ul.navbar-vertical li {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  padding-right: 1rem;
 }
 
 ul.navbar-vertical li span {
