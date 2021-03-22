@@ -16,14 +16,16 @@
     	</div>
     	
     	<div class="col-10">
-            <div class="tab" data-tab="info" data-active=true> {{ mission.content.info }}</div>
+            <div class="tab" data-tab="info" data-active=true>
+                {% include "missions/_info.html.j2" %}
+            </div>
 
             {% for source in mission.data_sources %}
-                <div class="tab" data-tab="data_{{source}}" data-active=false> {{source.content}}</div>
+                <div class="tab" data-tab="data_{{source.name}}" data-active=false> {{ source.html }}</div>
             {% endfor %}
 
             {% for action in mission.actions %}
-                <div class="tab" data-tab="action_{{action}}" data-active=false>{{action.content}}</div>
+                <div class="tab" data-tab="action_{{action.name}}" data-active=false>{{ action["html"] }}</div>
             {% endfor %}
     	</div>
     </div>

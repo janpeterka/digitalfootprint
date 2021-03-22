@@ -8,14 +8,14 @@
 	<li><span>Zdroje dat</span></li>
 	{% for source in mission.data_sources %}
 	<li>
-		<span class='tab-link' data-tab-name="data_{{source}}" data-action='click->tab-switcher#activate' data-active=false >{{ source|capitalize }}</span>
+		<span class='tab-link' data-tab-name="data_{{source.name}}" data-action='click->tab-switcher#activate' data-active=false >{{ source.public_name|capitalize }}</span>
 	</li>	
 	{% endfor %}
 	<hr>
 	<li><span>Aktivity</span></li>
 	{% for action in mission.actions %}
 	<li>
-		<span class='tab-link' data-tab-name="action_{{action}}" data-action='click->tab-switcher#activate' data-active=false>{{ action|capitalize }}</span>
+		<span class='tab-link' data-tab-name="action_{{action.name}}" data-action='click->tab-switcher#activate' data-active=false>{{ action.public_name|capitalize }}</span>
 	</li>
 	{% endfor %}
 </ul>

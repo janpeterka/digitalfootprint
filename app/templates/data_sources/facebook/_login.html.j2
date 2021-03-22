@@ -18,7 +18,7 @@
 {% block content %}
 <div class="container">
     <div class="col-6 pb-3">
-    	<form action="{{ url_for('FacebookView:login_post') }}" method="post" class="form-group form-control" >
+    	<form action="{{ url_for('FacebookView:login_post_check') }}" method="post" class="form-group form-control" >
             {{ form.csrf_token }}
             {% from "macros/_render_field.html.j2" import render_field %}
             <span><h2>Přihlásit se na Facebook</h2></span>

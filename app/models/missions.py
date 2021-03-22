@@ -11,6 +11,9 @@ class Mission(db.Model, BaseMixin):
     name = db.Column(db.String(255), nullable=False)
     info = db.Column(db.Text, nullable=False)
 
+    data_sources = []
+    actions = []
+
     # WIP - just for testing purposes
     @staticmethod
     def random_mission():
