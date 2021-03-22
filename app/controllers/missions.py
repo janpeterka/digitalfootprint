@@ -1,4 +1,5 @@
 import datetime
+import types
 
 from flask import url_for, abort
 from flask import request
@@ -65,6 +66,10 @@ class MissionView(FlaskView):
                 name="Uhodni heslo",
                 info="Uhodni heslo do účtu na sociální sítě na základě veřejně dostupných dat.",
             )
+
+            mission.content = types.SimpleNamespace()
+
+            mission.content.info = mission.info
 
             # Define data sources
             mission.data_sources = {}

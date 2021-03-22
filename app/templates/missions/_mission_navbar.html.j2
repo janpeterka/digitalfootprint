@@ -1,16 +1,22 @@
 <div>
 <ul class="navbar-vertical">
 	<li><span>Přehled</span></li>
-	<li><a href="{{ url_for('MissionView:show', id=mission.id, page='info')}}">Info</a></li>
+	<li>
+		<span class='tab-link' data-tab-name="info" data-action='click->tab-switcher#activate' data-active=true >Info</span>
+	</li>
 	<hr>
 	<li><span>Zdroje dat</span></li>
 	{% for source in mission.data_sources %}
-		<li><a href="{{ url_for('MissionView:show', id=mission.id, page='data_' + source) }}">{{ source|capitalize }}</a></li>
+	<li>
+		<span class='tab-link' data-tab-name="data_{{source}}" data-action='click->tab-switcher#activate' data-active=false >{{ source|capitalize }}</span>
+	</li>	
 	{% endfor %}
 	<hr>
 	<li><span>Aktivity</span></li>
 	{% for action in mission.actions %}
-		<li><a href="{{ url_for('MissionView:show', id=mission.id, page='action_' + action)}}">{{ action|capitalize }}</a></li>
+	<li>
+		<span class='tab-link' data-tab-name="action_{{action}}" data-action='click->tab-switcher#activate' data-active=false>{{ action|capitalize }}</span>
+	</li>
 	{% endfor %}
 </ul>
 </div>

@@ -99,20 +99,28 @@ ul.navbar-vertical li span {
   /*padding: 0.5rem 1rem;*/
 }
 
-ul.navbar-vertical li a {
-  display: block;
-  color: #000;
+ul.navbar-vertical li span.tab-link {
+  /*display: block;*/
+  /*color: #000;*/
+  font-weight: initial;
   padding-left: 4rem;
   /*padding: 0.5rem 4rem;*/
   text-decoration: none;
 }
 
-ul.navbar-vertical li a.active {
-  background-color: #4CAF50;
+ul.navbar-vertical li span.tab-link[data-active="true"] {
+  background-color: var(--logo-blue);
+  color: white;
+  font-weight: bolder;
+}
+
+ul.navbar-vertical li span.tab-link:hover:not(.active) {
+  background-color: #555;
   color: white;
 }
 
-ul.navbar-vertical li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
+/* Tab switcher*/
+
+.tab[data-active="false"] {
+    display: none;
 }
