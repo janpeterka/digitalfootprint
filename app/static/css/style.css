@@ -10,6 +10,9 @@
 /* data sources */
 @import "datasources.css";
 
+/* flashes */
+@import "flashes.css"
+
 /* Footer */
 
 .footer {
@@ -30,49 +33,7 @@
   background-color: var(--logo-light-green);
 }
 
-/* Flashes */
-/*Flashes*/
 
-div.flashes {
-    -moz-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Opera */
-    animation: cssAnimation 0s ease-in 5s forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    position: relative;
-    height: 0px;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-div.flashes ul li{
-    list-style-type: none;
-    text-align: center; 
-    color: #101010;
-}
-
-div.flashes ul li.error{
-    color: var(--error);
-}
-
-div.flashes ul li.success{
-    color: var(--success);
-}
-
-div.flashes ul li.info{
-    color: var(--info);
-}
-
-div.flashes ul li.warning{
-    color: var(--warning);
-}
-
-div.flashes ul li.debug{
-    color: var(--debug);
-}
 
 /* Mission vertical navbar */
 ul.navbar-vertical {
@@ -103,7 +64,8 @@ ul.navbar-vertical li span.tab-link {
   /*display: block;*/
   /*color: #000;*/
   font-weight: initial;
-  padding-left: 4rem;
+  padding-left: 3rem;
+  padding-right: 1rem;
   /*padding: 0.5rem 4rem;*/
   text-decoration: none;
 }
