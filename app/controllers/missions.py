@@ -6,7 +6,7 @@ from flask import render_template as template
 
 from flask_classful import FlaskView
 
-from app import fake
+from app import fake, turbo
 
 
 from app.models.missions import Mission

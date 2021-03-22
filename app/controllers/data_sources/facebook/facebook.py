@@ -3,6 +3,8 @@ from flask import render_template as template
 
 from flask_classful import FlaskView, route
 
+from app import turbo
+
 from app.helpers.form import create_form, save_form_to_session
 
 # from app.models.data_sources.facebook.posts import FacebookPost
