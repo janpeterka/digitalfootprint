@@ -4,14 +4,29 @@
     Mission - {{ mission.name }}
 {% endblock %}
 
+{% block script %}
+    {% include 'javascript/stimulus.js.html' %}
+    {% include 'javascript/tab_switcher_controller.js.html' %}
+{% endblock %}
+
 {% block content %}
-    <div class="row ml-2 mr-2">
+    <div class="row ml-2 mr-2" data-controller="tab-switcher">
     	<div class="col-2">
     		{% include('missions/_mission_navbar.html.j2') %}
     	</div>
     	
     	<div class="col-10">
-			{{ content }}
+            <div class="tab" data-tab="info" data-active=true>
+                {% include "missions/_info.html.j2" %}
+            </div>
+
+            {% for source in mission.data_sources %}
+                <div class="tab" data-tab="data_{{source.name}}" data-active=false> {{ source.html }}</div>
+            {% endfor %}
+
+            {% for action in mission.actions %}
+                <div class="tab" data-tab="action_{{action.name}}" data-active=false>{{ action["html"] }}</div>
+            {% endfor %}
     	</div>
     </div>
 {% endblock %}

@@ -24,14 +24,6 @@
     {% endif %}
   {% endif %}
 
-  {# Potential way using bootstrap invalid-feedback #}
-  {# {% if field.errors %}
-    {% set class_ = class_ + " is-invalid" %}
-  {% elif field.data %}
-    {% set class_ = class_ + " is-valid" %}
-  {% endif %} #}
-
-
   {% if field.type == 'BooleanField' %}
       {{ field(class_=class_ + ' form-check-input', **kwargs) }}
       {{ field.label.text|safe }}
@@ -70,6 +62,7 @@
 
   {% endif %}
 
+  {# {{ field.errors }} #}
   {% if with_errors and field.errors %}
     <ul class=errors>
     {% for error in field.errors %}
@@ -78,16 +71,4 @@
     </ul>
   {% endif %}
 
-  {# Potential way using bootstrap invalid-feedback #}
-  {# {% if with_errors and field.errors %}
-    <div class="invalid-feedback">
-      <ul>
-      {% for error in field.errors %}
-        <li style="list-style: none">{{ error }}</li>
-      {% endfor %}
-      </ul>
-    </div>
-  {% endif %} #}
-
 {% endmacro %}
-

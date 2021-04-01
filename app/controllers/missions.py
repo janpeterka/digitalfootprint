@@ -1,4 +1,5 @@
 import datetime
+import types
 
 from flask import url_for, abort
 from flask import request
@@ -6,10 +7,11 @@ from flask import render_template as template
 
 from flask_classful import FlaskView
 
-from app import fake
+from app import fake, turbo
 
 
 from app.models.missions import Mission
+from app.models.mission_items import MissionItem
 from app.models.data_sources.facebook.users import FacebookUser
 from app.models.data_sources.facebook.posts import FacebookPost
 
@@ -21,38 +23,24 @@ class MissionView(FlaskView):
         return template("missions/index.html.j2")
 
     def show(self, id):
-        subpage = request.args.get("page", None)
-
         # mission = Mission.load(id)
 
         mission = self._load_mission("password_guesser")
 
-        if subpage == "info":
-            content = template("missions/_info.html.j2", mission=mission)
-        elif subpage == "data_browser":
-            content = template(
-                "data_sources/browser/_browser.html.j2", html=fake.text()
-            )
-        elif subpage == "data_facebook":
-            content = template(
-                "data_sources/facebook/_facebook.html.j2",
-                user=mission.data_sources["facebook"]["user"],
-            )
+        # set contents
+        for source in mission.data_sources:
+            if source.name == "browser":
+                source.html = template(
+                    "data_sources/browser/_browser.html.j2", html=fake.text()
+                )
+            elif source.name == "facebook":
+                source.html = FacebookView().show(user=source.user)
 
-        elif subpage == "action_facebook_login":
-            print(mission.data_sources["facebook"]["user"])
-            content = template(
-                "data_sources/browser/_browser.html.j2",
-                url="https://facebook.com/login",
-                html=FacebookView().login(
-                    user=mission.data_sources["facebook"]["user"]
-                ),
-            )
+        for action in mission.actions:
+            if action.name == "facebook_login":
+                action.html = FacebookView().login(user=source.user)
 
-        else:
-            content = None
-
-        return template("missions/show.html.j2", mission=mission, content=content)
+        return template("missions/show.html.j2", mission=mission)
 
     def _load_mission(self, mission_name):
         # WIP - pravděpodobně přesunout do json
@@ -67,8 +55,6 @@ class MissionView(FlaskView):
             )
 
             # Define data sources
-            mission.data_sources = {}
-            mission.data_sources["facebook"] = {}
             facebook_user = FacebookUser(
                 full_name="Jakub Ryba",
                 password="Bramburek99",
@@ -90,11 +76,15 @@ class MissionView(FlaskView):
                     created_at=datetime.datetime(2019, 2, 16, 16, 0, 0),
                 ),
             ]
-            mission.data_sources["facebook"]["user"] = facebook_user
+            mission.data_sources = [MissionItem(name="facebook", user=facebook_user)]
+            # mission.data_sources["facebook"]["user"] = facebook_user
 
             # Define action pages
-            mission.actions = {}
-            mission.actions["facebook_login"] = {}
+            mission.actions = [
+                MissionItem(
+                    name="facebook_login", human_name="Zadat heslo", user=facebook_user
+                )
+            ]
 
         else:
             abort(404)

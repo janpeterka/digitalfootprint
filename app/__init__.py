@@ -1,8 +1,8 @@
 from flask import Flask
 
-# from flask_mail import Mail
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from turbo_flask import Turbo
 
 from faker import Faker
 
@@ -10,6 +10,7 @@ fake = Faker("cs_CZ")
 
 db = SQLAlchemy(session_options={"autoflush": False, "autocommit": False})
 migrate = Migrate()
+turbo = Turbo()
 
 
 def create_app(config_name="default"):
@@ -23,6 +24,7 @@ def create_app(config_name="default"):
     # APPS
     db.init_app(application)
     migrate.init_app(application, db)
+    turbo.init_app(application)
 
     # CONTROLLERS
     from .controllers import register_all_controllers  # noqa: F401
