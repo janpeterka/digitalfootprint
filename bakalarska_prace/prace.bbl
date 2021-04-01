@@ -5,6 +5,15 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Choi et~al.(2018)Choi, Park,, Jung]{privacy-fatigue}
+{\sc Choi}, H. -- {\sc Park}, J. -- {\sc Jung}, Y.
+\newblock The role of privacy fatigue in online privacy behavior.
+\newblock \emph{Computers in Human Behavior}. 2018, 81, s.~42--51.
+\newblock ISSN 0747-5632.
+\newblock \doi{https://doi.org/10.1016/j.chb.2017.12.001}.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S0747563217306817}}.
+
 \bibitem[eMarketer Editors(2019)]{google-ads}
 {\sc Editors}.
 \newblock \emph{US Digital Ad Spending Will Surpass Traditional in 2019}
@@ -12,18 +21,14 @@
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.emarketer.com/content/us-digital-ad-spending-will-surpass-traditional-in-2019}}.
 
-\bibitem[Hanbyul~Choi(2018)]{privacy-fatigue}
-{\sc Hanbyul~Choi}, Y.~J.~J.~P.
-\newblock \emph{The role of privacy fatigue in online privacy behavior}
-  [online]. 2018. [cit.~2021-03-15].
-\newblock Dostupn{\'{e}}~z:
-  \url{{https://www.sciencedirect.com/science/article/pii/S0747563217306817}}.
-
-\bibitem[Joanne~Hinds(2020)]{privacy-awareness}
-{\sc Joanne~Hinds}, A. N.~J.~E. J.~W.
-\newblock \emph{“It wouldn't happen to me”: Privacy concerns and
-  perspectives following the Cambridge Analytica scandal} [online]. 2020.
-  [cit.~2021-03-15].
+\bibitem[Hinds et~al.(2020)Hinds, Williams,, Joinson]{privacy-awareness}
+{\sc Hinds}, J. -- {\sc Williams}, E.~J. -- {\sc Joinson}, A.~N.
+\newblock “It wouldn't happen to me”: Privacy concerns and perspectives
+  following the Cambridge Analytica scandal.
+\newblock \emph{International Journal of Human-Computer Studies}. 2020, 143,
+  s.~102498.
+\newblock ISSN 1071-5819.
+\newblock \doi{https://doi.org/10.1016/j.ijhcs.2020.102498}.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.sciencedirect.com/science/article/pii/S1071581920301002}}.
 
