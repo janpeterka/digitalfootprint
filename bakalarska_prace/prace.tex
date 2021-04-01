@@ -1,0 +1,79 @@
+\documentclass[a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a-2u]{pdfx} % PDF-A output
+
+\usepackage[a4paper, top=25mm, bottom=30mm, left=30mm, right=25mm]{geometry}
+\usepackage[czech]{babel}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{unicode}
+\hypersetup{breaklinks=true}
+\usepackage{graphicx}
+\usepackage{cmap}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+
+% Typography
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\usepackage{setspace}
+	\setstretch{1.5} % Better alterative to \baselinestretch
+%\renewcommand{\baselinestretch}{1.5}
+\frenchspacing
+\usepackage{lmodern}
+
+% Citations
+\usepackage{natbib}
+\bibliographystyle{csplainnat}
+\renewcommand{\bibname}{Seznam použité literatury}
+
+% Size of title margins
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+	\titlespacing*{\chapter}{0pt}{0pt}{40pt}
+
+% Better multiline footnotes
+\usepackage{scrextend}
+\deffootnote[1em]{3em}{1em}{\textsuperscript{\thefootnotemark}}
+\setlength{\footnotesep}{0.5cm}
+\renewcommand{\footnoterule}{\vfill\kern -3pt \hrule width 0.4\columnwidth \kern 2.6pt}
+
+
+\def\Title{Rozsah a dopady sběru osobních dat v~digitálním prostředí s~přesahem do vzdělávání}
+\def\TitleEN{The scope and impact of the collection of personal data in the digital environment, extending to education}
+\def\Author{Jan Peterka}
+\def\Study{Specializace v~pedagogice (B7507)}
+\def\StudyField{Informační technologie se zaměřením na vzdělávání}
+\def\Department{Katedra informačních technologií a technické výchovy (41-KITTV)}
+\def\Supervisor{PhDr. Josef Procházka, Ph.D.}
+\def\Year{2021}
+\def\Date{17.4.}
+
+
+\begin{document}
+
+\include{titulka}
+\include{podekovani}
+\include{abstrakt}
+\tableofcontents
+\include{uvod}
+
+% \input{chapters/lorem}
+\input{chapters/1_mapovani_ve_vzdelavani}
+\input{chapters/2_problematika_ochrany}
+
+\include{zaver}
+
+% Citations
+\newpage
+{\raggedright
+	%\nocite{*} % List all entries from bibliography even if not cited in text.
+	\bibliography{bibliografie}
+}
+
+\end{document}

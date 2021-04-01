@@ -1,0 +1,113 @@
+\begin{thebibliography}{16}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[eMarketer Editors(2019)]{google-ads}
+{\sc Editors}.
+\newblock \emph{US Digital Ad Spending Will Surpass Traditional in 2019}
+  [online]. 2019. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.emarketer.com/content/us-digital-ad-spending-will-surpass-traditional-in-2019}}.
+
+\bibitem[Hanbyul~Choi(2018)]{privacy-fatigue}
+{\sc Hanbyul~Choi}, Y.~J.~J.~P.
+\newblock \emph{The role of privacy fatigue in online privacy behavior}
+  [online]. 2018. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S0747563217306817}}.
+
+\bibitem[Joanne~Hinds(2020)]{privacy-awareness}
+{\sc Joanne~Hinds}, A. N.~J.~E. J.~W.
+\newblock \emph{“It wouldn't happen to me”: Privacy concerns and
+  perspectives following the Cambridge Analytica scandal} [online]. 2020.
+  [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S1071581920301002}}.
+
+\bibitem[Kemp(2019)]{digital-2021-report}
+{\sc Kemp}, S.
+\newblock \emph{Digital 2021: Global overview report} [online]. 2019.
+  [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://datareportal.com/reports/digital-2021-global-overview-report}}.
+
+\bibitem[MŠMT({\natexlab{a}})]{rvp-is}
+{\sc MŠMT}.
+\newblock \emph{Publicistika, knihovnictví a informatika} [online].
+  {\natexlab{a}}. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.edu.cz/rvp/ramcove-vzdelavaci-programy-stredniho-odborneho-vzdelavani-rvp-sov/obory-l-a-m/72-publicistika-knihovnictvi-a-informatika/}}.
+
+\bibitem[MŠMT({\natexlab{b}})]{rvp-it}
+{\sc MŠMT}.
+\newblock \emph{Informatické obory} [online]. {\natexlab{b}}.
+  [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.edu.cz/rvp/ramcove-vzdelavaci-programy-stredniho-odborneho-vzdelavani-rvp-sov/obory-l-a-m/18-informaticke-obory/}}.
+
+\bibitem[NÚV({\natexlab{a}})]{revize}
+{\sc NÚV}.
+\newblock \emph{Návrh revizí ICT} [online]. {\natexlab{a}}.
+  [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z: \url{{http://www.nuv.cz/file/3362/}}.
+
+\bibitem[NÚV({\natexlab{b}})]{rvp}
+{\sc NÚV}.
+\newblock \emph{Rámcové programy} [online]. {\natexlab{b}}.
+  [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z: \url{{http://www.nuv.cz/t/rvp}}.
+
+\bibitem[NÚV(2021{\natexlab{a}})]{rvp-g}
+{\sc NÚV}.
+\newblock \emph{RVP-G} [online]. 2021{\natexlab{a}}. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z: \url{{http://www.nuv.cz/file/159}}.
+
+\bibitem[NÚV(2021{\natexlab{b}})]{rvp-zs}
+{\sc NÚV}.
+\newblock \emph{RVP ZŠ} [online]. 2021{\natexlab{b}}. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z: \url{{http://www.nuv.cz/file/4983/}}.
+
+\bibitem[NÚV({\natexlab{c}})]{stredni-vzdelavani}
+{\sc NÚV}.
+\newblock \emph{Střední vzdělávání} [online]. {\natexlab{c}}.
+  [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z: \url{{http://www.nuv.cz/t/stredni-vzdelavani}}.
+
+\bibitem[Penland(2020)]{cookies-history}
+{\sc Penland}, J.
+\newblock \emph{Browser Cookies: What Are They \& Why Should You Care?}
+  [online]. 2020. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.whoishostingthis.com/resources/cookies-guide/#:~:text=Cookies}}.
+
+\bibitem[Research(2019)]{lack-of-control}
+{\sc Research}, P.
+\newblock \emph{Americans and Privacy: Concerned, Confused and Feeling Lack of
+  Control Over Their Personal Information} [online]. 2019. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.pewresearch.org/internet/2019/11/15/americans-and-privacy-concerned-confused-and-feeling-lack-of-control-over-their-personal-information/}}.
+
+\bibitem[Scott(2020)]{scott-cookies}
+{\sc Scott}, T.
+\newblock \emph{Why is Internet such a mess} [online]. 2020. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.youtube.com/watch?v=OFRjZtYs3wY}}.
+
+\bibitem[Statcounter(2021)]{google-search}
+{\sc Statcounter}.
+\newblock \emph{Search Engine Market Share Worldwide} [online]. 2021.
+  [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://gs.statcounter.com/search-engine-market-share}}.
+
+\bibitem[Tankovska(2020)]{facebook-active-users}
+{\sc Tankovska}, H.
+\newblock \emph{Number of monthly active Facebook users worldwide as of 4th
+  quarter 2020} [online]. 2020. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.statista.com/statistics/264810/number-of-monthly-active-facebook-users-worldwide/}}.
+
+\end{thebibliography}
