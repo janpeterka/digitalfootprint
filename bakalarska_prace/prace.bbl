@@ -1,9 +1,53 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{33}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[ide(2016)]{identity-theft-rise}
+Identity theft rises sharply as fraudsters target social media.
+\newblock \emph{Computer Fraud \& Security}. 2016, 2016, 7, s.~1--3.
+\newblock ISSN 1361-3723.
+\newblock \doi{https://doi.org/10.1016/S1361-3723(16)30048-3}.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S1361372316300483}}.
+
+\bibitem[BBC(2020)]{ca-brexit}
+{\sc BBC}.
+\newblock \emph{Cambridge Analytica 'not involved' in Brexit referendum, says
+  watchdog} [online]. 2020. [cit.~2021-04-02].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.bbc.com/news/uk-politics-54457407}}.
+
+\bibitem[Beckers et~al.(2017)Beckers, Schosser, Pape,,
+  Schaab]{social-engineering-tools}
+{\sc Beckers}, K. et~al.
+\newblock A Structured Comparison of Social Engineering Intelligence Gathering
+  Tools.
+\newblock s. 232--246, 08 2017.
+\newblock \doi{10.1007/978-3-319-64483-7_15}.
+\newblock ISBN 978-3-319-64482-0.
+
+\bibitem[Bryce -- Klang(2009)Bryce, Klang]{behavior-changes}
+{\sc Bryce}, J. -- {\sc Klang}, M.
+\newblock Young people, disclosure of personal information and online privacy:
+  Control, choice and consequences.
+\newblock \emph{Information Security Technical Report}. 2009, 14, 3,
+  s.~160--166.
+\newblock ISSN 1363-4127.
+\newblock \doi{https://doi.org/10.1016/j.istr.2009.10.007}.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S1363412709000429}}.
+\newblock The Changing Shape of Privacy and Consent.
+
+\bibitem[Cadwalladr -- Graham-Harrison(2018)Cadwalladr,
+  Graham-Harrison]{cambridge-analytica}
+{\sc Cadwalladr}, C. -- {\sc Graham-Harrison}, E.
+\newblock \emph{Revealed: 50 million Facebook profiles harvested for Cambridge
+  Analytica in major data breach} [online]. 2018. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election}}.
 
 \bibitem[Choi et~al.(2018)Choi, Park,, Jung]{privacy-fatigue}
 {\sc Choi}, H. -- {\sc Park}, J. -- {\sc Jung}, Y.
@@ -21,6 +65,26 @@
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.emarketer.com/content/us-digital-ad-spending-will-surpass-traditional-in-2019}}.
 
+\bibitem[Foster(2015)]{burglary}
+{\sc Foster}, M.
+\newblock \emph{Is The Way We Use Social Media Leaving Us Vulnerable To
+  Burglary?} [online]. 2015. [cit.~2021-04-03].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://socialmediaweek.org/blog/2015/05/social-media-leaving-us-vulnerable-burglary/}}.
+
+\bibitem[Foucault(1980)]{panopticon}
+{\sc Foucault}, M.
+\newblock \emph{Power/knowledge: Selected interviews and other writings,
+  1972-1977}.
+\newblock Vintage, 1980.
+
+\bibitem[Hadnagy(2011)]{social-engineering-book}
+{\sc Hadnagy}, C.
+\newblock \emph{Social engineering: the art of human hacking}.
+\newblock Wiley, 2011.
+\newblock OCLC: ocn635494717.
+\newblock ISBN 9780470639535 9781118028018 9781118029718 9781118029749.
+
 \bibitem[Hinds et~al.(2020)Hinds, Williams,, Joinson]{privacy-awareness}
 {\sc Hinds}, J. -- {\sc Williams}, E.~J. -- {\sc Joinson}, A.~N.
 \newblock “It wouldn't happen to me”: Privacy concerns and perspectives
@@ -32,12 +96,51 @@
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.sciencedirect.com/science/article/pii/S1071581920301002}}.
 
+\bibitem[Juna -- Burýšek(2020)Juna, Burýšek]{pedophiles-web}
+{\sc Juna}, P. -- {\sc Burýšek}, J.
+\newblock \emph{Ruský web pro pedofily vystavuje kradené fotky českých
+  dětí} [online]. 2020. [cit.~2021-04-02].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.seznamzpravy.cz/clanek/rusky-web-pro-pedofily-vystavuje-kradene-fotky-ceskych-deti-89197}}.
+
 \bibitem[Kemp(2019)]{digital-2021-report}
 {\sc Kemp}, S.
 \newblock \emph{Digital 2021: Global overview report} [online]. 2019.
   [cit.~2021-03-15].
 \newblock Dostupn{\'{e}}~z:
   \url{{https://datareportal.com/reports/digital-2021-global-overview-report}}.
+
+\bibitem[Livingstone(2008)]{youth-online-behavior}
+{\sc Livingstone}, S.
+\newblock Taking risky opportunities in youthful content creation: teenagers'
+  use of social networking sites for intimacy, privacy and self-expression.
+\newblock \emph{New Media \& Society}. 2008, 10, 3, s.~393--411.
+\newblock \doi{10.1177/1461444808089415}.
+\newblock Dostupn{\'{e}}~z: \url{{https://doi.org/10.1177/1461444808089415}}.
+
+\bibitem[Marwick -- danah boyd(2014)Marwick, danah boyd]{networked-privacy}
+{\sc Marwick}, A.~E. -- {\sc boyd}.
+\newblock Networked privacy: How teenagers negotiate context in social media.
+\newblock \emph{New Media \& Society}. 2014, 16, 7, s.~1051--1067.
+\newblock \doi{10.1177/1461444814543995}.
+\newblock Dostupn{\'{e}}~z: \url{{https://doi.org/10.1177/1461444814543995}}.
+
+\bibitem[Morgan(2017)]{uber-spying}
+{\sc Morgan}, R.
+\newblock \emph{Uber settles federal probe over ‘God View’ spy software}
+  [online]. 2017. [cit.~2021-04-02].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://nypost.com/2017/08/15/uber-settles-federal-probe-over-god-view-spy-software/}}.
+
+\bibitem[Mouton et~al.(2016)Mouton, Leenen,,
+  Venter]{social-engineering-definition}
+{\sc Mouton}, F. -- {\sc Leenen}, L. -- {\sc Venter}, H.
+\newblock Social engineering attack examples, templates and scenarios.
+\newblock \emph{Computers \& Security}. 2016, 59, s.~186--209.
+\newblock ISSN 0167-4048.
+\newblock \doi{https://doi.org/10.1016/j.cose.2016.03.004}.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S0167404816300268}}.
 
 \bibitem[MŠMT({\natexlab{a}})]{rvp-is}
 {\sc MŠMT}.
@@ -88,6 +191,13 @@
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.whoishostingthis.com/resources/cookies-guide/#:~:text=Cookies}}.
 
+\bibitem[Rathi(2019)]{ca-elections}
+{\sc Rathi}, R.
+\newblock \emph{Effect of Cambridge Analytica’s Facebook ads on the 2016 US
+  Presidential Election} [online]. 2019. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://towardsdatascience.com/effect-of-cambridge-analyticas-facebook-ads-on-the-2016-us-presidential-election-dacb5462155d}}.
+
 \bibitem[Research(2019)]{lack-of-control}
 {\sc Research}, P.
 \newblock \emph{Americans and Privacy: Concerned, Confused and Feeling Lack of
@@ -101,6 +211,13 @@
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.youtube.com/watch?v=OFRjZtYs3wY}}.
 
+\bibitem[Services(2016)]{police-spying}
+{\sc Services}, T.~N.
+\newblock \emph{AP investigation: Across U.S., police officers abuse
+  confidential databases} [online]. 2016. [cit.~2021-04-02].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.chicagotribune.com/nation-world/ct-ap-police-database-abuse-20160928-story.html}}.
+
 \bibitem[Statcounter(2021)]{google-search}
 {\sc Statcounter}.
 \newblock \emph{Search Engine Market Share Worldwide} [online]. 2021.
@@ -108,11 +225,27 @@
 \newblock Dostupn{\'{e}}~z:
   \url{{https://gs.statcounter.com/search-engine-market-share}}.
 
+\bibitem[Sætra(2020)]{privacy-as-aggregate-public-good}
+{\sc Sætra}, H.~S.
+\newblock Privacy as an aggregate public good.
+\newblock \emph{Technology in Society}. 2020, 63, s.~101422.
+\newblock ISSN 0160-791X.
+\newblock \doi{https://doi.org/10.1016/j.techsoc.2020.101422}.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S0160791X20310381}}.
+
 \bibitem[Tankovska(2020)]{facebook-active-users}
 {\sc Tankovska}, H.
 \newblock \emph{Number of monthly active Facebook users worldwide as of 4th
   quarter 2020} [online]. 2020. [cit.~2021-03-15].
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.statista.com/statistics/264810/number-of-monthly-active-facebook-users-worldwide/}}.
+
+\bibitem[Valášek -- Horák(2020)Valášek, Horák]{china-czech}
+{\sc Valášek}, L. -- {\sc Horák}, J.
+\newblock \emph{Policisté, politici i jejich děti. Čínský armádní
+  dodavatel sbírá data stovek Čechů} [online]. 2020. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://zpravy.aktualne.cz/domaci/policiste-politici-i-jejich-rodina-cinsky-armadni-dodavatel/r~e3e18dfcf6c211ea842f0cc47ab5f122/}}.
 
 \end{thebibliography}
