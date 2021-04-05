@@ -1,0 +1,77 @@
+\chapter{Hlavní zdroje dat digitální stopy uživatele}
+
+\section{Kategorie dat}
+Data, která vytváříme používáním technologií a digitálních služeb, můžeme kategorizovat několik způsoby. Dělení může být například
+\begin{itemize}
+	\item \textbf{aktivní} vs \textbf{pasivní} digitální stopu \citep{pew-digital-footprint}
+    \item případně doplněna o~\textbf{vědomě nevědomou} \citep{fish-digital-footprint}
+\item \textbf{identifikovatelné} vs \textbf{anonymní}
+\end{itemize}
+
+
+\subsection{Aktivní, pasivní, vědomě nevědomá digitální stopa}
+\subsubsection{Aktivní stopa}
+Aktivní stopou se myslí takový typ dat, který uživatel vědomě publikuje. Může jít o~příspěvky, komentáře a reakce na sociálních sitích či osobních webech, fotky a jiné soubory nahrané na cloudová úložiště, nebo vytvořené uživatelské účty.\citep{pew-digital-footprint}
+
+V~tomto pohledu nerozlišujeme, kdo je majitelem dat a jak s~nimi kdo může nakládat, to závisí na podmínkách konkrétní platformy (omezené legislativou dané země).
+
+\subsubsection{Pasivní}
+
+Pasivní stopa se skládá z~typu dat, které uživatel vytváří svým používáním digitální platformy či služby, bez přímého sdílení či nahrávání nějakých svých dat. Obvykle jde o~analytická data, používána pro lepší technický, bezpečnostní nebo marketingo-ekonomický efekt. Může jít o~informace o~zobrazení stránky či příspěvku, IP adresu a další technické parametry připojeného uživatele (například lokaci). Může jít i o~kombinovaná data, například určení zájmů či demografické skupiny, vytvořené na základě jednotlivých dat.
+
+\subsubsection{Vědomě nevědomá}
+
+Tony Fish přidává kategorii vědomě nevědomé digitální stopy, která se skládá z~dat aktivně vložených jinými uživateli.\citep{fish-digital-footprint}
+Může jít o~fotografie - na sociálních sítích, ale například i z~různých akcí (kde člověk zveřejnění dat musí v~České Republice odsouhlasit) nebo o~data zveřejněná úřady
+
+\subsection{Identifikovatelná, Anonymní data}
+
+\subsubsection{Identifikovatelná}
+
+Sem můžeme řadit typ dat, které jsou přímo propojitelné s~naší osobou. Jde pak o~osobní údaje podle definice GDPR:
+
+\begin{displayquote}
+Personal data means any information relating to an identified or identifiable natural person (‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.\citep{gdpr}
+\end{displayquote}
+
+\subsubsection{Anonymní}
+
+Může jít o~data anonymizovaná službou či mezivrstvou, nebo také o~data vytvořená uživatelem s~použitím anonymizačních nástrojů, jako je například VPN (virtuální privátní síť, používána pro skrytí IP adresy uživatele).
+
+\section{Konkrétní typy dat}
+
+\subsection{Historie prohlížení}
+Jednou z~významných součástí pasivní digitální stopy je historie prohlížení - tedy záznam všech námi navštívených webových stránek (případně všech webových requestů).
+
+Samostatně jde o~data anonymní (nejsou přímo spojená s~naší osobou), ovšem v~realitě to tak nemusí být.
+
+Data o~webové aktivitě má poskytovatel internetového připojení (Internet Service Provider - ISP), který je zároveň má spojená s~naší IP adresou, která je vázaná na konkrétní smlouvu o~poskytování internetu. V~České Republice si tato data může vyžádat policie, a prokazatelně to dělá\citep{policie-isp}.
+
+Kromě toho je možné aktivitu uživatelů napříč weby sledovat pomocí cookies třetích stran a různých typů fingerprintingu.
+\subsubsection{Cookies}
+Jak bylo zmíněno v~kapitole 2, cookies jsou soubory, které si stránka ukládá do počítače uživatele, aby ho mohla identifikovat při dalších požadavcích. V~současnosti mnoho webů obsahuje takzvané \textit{cookies třetích stran}, které umožňují službám sledovat aktivitu napříč webem.
+
+\subsubsection{Device a browser fingerprinting}
+S~postupným legislativním tlakem na omezení rozsahu cookies se začaly služby přesouvat k~používání \textit{fingerprintingu}, tedy požívání jakéhosi otisku zařízení nebo prohlížeče, ze kterého uživatel přistupuje. Používané techniky jsou rozmanité, od získávání informací o~prohlížeči a operačním systému (verze, jazyk, instalované doplňky), po \textit{canvas fingerprint} využívající specifika v~renderování webového prvku \verb|canvas|, které se liší podle GPU nebo grafických ovladačů v~daném zařízení.  
+
+Zjistit svůj browser fingerprint lze například na stránce \url{https://amiunique.org/fp}. Služba ukazuje, kolik informací je prohlížeč schopen získat, a to i bez schválení uživatelem. 
+
+\subsubsection{Behavioral fingerprinting}
+Relativně nově se rozvíjející technikou je \textit{Behavioral fingerprinting}, 
+
+\subsection{Lokační data}
+
+\subsection{Data vkládaná na sociální sítě a další platformy}
+\subsubsection{Fotografie}
+
+\subsection{Další data sledovaná sociálními sítěmi a dalšími platformami}
+
+\subsection{Státní rejstříky a databáze}
+\subsubsection{Veřejné}
+\subsubsection{Neveřejné}
+
+\subsection{E-mail}
+
+\subsection{Finanční záznamy}
+
+\subsection{Zdravotní data}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{33}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -58,12 +58,33 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.sciencedirect.com/science/article/pii/S0747563217306817}}.
 
+\bibitem[{Council of European Union}(2016)]{gdpr}
+{\sc {Council of European Union}}.
+\newblock Council regulation ({EU}) no 2016/679, 2016.
+\newblock
+  \newline\url{https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679}.
+
+\bibitem[Doffman(2020)]{ashley-madison-leak}
+{\sc Doffman}, Z.
+\newblock \emph{Ashley Madison Hack Returns To ‘Haunt’ Its Victims: 32
+  Million Users Now Watch And Wait} [online]. 2020.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.forbes.com/sites/zakdoffman/2020/02/01/ashley-madison-hack-returns-to-haunt-its-victims-32-million-users-now-have-to-watch-and-wait/}}.
+
 \bibitem[eMarketer Editors(2019)]{google-ads}
 {\sc Editors}.
 \newblock \emph{US Digital Ad Spending Will Surpass Traditional in 2019}
   [online]. 2019. [cit.~2021-03-15].
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.emarketer.com/content/us-digital-ad-spending-will-surpass-traditional-in-2019}}.
+
+\bibitem[Fish(2009)]{fish-digital-footprint}
+{\sc Fish}, T.
+\newblock \emph{My digital footprint: a two sided digital business model where
+  your privacy will be someone else's business}.
+\newblock Futuretext, 2009.
+\newblock OCLC: 639933238.
+\newblock ISBN 9780955606984.
 
 \bibitem[Foster(2015)]{burglary}
 {\sc Foster}, M.
@@ -84,6 +105,13 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock Wiley, 2011.
 \newblock OCLC: ocn635494717.
 \newblock ISBN 9780470639535 9781118028018 9781118029718 9781118029749.
+
+\bibitem[Hern(2018)]{strava-locations}
+{\sc Hern}, A.
+\newblock \emph{Fitness tracking app Strava gives away location of secret US
+  army bases} [online]. 2018. [cit.~2021-04-02].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.theguardian.com/world/2018/jan/28/fitness-tracking-app-gives-away-location-of-secret-us-army-bases}}.
 
 \bibitem[Hinds et~al.(2020)Hinds, Williams,, Joinson]{privacy-awareness}
 {\sc Hinds}, J. -- {\sc Williams}, E.~J. -- {\sc Joinson}, A.~N.
@@ -117,6 +145,13 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock \emph{New Media \& Society}. 2008, 10, 3, s.~393--411.
 \newblock \doi{10.1177/1461444808089415}.
 \newblock Dostupn{\'{e}}~z: \url{{https://doi.org/10.1177/1461444808089415}}.
+
+\bibitem[Madden et~al.(2007)Madden, Fox, Smith,, Vitak]{pew-digital-footprint}
+{\sc Madden}, M. et~al.
+\newblock \emph{Digital Footprints - Online identity management and search in
+  the age of transparency} [online]. 2007. [cit.~2021-04-02].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.pewresearch.org/internet/wp-content/uploads/sites/9/media/Files/Reports/2007/PIP_Digital_Footprints.pdf.pdf}}.
 
 \bibitem[Marwick -- danah boyd(2014)Marwick, danah boyd]{networked-privacy}
 {\sc Marwick}, A.~E. -- {\sc boyd}.
@@ -211,6 +246,13 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.youtube.com/watch?v=OFRjZtYs3wY}}.
 
+\bibitem[Security(2021)]{data-breaches-2021}
+{\sc Security}, R.~B.
+\newblock \emph{New Research: No. of Records Exposed Increased 141\% in 2020}
+  [online]. 2021. [cit.~2021-04-02].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.riskbasedsecurity.com/2021/01/21/new-research-no-of-records-exposed-increased-141-in-2020/#download}}.
+
 \bibitem[Services(2016)]{police-spying}
 {\sc Services}, T.~N.
 \newblock \emph{AP investigation: Across U.S., police officers abuse
@@ -247,5 +289,12 @@ Identity theft rises sharply as fraudsters target social media.
   dodavatel sbírá data stovek Čechů} [online]. 2020. [cit.~2021-03-15].
 \newblock Dostupn{\'{e}}~z:
   \url{{https://zpravy.aktualne.cz/domaci/policiste-politici-i-jejich-rodina-cinsky-armadni-dodavatel/r~e3e18dfcf6c211ea842f0cc47ab5f122/}}.
+
+\bibitem[Vokuš(2019)]{policie-isp}
+{\sc Vokuš}, P.~J.
+\newblock \emph{Poskytovatelé internetového připojení} [online]. 2019.
+  [cit.~2021-04-02].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.policie.cz/clanek/poskytovatele-internetoveho-pripojeni.aspx}}.
 
 \end{thebibliography}

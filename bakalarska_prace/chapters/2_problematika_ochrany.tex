@@ -28,13 +28,13 @@ Obě tyto firmy mají svůj obchodní model založený na nabízení reklamy - v
 Pro tvorbu profilů jednotlivých uživatelů webu a nabízení reklamy je potřeba sbírat co nejvíce informací o~chování uživatele v~online světě. Vytvoření profilu člověka nebylo technicky téměř možné před začátkem používání \textit{cookies}.
 Cookies byly poprvé implementovány v~roce 1994 do prohlížeče Netscape jako řešení pro ukládání stavu nákupního košíku \citep{cookies-history}. Cookies umožňují uchovávat informace o~uživateli na dané stránce, s~rozvojem webu a zejména vkládání skriptů a iframů do webů to umožnilo sledovat uživatele skrze cookies napříč weby, což umožnilo sledování historie prohlížení části webů a remarketing - nabízení produktů z~obchodu, který uživatel na webu navštívil\citep{scott-cookies}. To byl dlouho hlavní způsob profilování uživatelů pro reklamní účely, postupně byly možnosti cookies právně limitovány, a začaly se používat další techniky - \textit{device} a \textit{browser fingerprinting}, \textit{tracking pixels} nebo \textit{behavioral profiling}.
 
-Na jednotlivé technologie jsou více popsány v~kapitole Klíčové zásady uživatelské ochrany osobních dat.
+Jednotlivé technologie jsou více popsány v~kapitole Hlavní zdroje dat digitální stopy uživatele.
 
 \section{Povědomí o~problematice}
 
 Důležitou otázkou je, jaké je aktuálně povědomí lidí o~této realitě. To není snadná otázka, i z~toho důvodu, že se oblast rychle mění a vyvíjí. Ovšem nějakou představu si udělat můžeme.
 
-Podle PEW Researchje 59\% dotázaných občanů USA podle svého mínění nedostatečně informováno o~tom, jak s~daty společnosti nakládá, a zároveň má 81\% pocit nedostatečné možnosti kontroly, a shodné procento vnímá rizika s~tím spojená z~vyšší než benefity.\citep{lack-of-control}
+Podle PEW Research je 59\% dotázaných občanů USA podle svého mínění nedostatečně informováno o~tom, jak s~daty společnosti nakládá, a zároveň má 81\% pocit nedostatečné možnosti kontroly, a shodné procento vnímá rizika s~tím spojená z~vyšší než benefity.\citep{lack-of-control}
 
 Studie\citep{privacy-awareness} zkoumající povědomí a změny ve vnímání digitálního soukromí mezi studenty po medializované kauze firmy Cambridge Analytica, dochází k~závěrům, že:
 
@@ -80,8 +80,7 @@ To není překvapivé ve chvíli, kdy 50\% respondentů průzkumu na sociálníc
 \subsubsection{Krádeže identity}
 Kromě vloupání také narostl počet krádeží identity \citep{identity-theft-rise}, kdy se použitím dat ze sociálních sítí výrazně zjednodušilo používání cizí identity oproti vytváření falešné například pro pojišťovací podvody. 
 % TODO - patří to sem?
-
-Příkladem krádeže digitální identity je příběh Bryana Rutberga, jemuž se útočník dostal do Facebookového účtu a vylákal peníze z~jeho přátel.
+% Příkladem krádeže digitální identity je příběh Bryana Rutberga, jemuž se útočník dostal do Facebookového účtu a vylákal peníze z~jeho přátel.
 
 \subsubsection{Social engineering}
 Další možností zneužití dat je jejich použití pro další útoky, jako je \textit{spear phishing} a obecně v~oblasti \textit{social engineering}. Jednou z~fází social engineering útoků je \textit{information gathering}\citep{social-engineering-definition}, které sociální sítě výrazně zjednodušily. Spear phishing útoky jsou často zaměřené na firmy, nástrojem pro sběr informací pak může být například profesní sociální síť LinkedIn \citep{social-engineering-tools}, nebo pomocí nalezení specifických zájmů osoby, skrze teré dojde k~navázání kontaktu a získání důvěry \citep{social-engineering-book}
@@ -96,12 +95,11 @@ Ve Spojených státech vyšetřování ukázalo, že zaměstnanci policie ve sto
 Výrazně odlišným tématem, který však také ukazuje na rizika sdílení různých osobních dat, jsou opakované případy, kdy se fotografie dětí, sdílené jejich rodiči na sociálních sítích nebo sdílecích službách (ulozto.cz, rajce.cz), dostanou do oběhu ve skupinách pedofilů \citep{pedophiles-web}.
 
 \subsubsection{Úniky dat}
-Ashley Madison
+Už běžnou součástí digitálního světa jsou úniky dat - jen v~roce 2020 bylo zveřejněno téměř 4000 případů \citep{data-breaches-2021}. Tato data mohou být riziková z~mnoha pohledů, výraznou ukázkou je únik dat služby Ashley Madison - seznamovací aplikace pro zadané. Tato data byla využita pro vydírání uživatelů skrze e-maily obsahující citlivá data a vyhrožující jejich zveřejněním rodině a na sociálních sítích.\citep{ashley-madison-leak}
 
 Další případy - ve spojení s~konkrétními postupy pro jejich zamezení - jsou rozebrány v~kapitole Klíčové zásady uživatelské ochrany osobních dat.
 
-Je možné si všimnout, že v~několika z~těchto případů se obejvuje zmiňovaný princip \textit{networked privacy} - tedy osoba, která data sdílí nemusí být stejná jako ta, která je terčem zneužití. 
-
+Je možné si všimnout, že v~několika z~těchto případů se obejvuje zmiňovaný princip \textit{networked privacy} - tedy osoba, která data sdílí nemusí být stejná jako ta, která je terčem zneužití.
 
 \subsection{S~dopadem na společnost}
 Henrik Skaug Sætra tvrdí, že nahlížení na soukromí pouze z~pohledu jednotlivce a jeho svobodné volby se svými daty a soukromím naložit podle svého uvážení, není dostatečný\citep{privacy-as-aggregate-public-good}. Argumentuje tím, že volba jednotlivce v~má tomto případě dopady i na ostatní - například na jejich možnosti uchování soukromí:
@@ -119,11 +117,13 @@ Tento pohled se dá stručně ukázat na příkladech konkrétních momentů, kd
 \subsubsection{Cambridge Analytica}
 Případ firmy Cambridge Analytica, která získala a zpracovala data z~více než 50 milionů profilů na Facebooku\citep{cambridge-analytica} pro použití v~profilované politické reklamě, je pravděpodobně dostud největší kauza, otevírající téma soukromí a osobních dat. Ač se po letech vyšetřování ukazuje, že byl pravděpodobně vliv menší, než se zdálo\citep{ca-brexit}\citep{ca-elections}, vyvolala mnoho otázek mimojiné o~tom, jak můžou být osobní data využita pro politickou kampaň v~dosud neviděném měřítku.
 
-
 \subsubsection{Čínský sběr dat}
 Česku bližší případ práce s~osobními daty s~potenciálním vlivem na celou společnost, je firma Zhenhua Data Technology, která vytvářela na základě získaných veřejných a komerčně dostupných dat profily strategicky významných osob české společnosti. Šlo o~politiky, pracovníky bezpečnostních složek či podnikatele \citep{china-czech}. Česko bylo samozřejmě jenom jednou z~mnoha zemí, o~kterých tento sběr a analýza probíhaly, ukázal ale jasněji, jak může být s~daty nakládáno.
 Zajímavé je, že i v~tomto případě byla část dat z~automatizovaného sběru ze sociální sítě Facebook, která tuto praktiku zakazuje. Firma Zhenhua byl pak dle mluvší Facebooku ze sítě zablokována, ovšem ukazuje to na fakt, že ani po kauze Cambridge Analytica se reálná ochrana nakládání osobními daty u~této firmy příliš nezměnila.
 
 \subsubsection{Citlivá lokační data}
-Strava - military base
-Locatios
+Příkladem ohrožení veřejných zájmů může být i případ, kdy fitness aplikace Strava zveřejnila mapu agregovaného pohybu uživatelů. Na mapě se tím objevilo umístění vojenských základen USA, nepříklad v~Afghánistánu.\citep{strava-locations}
+
+\section{Shrnutí}
+V~této kapitole jsme si nastínili, jak můžeme na problematiku osobních dat nahlížet, a jaká jsou konkrétní rizika s~ní spojená.
+V~další kapitole se podíváme na to, jaká data běžným fungováním v~digitálním světě vznikají.
