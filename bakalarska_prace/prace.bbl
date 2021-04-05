@@ -1,4 +1,4 @@
-\begin{thebibliography}{40}
+\begin{thebibliography}{43}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -123,6 +123,26 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock \doi{https://doi.org/10.1016/j.ijhcs.2020.102498}.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.sciencedirect.com/science/article/pii/S1071581920301002}}.
+
+\bibitem[Ikuesan -- Venter(2019)Ikuesan, Venter]{digital-behavior-fingerprint}
+{\sc Ikuesan}, A.~R. -- {\sc Venter}, H.~S.
+\newblock Digital behavioral-fingerprint for user attribution in digital
+  forensics: Are we there yet?
+\newblock \emph{Digital Investigation}. 2019, 30, s.~73--89.
+\newblock ISSN 1742-2876.
+\newblock \doi{https://doi.org/10.1016/j.diin.2019.07.003}.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S1742287619300945}}.
+
+\bibitem[Jorgensen -- Yu(2011)Jorgensen, Yu]{mouse-behavioral-biometrics}
+{\sc Jorgensen}, Z. -- {\sc Yu}, T.
+\newblock On Mouse Dynamics as a Behavioral Biometric for Authentication.
+\newblock In \emph{Proceedings of the 6th ACM Symposium on Information,
+  Computer and Communications Security}, ASIACCS '11, s. 476–482, New York,
+  NY, USA, 2011. Association for Computing Machinery.
+\newblock \doi{10.1145/1966913.1966983}.
+\newblock Dostupn{\'{e}}~z: \url{{https://doi.org/10.1145/1966913.1966983}}.
+\newblock ISBN 9781450305648.
 
 \bibitem[Juna -- Burýšek(2020)Juna, Burýšek]{pedophiles-web}
 {\sc Juna}, P. -- {\sc Burýšek}, J.
@@ -296,5 +316,14 @@ Identity theft rises sharply as fraudsters target social media.
   [cit.~2021-04-02].
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.policie.cz/clanek/poskytovatele-internetoveho-pripojeni.aspx}}.
+
+\bibitem[Yang(2010)]{behavioral-profiling}
+{\sc Yang}, Y.~C.
+\newblock Web user behavioral profiling for user identification.
+\newblock \emph{Decision Support Systems}. 2010, 49, 3, s.~261--271.
+\newblock ISSN 0167-9236.
+\newblock \doi{https://doi.org/10.1016/j.dss.2010.03.001}.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S0167923610000497}}.
 
 \end{thebibliography}
