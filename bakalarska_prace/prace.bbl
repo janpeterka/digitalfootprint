@@ -1,4 +1,4 @@
-\begin{thebibliography}{43}
+\begin{thebibliography}{44}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -302,6 +302,13 @@ Identity theft rises sharply as fraudsters target social media.
   quarter 2020} [online]. 2020. [cit.~2021-03-15].
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.statista.com/statistics/264810/number-of-monthly-active-facebook-users-worldwide/}}.
+
+\bibitem[Thompson -- Warzel(2019)Thompson, Warzel]{location-data}
+{\sc Thompson}, S.~A. -- {\sc Warzel}, C.
+\newblock \emph{Twelve Million Phones, One Dataset, Zero Privacy} [online].
+  2019. [cit.~2021-04-05].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.nytimes.com/interactive/2019/12/19/opinion/location-tracking-cell-phone.html}}.
 
 \bibitem[Valášek -- Horák(2020)Valášek, Horák]{china-czech}
 {\sc Valášek}, L. -- {\sc Horák}, J.

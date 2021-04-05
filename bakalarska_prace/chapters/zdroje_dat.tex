@@ -1,5 +1,9 @@
 \chapter{Hlavní zdroje dat digitální stopy uživatele}
 
+\section{Úvod}
+V~této kapitole se podíváme na kategorizace dat podle toho, jak se uživatel podílel na jejich vytvoření, a podle jejich anonymity.\\
+Dále si rozebereme konkrétní typy dat pro úplnější představu o~tom, co všechno je ukládáno a zpracováváno.\\   
+
 \section{Kategorie dat}
 Data, která vytváříme používáním technologií a digitálních služeb, můžeme kategorizovat několik způsoby. Dělení může být například
 \begin{itemize}
@@ -57,12 +61,31 @@ S~postupným legislativním tlakem na omezení rozsahu cookies se začaly služb
 Zjistit svůj browser fingerprint lze například na stránce \url{https://amiunique.org/fp}. Služba ukazuje, kolik informací je prohlížeč schopen získat, a to i bez schválení uživatelem. 
 
 \subsubsection{Behavioral profiling}
-Relativně nově používanou technikou je \textit{Behavioral profiling}, který se snaží rozlišit uživatele podle jejich chování - primárně charakteristik pohybu myši nebo způsobu psaní na klávesnici\citep{behavioral-profiling}\citep{mouse-behavioral-biometrics}\citep{digital-behavior-fingerprint}. Tento způsob je stále ještě méně spolehlivý než dříve zmíněné, neboť využívá výrazně rozmanitější typ dat, ale v~kombinaci s~jinými nástroji, a s~rostoucími možnosti vyhodnocování těchto dat (například využitím strojového učení) se stává nezanedbatelnou možností v~repertoáru nástrojů pro profilování a identifikaci uživatele.
+Relativně nově používanou technikou je \textit{Behavioral profiling}, který se snaží rozlišit uživatele podle jejich chování - primárně charakteristik pohybu myši nebo způsobu psaní na klávesnici\citep{behavioral-profiling}\citep{mouse-behavioral-biometrics}\citep{digital-behavior-fingerprint}.\\
+Tento způsob je stále ještě méně spolehlivý než dříve zmíněné, neboť využívá výrazně rozmanitější typ dat, ale v~kombinaci s~jinými nástroji, a s~rostoucími možnosti vyhodnocování těchto dat (například využitím strojového učení) se stává nezanedbatelnou možností v~repertoáru nástrojů pro profilování a identifikaci uživatele.
 
 \subsection{Lokační data}
+Jak bylo zmíněno v~kapitole Rizikové dopady sběru osobních dat, jedním z~typů vyhledávaných dat jsou data lokační.
+
+Tato data mohou například poskytnout vhled, do jakých obchodů uživatel chodí, a nabídnout tak \textit{remarketing} napříč fyzickým a digitálním světem.
+
+Lokační data je v~současné době, kdy většina lidí vlastní smartphone, snadné získat. I~aplikace, které reálně data pro svoje funkce nepotřebují, o~ně mohou uživatele požádat. Prodejem těchto dat pak mohou získat finance na samotný vývoj aplikace \uv{zdarma}.\\
+\textit{Zde je na místě říct, že možnosti prodeje dat se mohou výrazně lišit podle toho, v~jaké zemi - a tedy pod jakou legislativou - se uživatel pohybuje.}
+
+Mohlo by se zdát, že lokační data jsou anonymní (typicky obsahují nějaké náhodné ID zařízení, časovou značku a lokaci), v~realitě jsou však velmi snadno deanonymizována:
+\begin{blockquote}
+Describing location data as anonymous is “a completely false claim” that has been debunked in multiple studies, Paul Ohm, a law professor and privacy researcher at the Georgetown University Law Center, told us. “Really precise, longitudinal geolocation information is absolutely impossible to anonymize.”
+
+“D.N.A.,” he added, “is probably the only thing that’s harder to anonymize than precise geolocation information”\citep{location-data}.
+\end{blockquote}
 
 \subsection{Data vkládaná na sociální sítě a další platformy}
+Nejvýznamnější složkou aktivní (veřejné) digitální stopy jsou pravděpodobně v~současné době sociální sítě a obsah na nich.
+
+
+% big5 profiling a podobné
 \subsubsection{Fotografie}
+% Metadata
 
 \subsection{Další data sledovaná sociálními sítěmi a dalšími platformami}
 
@@ -73,5 +96,7 @@ Relativně nově používanou technikou je \textit{Behavioral profiling}, který
 \subsection{E-mail}
 
 \subsection{Finanční záznamy}
+% Bankovní výpisy
+% - policie
 
 \subsection{Zdravotní data}
