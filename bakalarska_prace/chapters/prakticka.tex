@@ -1,9 +1,117 @@
 \chapter{Praktická část}
 
+\section*{Úvod}
+Praktická část této balakářské práce se zabývá navržením a vytvořením prostředí (dále \textit{Aplikace}) pro vzdělávání této tématiky
+
 \section{Východiska}
-\subsection{Cíle prototypu}
+Jak vyplývá z~kapitoly \textit{Zařazení problematiky digitální stopy do školních výukových materiálů}, téma digitální stopy a osobních dat se nejspíše bude po revizích více objevovat v~RVP středních škol. Na tuto skupinu studentů tedy bude Aplikace cílit.
 
-\section{Scénáře}
+Prostředí může sloužit jako součást většího vzdělávacího oblouku, ovšem tato práce si nedává za cíl vytvoření metodik pro učitele, a tedy musí obsah Aplikace fungovat i sám o~sobě.
 
-\section{Výběr technologií}
+Cílem je uživatele (studenty) v~Aplikaci seznámit s~tématem interaktivní, lákavou formou.
 
+Zároveň však součástí Aplikace musí být kvalitní napojení na teorii i reálné příklady, včetně informování uživatele o~tom, jak může svou digitální stopu spravovat.
+
+\subsection{Návrh aplikace z~pohledu uživatele}
+Návrh aplikace je následující:
+Uživatel má možnost odehrát jednotlivé \uv{Mise}, které představují fiktivní příběh. V~každé Misi má uživatel ze simulovaných osobních dat různého typu vyřešit na začátku danou otázku.
+Zjednodušený use-case tedy je:
+\begin{itemize}
+	\item uživatel si vybírá Misi
+	\item uživatel je seznámen s~příběhem mise (symbolickým rámcem) a cílem - co je potřeba zjistit pro splnění Mise
+	\item uživatel využívá dané datasety pro nalezení řešení
+	\item po správném zadání odpovědi jsou uživateli zobrazeny doplňující informace - napojení na teorii, příklady z~reálného světa, možnosti zabezpečení se v~podobné situaci.
+\end{itemize}
+
+V~sekci \textit{Scénáře} budou popsány konkrétní možné scénáře, z~nich část bude použita v~prototypu.
+
+\subsection{Prototyp}
+Jak bylo řečeno, cílem práce je vytvoření prototypu. Ten tedy nemusí mít všechny funkce či grafické řešení aplikace, která by byla reálně veřejně použita ve vzdělávání, má za cíl pouze najít vhodnou podobu, otestovat její technickou proveditelnost a náročnost, a získat zpětnou vazbu od vybraných testerů.
+
+
+\subsection{Scénáře}
+Jak bylo popsáno, jádrem Aplikace jsou Mise - tedy jednotlivé příběhy, ve kterých se uživatel seznamuje s~různými situacemi, týkajícími se osobních dat.
+
+Aplikace bude navržena tak, aby bylo možné snadno další scénáře přidávat, a tím rozšiřovat její vzdělávací potenciál (například v~zacílení na jiné věkové skupiny).
+
+Při tvorbě scénářů vycházím z~dat a rizik popsaných v~předchozích kapitolách a navrhuji následující testovací scénáře, které představují různé typy a kategorie dat.
+
+\textit{Uvědomuji si, že některé scénáře ukazují činnost, jež je ilegální. Domnívám se, že možnost prožít si situaci z~pohledu útočníka může vést k~lepšímu prožití a přenesení do uvažování o~vlastní ochraně. Zároveň u~každého takového scénáře bude upozorněno, že jde o~simulaci a jaké trestněprávní dopady by taková činnost měla v~reálném světě.}
+
+\subsubsection*{Odhadnutí hesla}
+\textbf{Cíl}\\
+Uhodnout heslo blízké osoby na sociální síť.\\
+\textbf{Používané zdroje dat}\\
+Příspěvky na sociální síti.\\
+\textbf{Typ dat}\\
+Veřejné / veřejné pro okruh lidí.\\
+\textbf{Dodatečné informace}\\
+Informace o~tom, jak lidé tvoří hesla\\
+Případy toho, kdy lidé měli veřejně informace, jež vedly k~prolomení hesla.\\
+Obecná doporučení, jak chránit svoje hesla\\
+Upozornění na nelegálnost takové činnosti v~reálním životě\\
+
+V~tomto scénáři je úkolem uhodnout heslo do sociální sítě. Scénář se odkazuje na témata vhodného zabezpečení svých účtů a sicuací, kdy člověkem sdílené informace napomáhají k~prolomení jeho obran.
+
+Jde o~jednoduchý, začáteční scénář -- pracuje s~veřejnými daty z~jednoho zdroje. Je cíleně zjednodušený oproti realitě.
+
+\textit{Scénář se nezabývá hesly z~pohledu kryptografického a obecně bezpečnostního, neboť to je již mimo rozsah naší práce. Bylo by však pravděpodobně možné takový scénář do Aplikace přidat pro vzdělávání v~této oblasti.}
+
+
+\subsubsection*{Plánování vloupání}
+Tento scénář již ukazuje práci s~více zdroji dat a klade na uživatele větší nároky v~hledání částí informací.
+
+\textbf{Cíl}\\
+Naplánovat vloupání dané osoby -- udělat si představu o~jejím bydlišti a době, kdy bude dům prázdný.
+\textbf{Používané zdroje dat}\\
+Příspěvky na sociální síti
+Příspěvky z~fitness sociální sítě\\
+Stránky firmy\\
+\textbf{Typ dat}\\
+Veřejná data
+\textbf{Dodatečné informace}\\
+Případy z~praxe\\
+Obecná doporučení, jak se tomuto typu útoku bránit\\ 
+Upozornění na nelegálnost takové činnosti v~reálním životě\\
+
+
+\subsubsection*{Vyšetřování korupce}
+
+\textbf{Cíl}\\
+U~podezřelé osoby vyšetřit možné korupční vazby na jiné osoby.\\
+\textbf{Používané zdroje dat}\\
+Lokační data od operátorů\\
+Výpisy z~bankovního účtu\\
+Výpisy hovorů a SMS zpráv\\
+\textbf{Typ dat}\\
+Soukromé -- dostupné pouze poskytovatelům a v~oprávněných případech policii\\
+\textbf{Dodatečné informace}\\
+Informace o~sběru a uchovávání dat operátory\\
+Informace o~přesnosti lokačních dat\\
+Informace o~právních možnostech policie si tato data vyžádat\\
+
+
+\subsubsection*{Výběr vhodné reklamy} 
+
+\textbf{Cíl}\\
+Vybrat, jaké reklamy zobrazit jakým uživatelům.
+\textbf{Používané zdroje dat}\\
+Příspěvky na sociálních sítích\\
+Chování na sociálních sítích\\
+Historie prohlížení\\
+Lokační data\\
+\textbf{Typ dat}\\
+Soukromé -- data sbírají aplikace.
+\textbf{Dodatečné informace}\\
+Napojení na teorii \textit{attention economy}\\
+Informace o~možnostech nastavení ochrany soukromí v~různých aplikacích.\\
+
+Tento scénář simuluje fungování vyhodnocování dat algoritmy firem jako je Facebook nebo Google, a následnou reklamní aukci. Má potenciál, aby na něj bylo navázáno šířeji tématem personalizované reklamy a \textit{attention economy}. 
+
+\section{Uživatelské workflow a use-cases}
+
+\section{Technické řešení}
+\subsection{Výběr technologií}
+
+\section{Ověření a otestování aplikace}
+\subsection{Vyhodnocení provedeného ověření a doporučení pro další rozvoj aplikace}

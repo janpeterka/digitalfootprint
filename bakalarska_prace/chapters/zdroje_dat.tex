@@ -2,7 +2,8 @@
 
 \section{Úvod}
 V~této kapitole se podíváme na kategorizace dat podle toho, jak se uživatel podílel na jejich vytvoření, a podle jejich anonymity.\\
-Dále si rozebereme konkrétní typy dat pro úplnější představu o~tom, co všechno je ukládáno a zpracováváno.\\   
+Dále si rozebereme konkrétní typy dat pro úplnější představu o~tom, co všechno je ukládáno a zpracováváno.\\
+Tato data budou užitečná v~praktické části práce pro vytváření scénářů a modelových dat podle reálných typů dat a možnostech přístupu k~nim.
 
 \section{Kategorie dat}
 Data, která vytváříme používáním technologií a digitálních služeb, můžeme kategorizovat několik způsoby. Dělení může být například
@@ -47,13 +48,17 @@ Může jít o~data anonymizovaná službou či mezivrstvou, nebo také o~data vy
 \subsection{Historie prohlížení}
 Jednou z~významných součástí pasivní digitální stopy je historie prohlížení -- tedy záznam všech námi navštívených webových stránek (případně všech webových requestů).
 
+
 Samostatně jde o~data anonymní (nejsou přímo spojená s~naší osobou), ovšem v~realitě to tak nemusí být.
 
-Data o~webové aktivitě má poskytovatel internetového připojení (Internet Service Provider -- ISP), který je zároveň má spojená s~naší IP adresou, která je vázaná na konkrétní smlouvu o~poskytování internetu. V~České Republice si tato data může vyžádat policie, a prokazatelně to dělá\citep{policie-isp}.
+Tato data může uchovávat internetová prohlížeč, a to buď lokálně nebo na cloudu. Například v~případě prohlížeče Google Chrome se zapnutou synchronizací jsou tyto informace ukládány jako součást dat Google profilu.
+
+Data o~webové aktivitě má také poskytovatel internetového připojení (Internet Service Provider -- ISP), který je zároveň má spojená s~naší IP adresou, která je vázaná na konkrétní smlouvu o~poskytování internetu. V~České Republice si tato data může vyžádat policie, a prokazatelně to dělá\citep{policie-isp}.
 
 Kromě toho je možné aktivitu uživatelů napříč weby sledovat pomocí cookies třetích stran a různých typů fingerprintingu.
 \subsubsection{Cookies}
 Jak bylo zmíněno v~kapitole 2, cookies jsou soubory, které si stránka ukládá do počítače uživatele, aby ho mohla identifikovat při dalších požadavcích. V~současnosti mnoho webů obsahuje takzvané \textit{cookies třetích stran}, které umožňují službám sledovat aktivitu napříč webem.
+% google analytics
 
 \subsubsection{Device a browser fingerprinting}
 S~postupným legislativním tlakem na omezení rozsahu cookies se začaly služby přesouvat k~používání \textit{fingerprintingu}, tedy požívání jakéhosi otisku zařízení nebo prohlížeče, ze kterého uživatel přistupuje. Používané techniky jsou rozmanité, od získávání informací o~prohlížeči a operačním systému (verze, jazyk, instalované doplňky), po \textit{canvas fingerprint} využívající specifika v~renderování webového prvku \verb|canvas|, které se liší podle GPU nebo grafických ovladačů v~daném zařízení.  
@@ -73,14 +78,18 @@ Lokační data je v~současné době, kdy většina lidí vlastní smartphone, s
 \textit{Zde je na místě říct, že možnosti prodeje dat se mohou výrazně lišit podle toho, v~jaké zemi -- a tedy pod jakou legislativou -- se uživatel pohybuje.}
 
 Mohlo by se zdát, že lokační data jsou anonymní (typicky obsahují nějaké náhodné ID zařízení, časovou značku a lokaci), v~realitě jsou však velmi snadno deanonymizována:
-\begin{blockquote}
+
+\begin{displayquote}
 Describing location data as anonymous is “a completely false claim” that has been debunked in multiple studies, Paul Ohm, a law professor and privacy researcher at the Georgetown University Law Center, told us. “Really precise, longitudinal geolocation information is absolutely impossible to anonymize.”
 
 “D.N.A.,” he added, “is probably the only thing that’s harder to anonymize than precise geolocation information”\citep{location-data}.
-\end{blockquote}
+\end{displayquote}
+
+% Google lokační datas
 
 \subsection{Data vkládaná na sociální sítě a další platformy}
 Nejvýznamnější složkou aktivní (veřejné) digitální stopy jsou pravděpodobně v~současné době sociální sítě a obsah na nich.
+
 
 
 % big5 profiling a podobné
@@ -88,6 +97,69 @@ Nejvýznamnější složkou aktivní (veřejné) digitální stopy jsou pravděp
 % Metadata
 
 \subsection{Další data sledovaná sociálními sítěmi a dalšími platformami}
+Kromě dat, které na sociální sítě uživatel vědomě vkládá, tyto služby sbírají a vytváří další data, napojená na náš profil. Alespoň část z~nich můžeme vidět, když si od daných služeb svoje data vyžádáme (na což máme dle GDPR nárok).
+V~datech z~Facebooku je možné vidět například tyto typy dat, které jako uživatel typicky nevím, že Facebook uchovává (nejsou nikde zobrazována) a nejsou třeba pro uživatelskou funkcionalitu služby:
+\begin{itemize}
+	\item \textbf{friend\_peer\_group} -- \textit{Popis životní etapy vašich přátel na Facebooku}\\
+	Facebook si na základě dat o~uživateli jeho profil zařadí do některé z~předem definovaných skupin, například \textit{Začínající dospělý život}, a tu pak využívá pro cílení reklamy a celkové nastavení toho, co uživatel vidí.
+	
+	\item \textbf{viewed}
+	Facebook sleduje ve speciální kategorii
+	\begin{itemize}
+		\item jaká videa, jakou část z~nich, a kolik času celkově jsem strávil u~videí z~Facebook View
+		\item jaké zboží na Facebook Marketplace jsem si prohlížel
+		\item na jaké zobrazené reklamy jsem reagoval
+	\end{itemize}
+	Celkově zde jde o~data, která jsou velmi cenná z~pohledu reklams, monetizace a udržení uživatele ve službě.
+	
+	\item \textbf{ads\_interests}
+	Facebook k~uživateli přiřazuje zájmy, které jsou pak využívány na reklamních aukcích.
+
+	\item \textbf{unfollowed\_pages}
+	Facebook zachovává historii toho, jaké stránky uživatel přestal sledovat.
+
+	\item \textbf{removed\_friends}
+	Stejně tak uchovává informaci o~ukončených \uv{přátelstvích}.
+
+	\item \textbf{group interactions}
+	Počet interakcí (příspěvků, komentářů, reakcí) ve skupinách, jejichž je uživatel členem.
+
+	\item \textbf{people interactions}
+	Počet interakcí s~osobními profily.
+
+	\item \textbf{your\_topics} -- \textit{Sbírka témat, které určuje vaše aktivita na Facebooku a na jejímž základě se vytvářejí doporučení pro vás v~různých částech Facebooku, jako je třeba kanál vybraých příspěvků, Zpravodajství nebo Watch.}
+	Podobně jak ads\_topics -- seznam témat, jež se Facebook domnívá, že uživatele zajímají, a podle nich přizpusobuje zobrazovaný obsah.
+\end{itemize}
+
+Podobně je možné se podívat na některá data, která vytváří a uchovává Google (samozřejmě podle toho, které služby uživatel používá). Opět zde uvedu některá překvapivější, která se nezdají nutná pro základní funkcionalitu (v~této sekci uvádím data, která nelze zařadit do jiné sekce).
+U~každého bodu pak uvedu (pokud to bude možné), skrze jakou službu tato data vznikají .
+
+\begin{itemize}
+	\item \textbf{názvy tisknutých souborů}\\
+	Služba \textit{Google Cloud Print}, umožňující tisk přes internet, uchovává seznam s~názvem tisknutých souborů.
+
+	\item \textbf{informace o~hrách}\\
+	O~uživatelích služby \textit{Google Play Games} jsou uchovávána například data o~tom, kdy poprvé a kdy naposledy hráli danou hru, a souhrnné herní statistiky. Kromě toho jsou v~jiné sekci uloženy všechny záznamy spuštění her. 
+
+	\item \textbf{hudba}\\
+	Služba \textit{Google Play Music} uchovává mimojiné informaci o~počtu přehrání jednotlivých skladeb, a seznam všech spuštění nahrávek s~jejich časovou značkou. To platí i u~služby \textit{Google Podcasts}.
+
+	\item \textbf{aplikace}\\
+	Služba \textit{Google Store} -- tedy nejpoužívanější služba pro správu a instalaci aplikací na zařízeních s~operačním systémem \textit{Android} -- kromě seznamu někdy instalovaných aplikací zaznamenává údaje o~zařízení (konkrétní model telefonu), na kterých byla instalována a telefonního operátora. Dále je uložena informace o~každé instalaci a odinstalaci aplikací.
+	
+	\item \textbf{reklamy}\\
+	Google uchovává informaci o~všech reakcích (kliknutích) uživatele na zobrazené reklamy
+
+	\item \textbf{Android}\\
+	Seznam všech otevření aplikací. Vztahuje se na uživatele používající operační systém \textit{Android} s~přihlášeným profilem Google. 
+
+	\item \textbf{hlasové pokyny}\\
+	Hlasové pokyny pro službu \textit{Google Assistant} jsou ukládány jako originální zvukové nahrávky. To se děje i v~případech, kdy začalo zařízení poslouchat \uv{omylem} -- kdy uživatel neřekl klíčové slovo pro začátek poslechu, ale jiný zvuk tak byl mylně interpretován. 
+
+	\item \textbf{vyhledávání}\\
+	Služba \textit{Google Search} uchovává informaci o~každém vyhledávání a o~tom, kam z~něj uživatel pokračoval
+\end{itemize}
+
 
 \subsection{Státní rejstříky a databáze}
 \subsubsection{Veřejné}
@@ -96,7 +168,9 @@ Nejvýznamnější složkou aktivní (veřejné) digitální stopy jsou pravděp
 \subsection{E-mail}
 
 \subsection{Finanční záznamy}
+% Google Pay
 % Bankovní výpisy
 % -- policie
 
 \subsection{Zdravotní data}
+% Google Fit
