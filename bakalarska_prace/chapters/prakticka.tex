@@ -1,7 +1,7 @@
 \chapter{Praktická část}
 
 \section*{Úvod}
-Praktická část této balakářské práce se zabývá navržením a vytvořením prostředí (dále \textit{Aplikace}) pro vzdělávání této tématiky
+Praktická část této balakářské práce se zabývá navržením a vytvořením prostředí (dále \textit{Aplikace}) pro vzdělávání této tématiky.
 
 \section{Východiska}
 Jak vyplývá z~kapitoly \textit{Zařazení problematiky digitální stopy do školních výukových materiálů}, téma digitální stopy a osobních dat se nejspíše bude po revizích více objevovat v~RVP středních škol. Na tuto skupinu studentů tedy bude Aplikace cílit.
@@ -18,7 +18,7 @@ Uživatel má možnost odehrát jednotlivé \uv{Mise}, které představují fikt
 Zjednodušený use-case tedy je:
 \begin{itemize}
 	\item uživatel si vybírá Misi
-	\item uživatel je seznámen s~příběhem mise (symbolickým rámcem) a cílem - co je potřeba zjistit pro splnění Mise
+	\item uživatel je seznámen s~příběhem Mise (symbolickým rámcem) a cílem - co je potřeba zjistit pro splnění Mise
 	\item uživatel využívá dané datasety pro nalezení řešení
 	\item po správném zadání odpovědi jsou uživateli zobrazeny doplňující informace - napojení na teorii, příklady z~reálného světa, možnosti zabezpečení se v~podobné situaci.
 \end{itemize}
@@ -27,6 +27,8 @@ V~sekci \textit{Scénáře} budou popsány konkrétní možné scénáře, z~nic
 
 \subsection{Prototyp}
 Jak bylo řečeno, cílem práce je vytvoření prototypu. Ten tedy nemusí mít všechny funkce či grafické řešení aplikace, která by byla reálně veřejně použita ve vzdělávání, má za cíl pouze najít vhodnou podobu, otestovat její technickou proveditelnost a náročnost, a získat zpětnou vazbu od vybraných testerů.
+
+Prototyp bude obsahovat několik scénářů s~různými typy dat.
 
 
 \subsection{Scénáře}
@@ -59,8 +61,6 @@ Jde o~jednoduchý, začáteční scénář -- pracuje s~veřejnými daty z~jedno
 
 
 \subsubsection*{Plánování vloupání}
-Tento scénář již ukazuje práci s~více zdroji dat a klade na uživatele větší nároky v~hledání částí informací.
-
 \textbf{Cíl}\\
 Naplánovat vloupání dané osoby -- udělat si představu o~jejím bydlišti a době, kdy bude dům prázdný.
 \textbf{Používané zdroje dat}\\
@@ -74,9 +74,10 @@ Případy z~praxe\\
 Obecná doporučení, jak se tomuto typu útoku bránit\\ 
 Upozornění na nelegálnost takové činnosti v~reálním životě\\
 
+Tento scénář již ukazuje práci s~více zdroji dat a klade na uživatele větší nároky v~hledání částí informací.
+
 
 \subsubsection*{Vyšetřování korupce}
-
 \textbf{Cíl}\\
 U~podezřelé osoby vyšetřit možné korupční vazby na jiné osoby.\\
 \textbf{Používané zdroje dat}\\
@@ -92,7 +93,6 @@ Informace o~právních možnostech policie si tato data vyžádat\\
 
 
 \subsubsection*{Výběr vhodné reklamy} 
-
 \textbf{Cíl}\\
 Vybrat, jaké reklamy zobrazit jakým uživatelům.\\
 \textbf{Používané zdroje dat}\\
@@ -112,6 +112,37 @@ Tento scénář simuluje fungování vyhodnocování dat algoritmy firem jako je
 
 \section{Technické řešení}
 \subsection{Výběr technologií}
+Prototyp jsem se rozhodl vytvářet ve formě webové aplikace.
+Hlavními důvody pro toto rozhodnutí bylo:
+\begin{itemize}
+	\item dostupnost pro uživatele i testery\\
+	Není potřeba nic instalovat, stačí jakýkoli moderní webový prohlížeč.
+	\item snadné vytvoření prototypu
+	\item snadná rozšiřitelnost a kooperace na projektu\\ Jako open-source projekt předpokládá možnosti další spolupráce, například s~designéry. Úprava vizuálu je v~případě webové aplikace čistě HTML+CSS(+JS), což je rozšířená dovednost, oproti jiným grafickým prostředím (jako Qt či herní enginy).
+\end{itemize}
 
-\section{Ověření a otestování aplikace}
+Konkrétně jsem se rozhodl pro využití webového frameworku \textbf{Flask} (založeného na jazyce Python). Motivací byla osobní zkušenost s~tímto frameworkem, takže jsem měl dostatečnou představu o~tom, že je v~něm možné prototyp bez problémů vytvořit.
+
+Na frontendové straně jsem se pro potřeby prototypu rozhodl nezavádět žádný rozsáhlý framework a pro někde nutné části Javascriptu jsem použil pouze microframework \textbf{stimulus.js} a \textbf{jQuery}.
+
+Vývoj je verzován systémem \textbf{git} za použití veřejného repozitáře na službě GitHub.
+
+\subsection{Základní funkcionality}
+\subsubsection*{Nahrát předem definovaná data Mise}
+\subsubsection*{Zobrazit misi s~jednotlivými záložkami}
+\subsubsection*{Zobrazovat data různých typů}
+\begin{itemize}
+	\item Příspěvky na sociálních sítích
+	\item Výměna zpráv mezi dvěma osobami
+	\item Výpis dat\\
+		seznam hovorů, výpis z~bankovního účtu,...
+	\item Datové body na mapě
+	\item Souhrnné informace\\
+		například informace, které uchovávají sociální sítě o~jednotlivých uživatelích
+	\item webové stránky
+\end{itemize}
+
+\subsection{Objektová vrstva}
+
+\subsection{Ověření a otestování aplikace}
 \subsection{Vyhodnocení provedeného ověření a doporučení pro další rozvoj aplikace}

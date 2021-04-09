@@ -57,8 +57,7 @@ Data o~webové aktivitě má také poskytovatel internetového připojení (Inte
 
 Kromě toho je možné aktivitu uživatelů napříč weby sledovat pomocí cookies třetích stran a různých typů fingerprintingu.
 \subsubsection{Cookies}
-Jak bylo zmíněno v~kapitole 2, cookies jsou soubory, které si stránka ukládá do počítače uživatele, aby ho mohla identifikovat při dalších požadavcích. V~současnosti mnoho webů obsahuje takzvané \textit{cookies třetích stran}, které umožňují službám sledovat aktivitu napříč webem.
-% google analytics
+Jak bylo zmíněno v~kapitole 2, cookies jsou soubory, které si stránka ukládá do počítače uživatele, aby ho mohla identifikovat při dalších požadavcích. V~současnosti mnoho webů obsahuje takzvané \textit{cookies třetích stran}, které umožňují službám (například Google Analytics a Google Ads) sledovat aktivitu napříč webem.
 
 \subsubsection{Device a browser fingerprinting}
 S~postupným legislativním tlakem na omezení rozsahu cookies se začaly služby přesouvat k~používání \textit{fingerprintingu}, tedy požívání jakéhosi otisku zařízení nebo prohlížeče, ze kterého uživatel přistupuje. Používané techniky jsou rozmanité, od získávání informací o~prohlížeči a operačním systému (verze, jazyk, instalované doplňky), po \textit{canvas fingerprint} využívající specifika v~renderování webového prvku \verb|canvas|, které se liší podle GPU nebo grafických ovladačů v~daném zařízení.  
@@ -77,18 +76,21 @@ Tato data mohou například poskytnout vhled, do jakých obchodů uživatel chod
 Lokační data je v~současné době, kdy většina lidí vlastní smartphone, snadné získat. I~aplikace, které reálně data pro svoje funkce nepotřebují, o~ně mohou uživatele požádat. Prodejem těchto dat pak mohou získat finance na samotný vývoj aplikace \uv{zdarma}.\\
 \textit{Zde je na místě říct, že možnosti prodeje dat se mohou výrazně lišit podle toho, v~jaké zemi -- a tedy pod jakou legislativou -- se uživatel pohybuje.}
 
+Lokační data dále potenciálně sdílejí aplikace, které reálně data používají pro svoje služby -- mapy (\textit{Google Maps}, \textit{Mapy.cz} a podobné), dopravy (\textit{IDOS}, \textit{Pubtran}, \textit{PID Lítačka} a podobné) a dovozy (\textit{DámeJídlo}, \textit{Uber}  a podobné).
+
+Například Google Maps uchovává lokaci a přiřazuje ji ke konkrétním místům (obchody, úřady a podobně). Zároveň uchovává informaci o předpokládané formě aktivity (např. chůze, běh, kolo, auto, hromadná doprava) včetně důvěry (pravděpodobnosti) v predikci.
+
 Mohlo by se zdát, že lokační data jsou anonymní (typicky obsahují nějaké náhodné ID zařízení, časovou značku a lokaci), v~realitě jsou však velmi snadno deanonymizována:
 
 \begin{displayquote}
 Describing location data as anonymous is “a completely false claim” that has been debunked in multiple studies, Paul Ohm, a law professor and privacy researcher at the Georgetown University Law Center, told us. “Really precise, longitudinal geolocation information is absolutely impossible to anonymize.”
 
-“D.N.A.,” he added, “is probably the only thing that’s harder to anonymize than precise geolocation information”\citep{location-data}.
+“D.N.A.,” he added, “is probably the only thing that’s harder to anonymize than precise geolocation information” \citep{location-data}.
 \end{displayquote}
-
-% Google lokační datas
 
 \subsection{Data vkládaná na sociální sítě a další platformy}
 Nejvýznamnější složkou aktivní (veřejné) digitální stopy jsou pravděpodobně v~současné době sociální sítě a obsah na nich.
+
 
 
 
