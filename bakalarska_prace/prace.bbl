@@ -1,4 +1,4 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{48}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -12,6 +12,17 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock \doi{https://doi.org/10.1016/S1361-3723(16)30048-3}.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.sciencedirect.com/science/article/pii/S1361372316300483}}.
+
+\bibitem[Azucar et~al.(2018)Azucar, Marengo,, Settanni]{big-5-predictions}
+{\sc Azucar}, D. -- {\sc Marengo}, D. -- {\sc Settanni}, M.
+\newblock Predicting the Big 5 personality traits from digital footprints on
+  social media: A meta-analysis.
+\newblock \emph{Personality and Individual Differences}. 2018, 124,
+  s.~150--159.
+\newblock ISSN 0191-8869.
+\newblock \doi{https://doi.org/10.1016/j.paid.2017.12.018}.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S0191886917307328}}.
 
 \bibitem[BBC(2020)]{ca-brexit}
 {\sc BBC}.
@@ -64,6 +75,17 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock
   \newline\url{https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679}.
 
+\bibitem[Coutts et~al.(2020)Coutts, Plans, Brown,,
+  Collomosse]{heart-rate-health}
+{\sc Coutts}, L.~V. et~al.
+\newblock Deep learning with wearable based heart rate variability for
+  prediction of mental and general health.
+\newblock \emph{Journal of Biomedical Informatics}. 2020, 112, s.~103610.
+\newblock ISSN 1532-0464.
+\newblock \doi{https://doi.org/10.1016/j.jbi.2020.103610}.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S1532046420302380}}.
+
 \bibitem[Doffman(2020)]{ashley-madison-leak}
 {\sc Doffman}, Z.
 \newblock \emph{Ashley Madison Hack Returns To ‘Haunt’ Its Victims: 32
@@ -98,6 +120,13 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock \emph{Power/knowledge: Selected interviews and other writings,
   1972-1977}.
 \newblock Vintage, 1980.
+
+\bibitem[Frenkel(2018)]{facebook-public-posts}
+{\sc Frenkel}, S.
+\newblock \emph{Facebook Bug Changed Privacy Settings of Up to 14 Million
+  Users} [online]. 2018. [cit.~2021-04-02].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.nytimes.com/2018/06/07/technology/facebook-privacy-bug.html}}.
 
 \bibitem[Hadnagy(2011)]{social-engineering-book}
 {\sc Hadnagy}, C.
@@ -210,6 +239,13 @@ Identity theft rises sharply as fraudsters target social media.
   [cit.~2021-03-15].
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.edu.cz/rvp/ramcove-vzdelavaci-programy-stredniho-odborneho-vzdelavani-rvp-sov/obory-l-a-m/18-informaticke-obory/}}.
+
+\bibitem[Neil(2016)]{ai-photo-location}
+{\sc Neil}, A.
+\newblock \emph{Google AI Can Work Out Photo Locations Without Geotags}
+  [online]. 2016. [cit.~2021-04-02].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.eteknix.com/google-ai-can-work-photo-locations-without-geotags/}}.
 
 \bibitem[NÚV({\natexlab{a}})]{revize}
 {\sc NÚV}.
