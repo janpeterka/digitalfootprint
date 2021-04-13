@@ -1,6 +1,6 @@
 \chapter{Rizikové dopady sběru osobních dat}
 
-\section{Úvod}
+\section*{Úvod}
 Tato kapitola se pokouší zodpovědět na otázku, proč je téma osobních dat pro jednotlivce důležité, tedy \uv{Proč by mě to mělo zajímat?}. Poukazuje na obecná i konkrétní rizika a problémy, které se sběrem osobních dat v~dříve neuskutečnitelném měřítku souvisí. 
 
 % V~této práci se zabývám zejména negativními či rizikovými aspekty aktuálního rozsahu, možností a praktik sběru dat. Je tedy vhodné říct, že je i mnoho pozitivních dopadů a aplikací, těm se ovšem práce nevěnuje. 
@@ -9,11 +9,11 @@ Tato kapitola se pokouší zodpovědět na otázku, proč je téma osobních dat
 
 Jedním z~diskutovaných témat je riziko změny chování na základě vědomí toho, že naše chování je sledováno, ukládáno a potenciálně analyzováno \citep{behavior-changes}.
 
-Aktuálně ještě tato oblast není příliš prozkoumána, je tedy těžké říct, jak velké změny chování může nastávat. Pokusím se v~této sekci načrtnout úvahy o~těchto dopadech.
+Tato oblast ještě není příliš prozkoumána, je tedy těžké říct, jak velké změny chování mohou nastávat. Tato sekce tedy nabízí úvahy o~těchto dopadech.
 
 Jeden ze směru úvah o~změnách chování vychází z~modelu \textit{Panopticonu} \citep{panopticon}. Panopticon je popsán jako vězení, kde může být každý vězeň kdykoli sledován strážným. Protože vězeň neví, jestli zrovna je nebo není sledován, chová se, jako by byl sledován stále. Je tedy vytvořeno prostředí, kde se člověk stále cítí pod dohledem, a reguluje na základě toho svoje chování.
 
-Tento teoretický model se v~současnosti stává realitou skrze Čínský kreditový systém -- systém, který každému Čínskému občanovi určuje \textit{sociální skóre} na základě chování. Toto je umožněno enormním propojením mnoha zdrojů dat společností i státu, a právě cílenou snahou o~co největší možnosti monitorování občanů. Dokonce můžeme říct, že tento model je zesílenou verzí Foucaultova Panopticonu -- na rozdíl od něj tu má opravdu docházet ke stálému sledování a zpracování těchto dat (například pomocí systémů umělé inteligence).
+Tento teoretický model se v~současnosti stává realitou skrze Čínský kreditový systém -- systém, který každému čínskému občanovi určuje \textit{sociální skóre} na základě chování. Toto je umožněno enormním propojením mnoha zdrojů dat společností i státu, a právě cílenou snahou o~co největší možnosti monitorování občanů. Dokonce můžeme říct, že tento model je zesílenou verzí Foucaultova Panopticonu -- na rozdíl od něj tu má opravdu docházet ke stálému sledování a zpracování těchto dat (například pomocí systémů umělé inteligence).
 
 Dalším zajímavým aspektem, vyplývajícím z~aktuálního množství dat a networked privacy, je fakt, že i cílené snahy o~nevytváření digitální stopy (například vypnutím telefonu nebo používáním anonymizačních nástrojů) může být samo o~sobě také součástí stopy -- například používání prohlížeče zaměřeného na soukromí zároveň zvyšuje rozpoznatelnost uživatele skrze \textit{browser fingerprinting}.
 
@@ -30,7 +30,7 @@ Podíváme se tedy na několik obecných rizik i konkrétních případů zneuž
 
 \subsubsection*{Vloupání}
 S~příchodem a rozmachem sociálních sítí se začaly objevovat případy vloupání, kdy zloději využívají právě data ze sociálních sítí k~jejich naplánování. 75\% dopadených pachatelů se domnívá, že jiní pachatelé tato data využívají \citep{burglary}.
-To není překvapivé ve chvíli, kdy 50\% respondentů průzkumu na sociálních sítích sdílí informaci o~tom, že jsou na dovolené.\citep{burglary} 
+To není překvapivé ve chvíli, kdy 50\% respondentů průzkumu na sociálních sítích sdílí informaci o~tom, že jsou na dovolené \citep{burglary}. 
 
 \subsubsection*{Krádeže identity}
 Kromě vloupání také narostl počet krádeží identity \citep{identity-theft-rise}, kdy se použitím dat ze sociálních sítí výrazně zjednodušilo používání cizí identity oproti vytváření falešné například pro pojišťovací podvody. 
@@ -38,13 +38,13 @@ Kromě vloupání také narostl počet krádeží identity \citep{identity-theft
 % Příkladem krádeže digitální identity je příběh Bryana Rutberga, jemuž se útočník dostal do Facebookového účtu a vylákal peníze z~jeho přátel.
 
 \subsubsection*{Social engineering}
-Další možností zneužití dat je jejich použití pro další útoky, jako je \textit{spear phishing} a obecně v~oblasti \textit{social engineering}. Jednou z~fází social engineering útoků je \textit{information gathering}\citep{social-engineering-definition}, které sociální sítě výrazně zjednodušily. Spear phishing útoky jsou často zaměřené na firmy, nástrojem pro sběr informací pak může být například profesní sociální síť LinkedIn \citep{social-engineering-tools}, nebo pomocí nalezení specifických zájmů osoby, skrze teré dojde k~navázání kontaktu a získání důvěry \citep{social-engineering-book}
+Další možností zneužití dat je jejich použití pro další útoky, jako je \textit{spear phishing} a obecně v~oblasti \textit{social engineering}. Jednou z~fází social engineering útoků je \textit{information gathering}\citep{social-engineering-definition}, které sociální sítě výrazně zjednodušily. Spear phishing útoky jsou často zaměřené na firmy, nástrojem pro sběr informací pak může být například profesní sociální síť LinkedIn \citep{social-engineering-tools}, nebo pomocí nalezení specifických zájmů osoby, skrze teré dojde k~navázání kontaktu a získání důvěry \citep{social-engineering-book}.
 
 \subsubsection*{Neoprávněné sledování}
-Objevily se případy, kdy byly lokační data služby použity ke sledování osoby. V~roce 2014 se ukázalo, že zaměstnanci společnosti Uber měli možnost (a tuto možnost využívali) sledovat lokace pasažérů -- například známé osobnosti, novináře nebo svou bývalou přítelkyni\citep{uber-spying}
+Objevily se případy, kdy byly lokační data služby použity ke sledování osoby. V~roce 2014 se ukázalo, že zaměstnanci společnosti Uber měli možnost (a tuto možnost využívali) sledovat lokace pasažérů -- například známé osobnosti, novináře nebo svou bývalou přítelkyni \citep{uber-spying}.
 
 \subsubsection*{Neoprávněné zjišťování informací}
-Ve Spojených státech vyšetřování ukázalo, že zaměstnanci policie ve stovkách případů během dvou let nahlížely do osobních záznamů, které nesouvisely s~výkonem práce. Šlo například o~data bývalých partnerů nebo novináře, který vydal kritický článek o~místním policejním oddělení.\citep{police-spying} 
+Ve Spojených státech vyšetřování ukázalo, že zaměstnanci policie ve stovkách případů během dvou let nahlíželi do osobních záznamů, které nesouvisely s~výkonem práce. Šlo například o~data bývalých partnerů nebo novináře, který vydal kritický článek o~místním policejním oddělení \citep{police-spying}. 
 
 \subsubsection*{Šíření fotografií dětí}
 Výrazně odlišným tématem, který však také ukazuje na rizika sdílení různých osobních dat, jsou opakované případy, kdy se fotografie dětí, sdílené jejich rodiči na sociálních sítích nebo sdílecích službách (ulozto.cz, rajce.cz), dostanou do oběhu ve skupinách pedofilů \citep{pedophiles-web}.
@@ -60,10 +60,12 @@ Další případy -- ve spojení s~konkrétními postupy pro jejich zamezení --
 Je možné si všimnout, že v~několika z~těchto případů se objevuje zmiňovaný princip \textit{networked privacy} -- tedy osoba, která data sdílí nemusí být stejná jako ta, která je terčem zneužití.
 
 \subsection{S~dopadem na společnost}
-Henrik Skaug Sætra tvrdí, že nahlížení na soukromí pouze z~pohledu jednotlivce a jeho svobodné volby se svými daty a soukromím naložit podle svého uvážení, není dostatečný\citep{privacy-as-aggregate-public-good}. Argumentuje tím, že volba jednotlivce v~má tomto případě dopady i na ostatní -- například na jejich možnosti uchování soukromí:
+Henrik Skaug Sætra tvrdí, že nahlížení na soukromí pouze z~pohledu jednotlivce a jeho svobodné volby se svými daty a soukromím naložit podle svého uvážení, není dostatečný \citep{privacy-as-aggregate-public-good}. Argumentuje tím, že volba jednotlivce v~má tomto případě dopady i na ostatní -- říká například, že si jednotlivec nemůže zachovat naprosté soukromí ve světě, kde nemají soukromí ostatní -- soukromí jednotlivce je tedy neodělitelně navázáno na soukromí ostatních: 
+:
 
 \begin{displayquote}
-(...) it is impossible for me to be fully unknown in a world where everyone else is fully known.
+	\uv{(...) it is impossible for me to be fully unknown in a world where everyone else is fully known.}
+	\citep{privacy-as-aggregate-public-good}
 \end{displayquote}
 
 Rozhodování jednotlivců pak vede k~suboptimálním výsledkům pro společnost jako celek.
@@ -73,14 +75,14 @@ Soukromí pak nazývá \textit{agregovaným veřejným statkem}, tedy něčím, 
 Tento pohled se dá stručně ukázat na příkladech konkrétních momentů, kdy se téma objevilo ve společenském povědomí.
 
 \subsubsection*{Cambridge Analytica}
-Případ firmy Cambridge Analytica, která získala a zpracovala data z~více než 50 milionů profilů na Facebooku\citep{cambridge-analytica} pro použití v~profilované politické reklamě, je pravděpodobně dostud největší kauza, otevírající téma soukromí a osobních dat. Ač se po letech vyšetřování ukazuje, že byl pravděpodobně vliv menší, než se zdálo\citep{ca-brexit}\citep{ca-elections}, vyvolala mnoho otázek mimojiné o~tom, jak můžou být osobní data využita pro politickou kampaň v~dosud neviděném měřítku.
+Případ firmy Cambridge Analytica, která získala a zpracovala data z~více než 50 milionů profilů na Facebooku \citep{cambridge-analytica} pro použití v~profilované politické reklamě, je pravděpodobně dostud největší kauza, otevírající téma soukromí a osobních dat. Ač se po letech vyšetřování ukazuje, že byl pravděpodobně vliv menší, než se zdálo \citep{ca-brexit}, \citep{ca-elections}, vyvolala mnoho otázek mimojiné o~tom, jak můžou být osobní data využita pro politickou kampaň v~dosud neviděném měřítku.
 
 \subsubsection*{Čínský sběr dat}
-Česku bližší případ práce s~osobními daty s~potenciálním vlivem na celou společnost, je firma Zhenhua Data Technology, která vytvářela na základě získaných veřejných a komerčně dostupných dat profily strategicky významných osob české společnosti. Šlo o~politiky, pracovníky bezpečnostních složek či podnikatele \citep{china-czech}. Česko bylo samozřejmě jenom jednou z~mnoha zemí, o~kterých tento sběr a analýza probíhaly, ukázal ale jasněji, jak může být s~daty nakládáno.
+Česku bližší případ práce s~osobními daty s~potenciálním vlivem na celou společnost je firma Zhenhua Data Technology, která vytvářela na základě získaných veřejných a komerčně dostupných dat profily strategicky významných osob české společnosti. Šlo o~politiky, pracovníky bezpečnostních složek či podnikatele \citep{china-czech}. Česko bylo samozřejmě jenom jednou z~mnoha zemí, o~kterých tento sběr a analýza probíhaly, ukázal ale jasněji, jak může být s~daty nakládáno.
 Zajímavé je, že i v~tomto případě byla část dat z~automatizovaného sběru ze sociální sítě Facebook, která tuto praktiku zakazuje. Firma Zhenhua byl pak dle mluvší Facebooku ze sítě zablokována, ovšem ukazuje to na fakt, že ani po kauze Cambridge Analytica se reálná ochrana nakládání osobními daty u~této firmy příliš nezměnila.
 
 \subsubsection*{Citlivá lokační data}
-Příkladem ohrožení veřejných zájmů může být i případ, kdy fitness aplikace Strava zveřejnila mapu agregovaného pohybu uživatelů. Na mapě se tím objevilo umístění vojenských základen USA, například v~Afghánistánu.\citep{strava-locations}. 
+Příkladem ohrožení veřejných zájmů může být i případ, kdy fitness aplikace Strava zveřejnila mapu agregovaného pohybu uživatelů. Na mapě se tím objevilo umístění vojenských základen USA, například v~Afghánistánu \citep{strava-locations}. 
 
-\section{Shrnutí}
+\section*{Shrnutí}
 % TODO
