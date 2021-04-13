@@ -1,8 +1,15 @@
-\chapter{Zařazení problematiky digitální stopy do školních výukových materiálů}
+\chapter{Praktická část - Východiska}
 
-\section*{Úvod a vymezení pojmů}
+\section*{Úvod}
+Praktická část této balakářské práce se zabývá navržením a vytvořením prostředí (\textit{Aplikace}) pro vzdělávání této tématiky.
+Je rozdělena do dvou kapitol. První kapitola popisuje východiska aplikace, druhá pak její technický návrh a řešení.
 
-Cílem této kapitoly je dát téma osobních dat a digitální stopy do kontextu vzdělávacích materiálů a východisek, na to, jakou roli a prostor v~nich aktuálně (v~kontextu narůstající důležitosti tématu ve společnosti a společenských debatách) zaujímá. 
+\section{Zařazení problematiky digitální stopy do školních výukových materiálů}
+
+\subsection*{Úvod a vymezení pojmů}
+
+První oblastí východisek je zařazení tématu osobních dat a digitální stopy do kontextu vzdělávacích materiálů.
+Zaměřuje se na to, jakou roli a prostor v~nich aktuálně (v~kontextu narůstající důležitosti tématu ve společnosti a společenských debatách) zaujímá.
 
 Pro snazší orientaci v~kapitole zde shrnuji použité zkratky a kódy a jejich význam:
 
@@ -48,7 +55,7 @@ Pro snazší orientaci v~kapitole zde shrnuji použité zkratky a kódy a jejich
 \uv{studium je tříleté nebo dvouleté, výstupem je výuční list. Obory mají nižší nároky v~oblasti všeobecného i obecně odborného vzdělání a jsou určeny především pro žáky se speciálními vzdělávacími potřebami, např. pro absolventy dřívějších speciálních základních škol a žáky, kteří ukončili povinnou školní docházku v~nižším než 9. ročníku základní školy. Obory připravují pro výkon jednoduchých prací v~rámci dělnických povolání a ve službách.} \citep{stredni-vzdelavani}
 \end{displayquote}
 
-\section{Vymezení dokumentů}
+\subsection{Vymezení dokumentů}
 
 Pro prozkoumání, jak jsou témata zařazena ve vzdělání, budou primárním zdrojem Rámcové vzdělávací plány (dále RVP). Je nutné se dívat na jejich návaznost, podobnosti a rozdíly na různých stupních a zaměřeních vzdělávání.
 
@@ -69,9 +76,9 @@ Konkrétně tedy kapitola prozkoumá propojení na následující dokumenty:
 \item Návrh revizí rámcových vzdělávacích programů v oblasti informatiky a informačních a komunikačních technologií \citep{revize}
 \end{itemize}
 
-\section{Rámcové vzdělávací plány}
+\subsection{Rámcové vzdělávací plány}
 
-\subsection{RVP základní školy}
+\subsubsection*{RVP základní školy}
 
 \textbf{Vzdělávací oblast Informatika}
 
@@ -84,7 +91,7 @@ Ve vymezení Cílového zaměření vzdělávací oblasti je v~kontextu tématu 
 
 konkrétně však tento bod není vymezen cíli ani učivem, které by s~oblastí osobních dat a digitální stopy přímo souviselo.
 
-\subsection{RVP-G}
+\subsubsection*{RVP-G}
 
 \textbf{Vzdělávací oblast Informatika a informační a komunikační technologie}
 
@@ -113,7 +120,7 @@ Alespoň částečně tedy jde o~problematiku osobních údajů, ačkoli více z
 
 V~dalších oblastech se pak téma neobjevuje. 
 
-\subsection{RVP odborné školy -- Informační technologie}
+\subsubsection*{RVP odborné školy -- Informační technologie}
 
 V~cílech vzdělávání můžeme najít následující body:
 
@@ -139,11 +146,11 @@ Ve výsledcích vzdělávání pak najdeme konkrétní body:
 	\citep{rvp-it}
 \end{displayquote}
 
-\subsection{RVP odborné školy -- Informační služby}
+\subsubsection*{RVP odborné školy -- Informační služby}
 
 V~tomto RVP se žádné body přímo související s~tématikou nenachází.
 
-\section{Návrh revizí RVP v~oblasti Informatiky a informačních a komunikačních technologií}
+\subsection{Návrh revizí RVP v~oblasti Informatiky a informačních a komunikačních technologií}
 
 Aktuálně se pracuje na revizi RVP v~oblasti Informatiky a informačních a komunikačních technologií, je tedy vhodné se podívat, zda tato revize nějak mění zakotvení tématu digitální stopy a osobních dat ve vzdělávání.
 
@@ -186,7 +193,7 @@ a pro SŠ (E) podobný bod
 	\citep{revize}
 \end{displayquote}
 
-\section*{Shrnutí}
+\subsection*{Shrnutí}
 
 Téma osobních dat a digitální stopy můžeme v~aktuálních vzdělávacích materiálech najít v~obecném vymezení v~cíli vzdělávací oblasti Informatika (respektive Informatika a informační a komunikační technologie) v~bodě:
 
@@ -200,3 +207,113 @@ Konkrétní vzdělávací výsledky s~tímto tématem se nachází pouze u~RVP o
 Zároveň se však toto téma výrazněji objevuje v~návrhu revize, a lze tedy předpokládat, že se do RVP (a následně ŠVP jednotlivých škol) bude více promítat.
 
 Vznik materiálů a prostředí pro zařazení této problematiky do výuky je tedy možné považovat za užitečný a do budoucna nutný.
+
+
+
+\section{Východiska}
+Jak vyplývá z~předchozí sekce, téma digitální stopy a osobních dat se nejspíše bude po revizích více objevovat v~RVP středních škol. Na tuto skupinu studentů tedy bude Aplikace cílit.
+
+Prostředí může sloužit jako součást většího vzdělávacího oblouku, ovšem tato práce si nedává za cíl vytvoření metodik pro učitele, a tedy musí obsah Aplikace fungovat i sám o~sobě.
+
+Cílem je uživatele (studenty) v~Aplikaci seznámit s~tématem interaktivní, lákavou formou.
+
+Zároveň však součástí Aplikace musí být kvalitní napojení na teorii i reálné příklady, včetně informování uživatele o~tom, jak může svou digitální stopu spravovat.
+
+\subsection{Návrh aplikace z~pohledu uživatele}
+Návrh aplikace je následující:
+Uživatel má možnost odehrát jednotlivé \uv{Mise}, které představují fiktivní příběh. V~každé Misi má uživatel ze simulovaných osobních dat různého typu vyřešit na začátku danou otázku.
+Zjednodušený use-case tedy je:
+\begin{itemize}
+	\item uživatel si vybírá Misi
+	\item uživatel je seznámen s~příběhem Mise (symbolickým rámcem) a cílem - co je potřeba zjistit pro splnění Mise
+	\item uživatel využívá dané datasety pro nalezení řešení
+	\item po správném zadání odpovědi jsou uživateli zobrazeny doplňující informace - napojení na teorii, příklady z~reálného světa, možnosti zabezpečení se v~podobné situaci.
+\end{itemize}
+
+V~sekci \textit{Scénáře} budou popsány konkrétní možné scénáře, z~nich část bude použita v~prototypu.
+
+\subsection{Prototyp}
+Jak bylo řečeno, cílem práce je vytvoření prototypu. Ten tedy nemusí mít všechny funkce či grafické řešení aplikace, která by byla reálně veřejně použita ve vzdělávání, má za cíl pouze najít vhodnou podobu, otestovat její technickou proveditelnost a náročnost, a získat zpětnou vazbu od vybraných testerů.
+
+Prototyp bude obsahovat několik scénářů s~různými typy dat.
+
+
+\subsection{Scénáře}
+Jak bylo popsáno, jádrem Aplikace jsou Mise - tedy jednotlivé příběhy, ve kterých se uživatel seznamuje s~různými situacemi, týkajícími se osobních dat.
+
+Aplikace bude navržena tak, aby bylo možné snadno další scénáře přidávat, a tím rozšiřovat její vzdělávací potenciál (například v~zacílení na jiné věkové skupiny).
+
+Při tvorbě scénářů vycházím z~dat a rizik popsaných v~předchozích kapitolách a navrhuji následující testovací scénáře, které představují různé typy a kategorie dat.
+
+\textit{Některé scénáře ukazují činnost, jež je ilegální. Motivací pro jejich zachování je to, že  možnost prožít si situaci z~pohledu útočníka může vést k~lepšímu prožití a přenesení do uvažování o~vlastní ochraně. Zároveň u~každého takového scénáře bude upozorněno, že jde o~simulaci a jaké trestněprávní dopady by taková činnost měla v~reálném světě.}
+
+\subsubsection*{Odhadnutí hesla}
+\textbf{Cíl}\\
+Uhodnout heslo blízké osoby na sociální síť.\\
+\textbf{Používané zdroje dat}\\
+Příspěvky na sociální síti.\\
+\textbf{Typ dat}\\
+Veřejné / veřejné pro okruh lidí.\\
+\textbf{Dodatečné informace}\\
+Informace o~tom, jak lidé tvoří hesla\\
+Případy toho, kdy lidé měli veřejně informace, jež vedly k~prolomení hesla.\\
+Obecná doporučení, jak chránit svoje hesla\\
+Upozornění na nelegálnost takové činnosti v~reálním životě\\
+
+V~tomto scénáři je úkolem uhodnout heslo do sociální sítě. Scénář se odkazuje na témata vhodného zabezpečení svých účtů a sicuací, kdy člověkem sdílené informace napomáhají k~prolomení jeho obran.
+
+Jde o~jednoduchý, začáteční scénář -- pracuje s~veřejnými daty z~jednoho zdroje. Je cíleně zjednodušený oproti realitě.
+
+\textit{Scénář se nezabývá hesly z~pohledu kryptografického a obecně bezpečnostního, neboť to je již mimo rozsah naší práce. Bylo by však pravděpodobně možné takový scénář do Aplikace přidat pro vzdělávání v~této oblasti.}
+
+
+\subsubsection*{Plánování vloupání}
+\textbf{Cíl}\\
+Naplánovat vloupání dané osoby -- udělat si představu o~jejím bydlišti a době, kdy bude dům prázdný.
+\textbf{Používané zdroje dat}\\
+Příspěvky na sociální síti
+Příspěvky z~fitness sociální sítě\\
+Stránky firmy\\
+\textbf{Typ dat}\\
+Veřejná data\\
+\textbf{Dodatečné informace}\\
+Případy z~praxe\\
+Obecná doporučení, jak se tomuto typu útoku bránit\\ 
+Upozornění na nelegálnost takové činnosti v~reálním životě\\
+
+Tento scénář již ukazuje práci s~více zdroji dat a klade na uživatele větší nároky v~hledání částí informací.
+
+
+\subsubsection*{Vyšetřování korupce}
+\textbf{Cíl}\\
+U~podezřelé osoby vyšetřit možné korupční vazby na jiné osoby.\\
+\textbf{Používané zdroje dat}\\
+Lokační data od operátorů\\
+Výpisy z~bankovního účtu\\
+Výpisy hovorů a SMS zpráv\\
+\textbf{Typ dat}\\
+Soukromé -- dostupné pouze poskytovatelům a v~oprávněných případech policii\\
+\textbf{Dodatečné informace}\\
+Informace o~sběru a uchovávání dat operátory\\
+Informace o~přesnosti lokačních dat\\
+Informace o~právních možnostech policie si tato data vyžádat\\
+
+
+\subsubsection*{Výběr vhodné reklamy} 
+\textbf{Cíl}\\
+Vybrat, jaké reklamy zobrazit jakým uživatelům.\\
+\textbf{Používané zdroje dat}\\
+Příspěvky na sociálních sítích\\
+Chování na sociálních sítích\\
+Historie prohlížení\\
+Lokační data\\
+\textbf{Typ dat}\\
+Soukromé -- data sbírají aplikace.\\
+\textbf{Dodatečné informace}\\
+Napojení na teorii \textit{attention economy}\\
+Informace o~možnostech nastavení ochrany soukromí v~různých aplikacích.\\
+
+Tento scénář simuluje fungování vyhodnocování dat algoritmy firem jako je Facebook nebo Google, a následnou reklamní aukci. Má potenciál, aby na něj bylo navázáno šířeji tématem personalizované reklamy a \textit{attention economy}. 
+
+\section*{Závěr}
+% TODO
