@@ -38,7 +38,7 @@ Aplikace bude navržena tak, aby bylo možné snadno další scénáře přidáv
 
 Při tvorbě scénářů vycházím z~dat a rizik popsaných v~předchozích kapitolách a navrhuji následující testovací scénáře, které představují různé typy a kategorie dat.
 
-\textit{Uvědomuji si, že některé scénáře ukazují činnost, jež je ilegální. Domnívám se, že možnost prožít si situaci z~pohledu útočníka může vést k~lepšímu prožití a přenesení do uvažování o~vlastní ochraně. Zároveň u~každého takového scénáře bude upozorněno, že jde o~simulaci a jaké trestněprávní dopady by taková činnost měla v~reálném světě.}
+\textit{Některé scénáře ukazují činnost, jež je ilegální. Motivací pro jejich zachování je to, že  možnost prožít si situaci z~pohledu útočníka může vést k~lepšímu prožití a přenesení do uvažování o~vlastní ochraně. Zároveň u~každého takového scénáře bude upozorněno, že jde o~simulaci a jaké trestněprávní dopady by taková činnost měla v~reálném světě.}
 
 \subsubsection*{Odhadnutí hesla}
 \textbf{Cíl}\\
@@ -112,7 +112,7 @@ Tento scénář simuluje fungování vyhodnocování dat algoritmy firem jako je
 
 \section{Technické řešení}
 \subsection{Výběr technologií}
-Prototyp jsem se rozhodl vytvářet ve formě webové aplikace.
+Prototyp byl vytvořen jako webové aplikace.
 Hlavními důvody pro toto rozhodnutí bylo:
 \begin{itemize}
 	\item dostupnost pro uživatele i testery\\
@@ -121,19 +121,20 @@ Hlavními důvody pro toto rozhodnutí bylo:
 	\item snadná rozšiřitelnost a kooperace na projektu\\ Jako open-source projekt předpokládá možnosti další spolupráce, například s~designéry. Úprava vizuálu je v~případě webové aplikace čistě HTML+CSS(+JS), což je rozšířená dovednost, oproti jiným grafickým prostředím (jako Qt či herní enginy).
 \end{itemize}
 
-Konkrétně jsem se rozhodl pro využití webového frameworku \textbf{Flask} (založeného na jazyce Python). Motivací byla osobní zkušenost s~tímto frameworkem, takže jsem měl dostatečnou představu o~tom, že je v~něm možné prototyp bez problémů vytvořit.
+Konkrétně byl zvolen webový framework \textbf{Flask} (založeného na jazyce Python). Motivací byla osobní zkušenost s~tímto frameworkem, a tedy dostatečná představa o~realizovatelnosti tohoto typu aplikace v~daném prostředí.
 
-Na frontendové straně jsem se pro potřeby prototypu rozhodl nezavádět žádný rozsáhlý framework a pro někde nutné části Javascriptu jsem použil pouze microframework \textbf{stimulus.js} a \textbf{jQuery}.
+Na frontendové straně nebyl použit žádný rozsáhlý framework a pro někde nutné části Javascriptu byly zvoleny pouze microframeworky \textbf{stimulus.js} a \textbf{jQuery}.
 
 Vývoj je verzován systémem \textbf{git} za použití veřejného repozitáře na službě GitHub.
 
 \subsection{Základní funkcionality}
 \subsubsection*{Nahrávání předem definovaných dat Mise}
 	\textbf{Východiska}\\
-	Mise musí být schopné používat předem definovaná data. Tato data mohou být v~různé formě. Ve fázi prototypu vytvářím data já, formu mám tedy plně pod kontrolou. V~budoucnu by aplikace mohla nabízet možnosti, jak přidávat další data misí.
+	Mise musí být schopné používat předem definovaná data. Tato data mohou být v~různé formě.\\
+	V~budoucnu by aplikace mohla nabízet možnosti, jak přidávat další data misí.
 	
 	\textbf{Řešení}\\
-	Zvažoval jsem několik řešení:
+	Zvažováno bylo několik řešení:
 	
 	\begin{itemize}
 		\item data v~databázi -- například SQLite (která může být oproti jiným přímo součástí projektu)
@@ -141,8 +142,9 @@ Vývoj je verzován systémem \textbf{git} za použití veřejného repozitáře
 		\item data v~externím strukturovaném souboru
 	\end{itemize}
 
-	Variantu databáze jsem pro prototyp vyřadil z~důvodu složitější úpravy a nahlížení dat. \\
-	Z~dlouhodobého hlediska mi přijde vhodná forma strukturovaného dokumentu (např. JSON) -- má výhody ve snadném přidávání dalších scénářů, a jasného oddělení dat a funkcionality (kódu). Vyžaduje však vytvoření kódu pro převod těchto dat do objektové struktury, kterou používá samotná aplikace. Proto jsem tuto variantu zařadil pro prototyp jako \textit{nice-to-have}, a v~první verzi prototypu data vytvářel přímo v~kódu v~kontroleru mise.
+	Varianta databáze byla pro účely prototypu vyřadazena z~důvodu složitější úpravy a nahlížení dat. \\
+	Z~dlouhodobého hlediska se jeví jako vhodná forma strukturovaného dokumentu (např. JSON) -- má výhody ve snadném přidávání dalších scénářů, a jasného oddělení dat a funkcionality (kódu). Vyžaduje však vytvoření kódu pro převod těchto dat do objektové struktury, kterou používá samotná aplikace.
+	Proto byla tato varianta zařazena pro prototyp jako \textit{nice-to-have}, a v~první verzi prototypu jsou data přímo v~kódu v~kontroleru mise.
 
 	V~případě velkého objemu dat by forma nahrávání s~externího souboru nemusela být nejvhodnější, a bude možná nutné přejít na variantu s~databází, či jinou. Díky použití ORM knihovny SQLAlchemy, a abstrahování logiky do modelové/objektové vrstvy, to ovšem nebude znamenat velký zásah do kódu. 
 
@@ -158,13 +160,13 @@ Vývoj je verzován systémem \textbf{git} za použití veřejného repozitáře
 	\end{itemize}	
 
 	\textbf{Řešení}\\
-	V~prototypu jsem zobrazování vyřešil nahráním všech datových zdrojů při načtení stránky a zobrazování/skrývání pomocí jednoduchého javascriptového (stimulus.js) kontroleru. Kontroler funguje obecně pro libovolný počet datových zdrojů.
+	V~prototypu je zobrazování vyřešeno nahráním všech datových zdrojů při načtení stránky a zobrazování/skrývání pomocí jednoduchého javascriptového (stimulus.js) kontroleru. Kontroler funguje obecně pro libovolný počet datových zdrojů.
 	Toto řešení má oproti jiným variantám jednoduchý kód (přehledná šablona a malý přehledný javascriptový kontroler).
 	Potenciální riziko je v~tom, že pokud budou datové zdroje rozsáhlejší, bude první nahrání stránky pomalé. V~takové situaci by bylo vhodné data nenahrávat všechna při prvotním načtení stránky, ale přidat asynchronní získání dat pomocí Fetch API. To se však nijak nevylučuje s~vytvořeným kontrolerem, který má na starost pouze přepínání viditelnosti jednotlivých částí stránky.
 
 \subsubsection*{Zobrazovat data různých typů}
 	\textbf{Východiska}\\
-	Definoval jsem si základní typy dat, které se v~náhledech misí mohou objevovat (dle kapitoly \textit{Hlavní zdroje dat digitální stopy uživatele}): 
+	Na základě dat z~kapitoly \textit{Hlavní zdroje dat digitální stopy uživatele} byly definovány základní typy dat, které se v~náhledech misí mohou objevovat:
 
 	\begin{itemize}
 		\item Příspěvky na sociálních sítích
@@ -180,12 +182,12 @@ Vývoj je verzován systémem \textbf{git} za použití veřejného repozitáře
 	Kromě toho ale lze očekávat, že se budou v~budoucnu objevovat další typy dat, je tedy důležité, aby bylo snadné tuto nabídku rozšiřovat, a aby bylo řešení dostatečně obecné (nebo zobecnitelné), aby bylo toto přidávání snadné. 
 
 	\textbf{Řešení}\\
-	Pro jednotlivé typy dat jsem vytvořil samostatné modely, kontrolery a sadu šablon. Pro ukázku popíši strukturu kódu pro zobrazování dat typu sociální síť:\\
+	Pro jednotlivé typy dat byly vytvořeny samostatné modely, kontrolery a sadu šablon. Pro ukázku je zde struktura kódu pro zobrazování dat typu sociální síť:\\
 	Kontroler umožňuje zobrazovat několik základních stránek - osobní profil, sadu příspěvků (feed) a přihlašovací stránku.
 	Zobrazování sady příspěvků je realizováno pomocí několik \textit{partial} šablon - feed, post, comment. Jednotlivé šablony je pak snadné například designově upravovat, a zůstávají velice přehledné.
 
 	U~většiny typů dat bylo třeba si vytvořit vlastní HTML+CSS kód, který nabízí očekávanou strukturu dat v~přehledné podobě.
-	Pro zobrazování lokačních dat jsem využil SMapy pomocí javascriptu.   
+	Pro zobrazování lokačních dat byla využita javascriptová knihovna SMapy.   
 
 
 \subsection{Další funkcionality}
@@ -219,7 +221,20 @@ V~aplikaci je použito rozšíření \verb|Flask-Classful|, které usnadňuje pr
 Flask v~základu využívá templatovací jazyk \verb|Jinja2|, který nabízí omezené množství logiky v~šabloně, a vede k~tomu, aby většina aplikační logiky zůstávala mimo šablonu (tedy ve View).
 
 \subsection{Ověření a otestování aplikace}
-Prototyp aplikace je třeba uživatelsky otestovat, 
+Při ověřování funkčnosti aplikace s~reálnými uživateli budou zejména kontrolovány tyto oblasti: 
+
+\begin{itemize}
+	\item \textbf{Orientace v~prostředí}
+		Bude ověřováno, zda je uživateli dostatečně jasné, co se po něm chce, a dokáže v~prostředí aplikace najít vše co potřebuje pro interakci s~ním. 
+	\item \textbf{Používání datových zdrojů}
+		S~ohledem na to, že nahlížení datových zdrojů je v~uživatelské interakci s~aplikací hlavní činností, bude ověřováno, zda je jejich používání jasné, srozumitelné a umožňuje plnění misí. 
+	\item \textbf{Náročnost úkolů}
+		Další testovanou oblastí bude náročnost úkolů v~prezentovaných misích. Toto testování musí probíhat u~každé mise, jež bude do aplikace přidána. Bude ověřováno, zda dokáže uživatel z~dodaných informací vymyslet postup práce, zda má všechna potřebná data a naopak jestli není úkol příliš jednoduchý.
+	\item \textbf{Míra zaujetí}
+		Nakonec bude získán pohled uživatelů na to, zda je tato forma seznámení s~tématikou zajímavá a poutavá.
+\end{itemize}
+
+Ze všech kontrolovaných oblastí lze očekávat výstupy, které poslouží k~posunutí aplikace z~fáze prototypu do produkční verze.    
 
 
-\subsection{Vyhodnocení provedeného ověření a doporučení pro další rozvoj aplikace}
+% \subsection{Vyhodnocení provedeného ověření a doporučení pro další rozvoj aplikace}
