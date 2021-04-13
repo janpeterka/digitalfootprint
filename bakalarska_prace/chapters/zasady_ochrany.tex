@@ -1,47 +1,149 @@
 \chapter{Klíčové zásady uživatelské ochrany osobních dat}
 
 \section*{Úvod}
+Ač se posouvá i právní ochrana uživatelů, která může provést větší zásahy do způsobů, kterými firmy s~daty nakládají, každý uživatel má alespoň omezenou možnost kontroly nad svými daty a jejich ochranou.
 
 \section{Obecné náhledy}
+Kromě přímých nástrojů a postupů je dobré si osvojit několik základních pohledů na osobní data a nakládání s~nimi.
 
 \subsection{Co je na internetu, to je veřejné}
-\subsubsection*{Úniky dat}
+Informace, které zveřejníme pomocí digitálních platforem (sociální sítě, chatovací aplikace a další) sice působí, že sdílíme jen s~omezenou skupinou lidí, je však důležité si uvědomit, že je z~jejich podstaty možné je snadno sdílet i mimo tento okruh. Opakovaně se to dělo ať chybou v~systému, tak cíleným sdílením dat.
+
+U~informací, které dává uživatel na internet, je tedy třeba myslet na potenciální zveřejnění dat a rizika s~tím spojená.
+
+% \subsubsection*{Úniky dat}
+
+\subsection{Propojenost}
+Ač může mít uživatel pocit, že nemá důvod se o~své soukromí starat, je dobré si uvědomovat, že vytvářením a zveřejňováním dat zaprvé poskytujeme data pro zpřesňování modelů a nepřímo ovlivňujeme i další uživatele. Zároveň v~některých situacích, kdy můžeme mít pocit, že sdílíme pouze svoje osobní data (například lokační data), v~kombinaci s~daty jiné osoby může vznikat úplně nová informace (například o~tom, kdo se s~kým setkává), kterou jsme přímo nesdíleli. A~dopad na ostatní osoby je jasný ve chvíli, kdy přímo sdílíme informace o~někom jiném (například fotografie, kontakty a adresy).  
 
 \subsection{Budoucnost}
-% kariéra, veřejné vystupování
+Kromě toho je třeba myslet na to, že informace, které nyní vytvářím, budou existovat potenciálně navždy a mohou se mi vrátit v~dalším životě -- například při hledání zaměstnání, nebo pokud se stanu veřejně činnou osobou.
+
 
 \section{Zásady a nástroje}
 
 \subsection{Omezení vědomého sdílení informací}
+Zejména sociální sítě vedou své uživatele k~tomu, aby sdíleli mnoho informací ze svého života. Tyto informace však mohou uživatele ohrozit, například zvýšeným rizikem vloupání, krádeže identity, cíleného útoku (\textit{social engineering}, \textit{spear phishing}), nebo sdílení těchto informací někam, kde bychom je nechtěli (viz kapitolu \textit{Rizikové dopady sběru osobních dat}).
 
-\subsection{Anonymní prohlížení webu}
-\subsubsection*{Anonymní režim}
-\subsubsection*{Prohlížeče}
-% tor
-\subsubsection*{VPN}
-\subsubsection*{Doplňky}
-% fingerprint blocker
-% pixel tracking blocker
-\subsubsection*{Do Not Track}
-\subsubsection*{Výběr nástrojů}
+Základní zásadou tedy je si být vědomý toho, jaké informace vědomě sdílím, včetně vědomí, že se mohou dostat kamkoli a kdykoli.
 
 \subsection{Pravidla pro aplikace a služby}
 \subsubsection*{Souhlasy cookies}
-\subsubsection*{Nastavení sběru dat}
+
+Pokud chci omezit množství dalších dat, které vznikají mým běžným chováním, a které jsou propojitelné do jednoho celku (profilu), jednou z~prvních možností je dbát na možnosti nastavení cookies a sběru dat, které díky GDPR v~EU máme. Stránka je povinna nám nabídnout možnosti nastavení cookies, včetně odmítnutí těch, které nejsou esenciální pro funkcionalitu služby.
+Bohužel je však tato možnost stále často příliš složitá či nesrozumitelná, a mnoho uživatelů povolí vše. Jen některé služby nabízí snadné odmítnutí všech neesenciálních cookies. 
+
+Uložené cookies je také možné z~počítače smazat, obvykle v~nastavení prohlížeče. Někteé prohlížeče zaměřené na zvýšené soukromí dále umožňují jak omezit prvotní ukládání (zejména cookies třetích stran), tak jejich automatické mazání po zavření okna nebo po určité době.
+
 \subsubsection*{Možnost smazání dat}
+Také je možné u~služeb vyžádat mazání dat. Na toto mají opět nárok uživatelé v~EU díky GDPR, a služby mají povinnost tuto možnost snadno nabízet. Často však jde o~mazání celého účtu a není možné snadno smazat jen část dat. Případně to služby umožňují, ale běžný uživatel o~tom nemusí ani vědět. Existují služby, které toto mohou za uživatele dělat automaticky, například aplikace \href{https://www.jumboprivacy.com}{Jumbo}. 
+
+\subsubsection*{Do Not Track}
+% TODO
+
+\subsection{Anonymní prohlížení webu}
+
+\subsubsection*{Anonymní režim}
+Snad všechny běženě používané prohlížeče nabízí takzvaný \textit{anonymní režim}. Je důležité si být vědom toho, co tento režim dělá a co ne.
+Základním principem je, že soubory cookie, a celkový kontext prohlížení, uchovává pouze po dobu, kdy je dané okno anonymního prohlížení otevřeno - potom, co okno smažu, jsou všechny cookies smazány. To ovšem uživatele nechrání před ostatními typy sběru dat a identifikace - dříve zmíněný \textit{browser fingerprinting}, \textit{behavioral profiling} nebo \textit{tracking pixel} budou fungovat dále. Stejně tak není nijak pozměněno, jaké informace se dostávají s~poskytovateli internetu.
+
+\subsubsection*{Prohlížeče}
+Jak již bylo zmíněno, různé prohlížeče nabízí různou míru základního nastavení soukromí i různé možnosti pro uživatelské nastavení.
+V~posledních letech vznikají prohlížeče, které této problematice dávají větší důraz -- za zmínku stojí třeba \href{https://vivaldi.com}{Vivaldi} nebo \href{https://brave.com}{Brave}. Dlouhodobě je také velkým advokátem soukromí Mozzila Foundation s~jejich prohlížečem Firefox.
+Na druhé straně stojí prohlížeč Google Chrome, který jako součást ekosystému služeb Google defaultně sbírá větší objem dat.
+
+
+Specifickým případem prohlížeče je Tor Browser (případně další prohlížeče používající stejnou technologii), který umožňuje šifrovanou komunikaci, tedy chrání o~před sledováním ze strany poskytovatele internetu, a stejně jako VPN umožňuje obcházení omezení dané například státem, ve kterém se uživatel nachází.  
+
+\subsubsection*{VPN}
+VPN (\textit{virtual private network -- virtuální osobní síť}) je technologií, jež umožňuje připojení ke službám skrze jiné servery, anonymizuje tedy naši IP adresu a s~ní spojené informace (zejména lokaci). Je tedy možné je používat pro obcházení geografických omezení, či rizika sledování poskytovatelem (stejně jako u~sítě Tor).
+
+\subsubsection*{Doplňky}
+Proti některým konkrétním sledovacím praktikám se dá bránit specializovanými nástroji, dostupnými buď jako samostatné programy, nebo často jako doplňky do prohlížečů.
+Lze se takto bránit proti \textit{canvas fingerprinting}u pomocí doplňků jako je \href{https://chrome.google.com/webstore/detail/canvas-blocker-fingerprin/nomnklagbgmgghhjidfhnoelnjfndfpd?hl=en}{Canvas Blocker} nebo \href{https://chrome.google.com/webstore/detail/canvas-fingerprint-defend/lanfdkkpgfjfdikkncbnojekcppdebfp?hl=en}{Canvas Fingerprint Defender}, blokovat \textit{tracking pixel}y v~Gmailu pomocí doplňku \href{https://chrome.google.com/webstore/detail/pixelblock/jmpmfcjnflbcoidlgapblgpgbilinlem?hl=en}{PixelBlock} nebo e-mailových služeb se zabudovanou funkcí (například \href{https://hey.com}{HEY}), i proti \textit{behavioral profiling}u pomocí doplňku přidávajícímu náhodnou prodlevu ke stiskům kláves.
+Kromě toho existuje mnoho doplňků, kombinujících více technik ochrany soukromí a blokace obsahu - mezi nejznámější patří AdBlock+, uBlock, Ghostery nebo Privacy Badger.
+
+\subsubsection*{Vyhledávací enginy}
+Pokud se chceme vyhnout sběru dat při používání vyhledávačů, je třeba se poohlédnout po alternativách k~nejpoužívanějším vyhledáváčům, jimiž jsou Google, Bing a v~česku Seznam. Variantou, která neuchovává historii a nevytváří profil uživatele (a tím pádem nenabízí personalizované výsledky), je vyhledávač DuckDuckGo.
 
 \subsection{Šifrování dat}
+Dalším způsobem omezení možností práce s~daty, které vytváříme, je jejich šifrování. To se samozřejmě vztahuje jen na část možných digitálních služeb, zejména na komunikaci.
 \subsubsection*{Šifrovaná komunikace}
-\subsubsection*{Šifrované ukládání dat}
+Jak u~chatů, tak u~e-mailu můžeme hledat varianty, kdy je komunikace šifrovaná. To znamená, že je chráněna před čtením třetí stranou. Je důležité si být vědom, že jsou různé způsoby šifrování, a jen některé zaručují, že komunikaci opravdu nemůže číst nikdo kromě komunikujících (tedy ani daná služba). Dále je podstatné, že ač tuto možnost některé služby (například WhatsApp) umožňují, šifrování neprobíhá vždy, ani nemusí být nastaveno jako základní možnost.
 
-\subsection*{Zabezpečení dat proti útočníkům}
-\subsection{Phishing}
+Nejznámější chatovací služby zaměřené na šifrovanou komunikaci jsou Signal a Telegram.
 
-\subsection{Ochrana zařízení}
+Šifrovanou komunikaci můžeme chtít i u~e-mailové služby, pak je možné využít například ProtonMail. 
 
-\subsection{Hesla a zabezpečení}
-\subsubsection*{Bezpečné heslo}
-\subsubsection*{Správci hesel}
-\subsubsection*{2FA}
-\subsubsection*{Bezpečnostní otázky}
-\subsubsection*{Úniky hesel}
+
+\subsection{Zabezpečení dat proti útočníkům}
+Ač se tím dostáváme více do oblasti bezpečnosti než soukromí, je nezbytné zmínit i základní zásady ochrany před útočníky, neboť i to může být způsob, jak se naše osobní data mohou dostat na veřejnost a být zneužita.
+
+\subsubsection*{Ochrana zařízení}
+Primárně do důležité -- a zároveň relativně jednoduché -- chránit svá zařízení před útoky. Dva hlavní způsoby jsou:
+
+\textbf{Udržování aktuálního softwaru}\\
+Jedním z~častých důvodu průniku do zařízení je neaktualizovaný software, který obsahuje známé bezpečnostní chyby. Typickým případem může být používání již nepodporované verze operačního systému a stará verze prohlížeče. V~současné době se obvykle moderní osperační systémy i prohlížeče aktualizace vyhledávají sami a upozorňují (pokud přímo nevynucují) na aktualizace uživatele.
+
+
+\textbf{Antiviry}\\
+Zvýšenou ochranu pak uživatel získá použitím specializovaného software na odhalování rizikového kódu, například ve stažených souborech (což je jeden z~častých způsobu napadení zařízení). Nabídka antivirových a podobných bezpečnostích programů je široká, zroveň novější verze operačního systému Microsoft Windows obsahují i zabudovaný nástroj Microsoft Defender Antivirus.
+
+\subsubsection*{Phishing}
+% TODO
+
+% \subsubsection*{Šifrované ukládání dat}
+
+
+\subsubsection*{Hesla a zabezpečení}
+Důležitou částí ochrany svých účtů, a tedy dat, která jsou v~nich k~dispozici, je dostatečné zabezpečení přihlašování. Téma hesel by vydalo na samostatnou práci, zmíním tak alespoň několik základních zásad a pravidel.
+
+% \subsubsection*{Úniky hesel}
+% TODO
+
+\textbf{Bezpečné heslo}
+Je důležité zvolit takové heslo, které je dostatečně složité prolomit. Útoky směřující k~prolamování hesel obvykle využívají dvou technik (nebo jejich kombinace) -- \textit{brute force}, kdy útočník zkouší náhodné kombinace znaků, a \textit{slovníkový útok}, který využívá známá slova (případně hesla známá z~přechozích úniků).
+
+To vede ke třem základním poučkám při tvorbě hesel:
+
+\begin{itemize}
+	\item \textbf{Heslo by mělo být dostatečně dlouhé.}\\
+	Tím je lépe chráněno před \textit{brute force} útokem, protože počet kombinací u~delších retězců je takový, že již není praktické vyzkoušet všechny. Doporučovaná délka se mění s~růstem výkonu počítačů i s~pokrokem hashovacích algoritmů, které jsou pro uchovávání hesel používány, hrubé doporučení může být kolem 10 znaků (pokud používáme všechny ASCII znaky) až 25 znaků (pokud používáme pouze velká a malá písmena)
+
+	\item \textbf{Heslo musí být náhodné}\\
+	Pokud heslo je celé nebo z~většiny existujícím slovem (větou, souslovím), výrazně to snižuje jeho bezpečnost. Heslo by mělo být náhodné -- buď řetězec náhodných znaků, nebo (lépe zapamatovatelné) kombinace více náhodně vybraných slov.
+
+	\item \textbf{Heslo musí být unikátní}\\
+	Pokud používáme stejné heslo pro více účtů, při úniku hesla je ohrožení větší. Je tedy zásadní mít odlišná hesla v~různých službách. 
+
+\end{itemize}
+
+\textbf{Správci hesel}
+Naplnit předchozí tři poučky a při tom si pamatovat hesla k~desítkám až stovkám svých účtů není reálné. Proto velká část uživatelů tyto zásady nedodržuje (i v~případě, že si jich jsou vědomi). Bezpečnostní experti proto obvykle doporučují používat nějakou formu správce hesel -- místo, kde jsou hesla zapsána, ideálně v~šifrované podobě pod hlavním heslem/klíčem.
+
+Různé správce hesel již nabízejí v~základní výbavě internetové prohlížeče, u~nich však není vždy míra zabezpečení největší. Proto jsou i specializované nástroje, které typicky nabízí větší zabezpečení a větší škálu možností.
+
+\textbf{Vícefaktorová autentizace}\\
+Dalším způsobem, jak výrazně zvýšit zabezpečení svého účtu, je vícefaktorová autentizace. Ta obecně znamená, že pro přihlášení je třeba více než jedna věc (což by bylo obvykle heslo). Faktory, které jsou pro přihlášení použité, se dají rozdělit do následujících částí:
+
+\begin{itemize}
+	\item \textbf{znalost} -- \textit{něco, co vím}\\ 
+		Jde o~heslo, PIN, případně o~odpověď na bezpečnostní otázku.
+	\item \textbf{vlastnictví} -- \textit{něco, co mám}\\
+		To může být speciální bezpečnostní klíč, ale v~současnosti běžně také mobilní zařízení. 
+	\item \textbf{biometrie} -- \textit{něco, co jsem}\\
+		Se zlevňováním potřebných senzorů a technologií je běžnou součástí zařízení detektor otisku prstu, kamera schopná rozpoznat obličej, a rozpoznávání hlasu. Specializovaná zařízení se pak dají použít například pro kontrolu podle duhovky. Sem lze také zařadit dříve zmíněný \textit{behavioral profiling} použitý pro autentizaci.
+	\item \textbf{lokace} -- \textit{kde se nacházím}\\
+		V~některých případech lze jako další faktor používat lokaci, a to buď vázanou na konkrétní IP adresy (například zařízení v~kanceláři), nebo (skrze mobilní zařízení) reálnou lokaci.  
+\end{itemize} 
+
+Mnoho služeb nabízí dvoufaktorovou autentizaci (2FA), obvykle v~kombinaci hesla a zařízení (použití mobilního zařízení jako klíče při přihlašování na jiném zařízení) nebo biometrie (při přihlašování na zařízení, které tuto formu nabízí).
+
+Některé služby dokonce tuto míru zabezpečnení vyžadují -- ať už ze zákona (služby pro komunikaci s~úřady, jako je v~česku Datová schránka), nebo kvůli prioritizaci zabezpečení (e-mailová služba HEY).
+
+% \subsubsection*{Bezpečnostní otázky}
+% TODO
+
+
+\section*{Závěr}
+V~této kapitole jsme detailně rozebrali konkrétní přístupy a nástroje, které nám jako uživateli mohou zvýšit kontrolu nad naší digitální stopou a zabezpečit naše data. I~když jsou možnosti limitované, je důležité si být těchto možností vědom a využívat je. 

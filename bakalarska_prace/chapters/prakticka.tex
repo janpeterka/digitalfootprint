@@ -128,21 +128,98 @@ Na frontendové straně jsem se pro potřeby prototypu rozhodl nezavádět žád
 Vývoj je verzován systémem \textbf{git} za použití veřejného repozitáře na službě GitHub.
 
 \subsection{Základní funkcionality}
-\subsubsection*{Nahrát předem definovaná data Mise}
-\subsubsection*{Zobrazit misi s~jednotlivými záložkami}
-\subsubsection*{Zobrazovat data různých typů}
-\begin{itemize}
-	\item Příspěvky na sociálních sítích
-	\item Výměna zpráv mezi dvěma osobami
-	\item Výpis dat\\
-		seznam hovorů, výpis z~bankovního účtu,...
-	\item Datové body na mapě
-	\item Souhrnné informace\\
-		například informace, které uchovávají sociální sítě o~jednotlivých uživatelích
-	\item webové stránky
-\end{itemize}
+\subsubsection*{Nahrávání předem definovaných dat Mise}
+	\textbf{Východiska}\\
+	Mise musí být schopné používat předem definovaná data. Tato data mohou být v~různé formě. Ve fázi prototypu vytvářím data já, formu mám tedy plně pod kontrolou. V~budoucnu by aplikace mohla nabízet možnosti, jak přidávat další data misí.
+	
+	\textbf{Řešení}\\
+	Zvažoval jsem několik řešení:
+	
+	\begin{itemize}
+		\item data v~databázi -- například SQLite (která může být oproti jiným přímo součástí projektu)
+		\item data přímo v~kódu
+		\item data v~externím strukturovaném souboru
+	\end{itemize}
 
-\subsection{Objektová vrstva}
+	Variantu databáze jsem pro prototyp vyřadil z~důvodu složitější úpravy a nahlížení dat. \\
+	Z~dlouhodobého hlediska mi přijde vhodná forma strukturovaného dokumentu (např. JSON) -- má výhody ve snadném přidávání dalších scénářů, a jasného oddělení dat a funkcionality (kódu). Vyžaduje však vytvoření kódu pro převod těchto dat do objektové struktury, kterou používá samotná aplikace. Proto jsem tuto variantu zařadil pro prototyp jako \textit{nice-to-have}, a v~první verzi prototypu data vytvářel přímo v~kódu v~kontroleru mise.
+
+	V~případě velkého objemu dat by forma nahrávání s~externího souboru nemusela být nejvhodnější, a bude možná nutné přejít na variantu s~databází, či jinou. Díky použití ORM knihovny SQLAlchemy, a abstrahování logiky do modelové/objektové vrstvy, to ovšem nebude znamenat velký zásah do kódu. 
+
+\subsubsection*{Zobrazení misi s~jednotlivými záložkami}
+	\textbf{Východiska}\\
+	V~náhledu mise je třeba uživateli zobrazit následující obsah:
+	
+	\begin{itemize}
+		\item Úvod -- představení mise
+		\item Data -- několik různých typů dat
+		\item Místo pro řešení -- stránku nebo stránky, kde uživatel řeší daný úkol - zadává informaci (např. heslo), vybírá z~uvedených možností a podobně
+		\item Závěr -- stránku s~přehledem použitých zdrojů a doplňujících informací. 
+	\end{itemize}	
+
+	\textbf{Řešení}\\
+	V~prototypu jsem zobrazování vyřešil nahráním všech datových zdrojů při načtení stránky a zobrazování/skrývání pomocí jednoduchého javascriptového (stimulus.js) kontroleru. Kontroler funguje obecně pro libovolný počet datových zdrojů.
+	Toto řešení má oproti jiným variantám jednoduchý kód (přehledná šablona a malý přehledný javascriptový kontroler).
+	Potenciální riziko je v~tom, že pokud budou datové zdroje rozsáhlejší, bude první nahrání stránky pomalé. V~takové situaci by bylo vhodné data nenahrávat všechna při prvotním načtení stránky, ale přidat asynchronní získání dat pomocí Fetch API. To se však nijak nevylučuje s~vytvořeným kontrolerem, který má na starost pouze přepínání viditelnosti jednotlivých částí stránky.
+
+\subsubsection*{Zobrazovat data různých typů}
+	\textbf{Východiska}\\
+	Definoval jsem si základní typy dat, které se v~náhledech misí mohou objevovat (dle kapitoly \textit{Hlavní zdroje dat digitální stopy uživatele}): 
+
+	\begin{itemize}
+		\item Příspěvky na sociálních sítích
+		\item Výměna zpráv mezi dvěma osobami
+		\item Výpis dat\\
+			seznam hovorů, výpis z~bankovního účtu,...
+		\item Datové body na mapě
+		\item Souhrnné informace\\
+			například informace, které uchovávají sociální sítě o~jednotlivých uživatelích
+		\item webové stránky
+	\end{itemize}
+
+	Kromě toho ale lze očekávat, že se budou v~budoucnu objevovat další typy dat, je tedy důležité, aby bylo snadné tuto nabídku rozšiřovat, a aby bylo řešení dostatečně obecné (nebo zobecnitelné), aby bylo toto přidávání snadné. 
+
+	\textbf{Řešení}\\
+	Pro jednotlivé typy dat jsem vytvořil samostatné modely, kontrolery a sadu šablon. Pro ukázku popíši strukturu kódu pro zobrazování dat typu sociální síť:\\
+	Kontroler umožňuje zobrazovat několik základních stránek - osobní profil, sadu příspěvků (feed) a přihlašovací stránku.
+	Zobrazování sady příspěvků je realizováno pomocí několik \textit{partial} šablon - feed, post, comment. Jednotlivé šablony je pak snadné například designově upravovat, a zůstávají velice přehledné.
+
+	U~většiny typů dat bylo třeba si vytvořit vlastní HTML+CSS kód, který nabízí očekávanou strukturu dat v~přehledné podobě.
+	Pro zobrazování lokačních dat jsem využil SMapy pomocí javascriptu.   
+
+
+\subsection{Další funkcionality}
+Mezi funkcionality, které nejsou potřebné pro fázi prototypu, ale je dobré na ně myslet při strukturování celé aplikace, patří:
+
+\begin{itemize}
+	\item \textbf{Uživatelský účet}\\
+		Aplikace by měla nabízet uchovávání informací o~stavu jednotlivých misí, aby mohl uživatel navázat tam, kde přestal.
+		Může to být řešeno uživatelským účtem s~registrací, nebo identifikací pomocí cookies.
+
+	\item \textbf{Přidávání dalších scénářů}\\
+		Aplikace do budoucna počítá s~možností vlastních scénářů. Systém zadávání zdrojových dat a jejich nahrávání tedy musí být možné vystavit ven.
+		Varianty přidávání můžou být různě technicky složité, to bude záležet na další analýze používání aplikace v~praxi.		
+
+
+\end{itemize} 
+
+\subsection{Návrh aplikace}
+Aplikace má architekturu MVT (Model-View-Template), inspirovanou návrhem jiného webového frameworku v~jazyce Python, a to Django.
+
+\subsubsection*{Model}
+Aplikace plně využívá objektový návrh, a se všemi zdrojovými daty nakládá jako s~objekty.\\
+Jsou tedy definované modely/třídy jako \verb|Facebook user|, \verb|Facebook post|, \verb|Location point| a další.\\
+Kromě toho je objektem i každá Mise, která obsahuje jednotlivé \verb|Mission Items|.
+
+\subsubsection*{View}
+Vrstva View řeší získávání a zpracování dat, vykreslení šablony s~těmito daty a navázání na konkrétní cesty (\textit{route}).\\
+V~aplikaci je použito rozšíření \verb|Flask-Classful|, které usnadňuje práci s~views, například snadným vytvořením základních \verb|CRUD| operací.
+
+\subsubsection*{Template}
+Flask v~základu využívá templatovací jazyk \verb|Jinja2|, který nabízí omezené množství logiky v~šabloně, a vede k~tomu, aby většina aplikační logiky zůstávala mimo šablonu (tedy ve View).
 
 \subsection{Ověření a otestování aplikace}
+Prototyp aplikace je třeba uživatelsky otestovat, 
+
+
 \subsection{Vyhodnocení provedeného ověření a doporučení pro další rozvoj aplikace}
