@@ -40,13 +40,14 @@ Uložené cookies je také možné z~počítače smazat, obvykle v~nastavení pr
 Také je možné u~služeb vyžádat mazání dat. Na toto mají opět nárok uživatelé v~EU díky GDPR, a služby mají povinnost tuto možnost snadno nabízet. Často však jde o~mazání celého účtu a není možné snadno smazat jen část dat. Případně to služby umožňují, ale běžný uživatel o~tom nemusí ani vědět. Existují služby, které toto mohou za uživatele dělat automaticky, například aplikace \href{https://www.jumboprivacy.com}{Jumbo}. 
 
 \subsubsection*{Do Not Track}
-% TODO
+S~webovým požadavkem je možné poslat signál \textit{Do Not Track}. Aby se tak dělo, je třeba toto nastavení zapnout v~možnostech prohlížeče. Tento signál dává službám najevo, že uživatel nechce, aby byla jeho aktivita sledována. Aktuálně však není žádná zákonná povinnost ho jakkoli zpracovat, ani neexistuje konsensus na tom, jak by služby, které toto přání uživatele respektovat chtějí, měly postupovat. To se snad v~budoucnu mění, neboť probíhají snahy tento postup sjednotit a dát mu zákonnou váhu \citep{do-not-track-future}
 
 \subsection{Anonymní prohlížení webu}
 
 \subsubsection*{Anonymní režim}
 Snad všechny běženě používané prohlížeče nabízí takzvaný \textit{anonymní režim}. Je důležité si být vědom toho, co tento režim dělá a co ne.
-Základním principem je, že soubory cookie, a celkový kontext prohlížení, uchovává pouze po dobu, kdy je dané okno anonymního prohlížení otevřeno - potom, co okno smažu, jsou všechny cookies smazány. To ovšem uživatele nechrání před ostatními typy sběru dat a identifikace - dříve zmíněný \textit{browser fingerprinting}, \textit{behavioral profiling} nebo \textit{tracking pixel} budou fungovat dále. Stejně tak není nijak pozměněno, jaké informace se dostávají s~poskytovateli internetu.
+Základním principem je, že soubory cookie, a celkový kontext prohlížení, uchovává pouze po dobu, kdy je dané okno anonymního prohlížení otevřeno - potom, co okno smažu, jsou všechny cookies smazány. To ovšem uživatele nechrání před ostatními typy sběru dat a identifikace - dříve zmíněný \textit{browser fingerprinting}, \textit{behavioral profiling} nebo \textit{tracking pixel} budou fungovat dále. Stejně tak není nijak pozměněno, jaké informace se dostávají s~poskytovateli internetu.\\
+Bohužel ani na část ochrany soukromí, kterou by anonymní režim poskytovat měl, se nelze spolehnout. Opakovaně byly objeveny způsoby, jak díky chybám software sledovat uživatele používající anonymní režim, například pomocí cachování ikon stránek \citep{incognito-tracking}.
 
 \subsubsection*{Prohlížeče}
 Jak již bylo zmíněno, různé prohlížeče nabízí různou míru základního nastavení soukromí i různé možnosti pro uživatelské nastavení.
@@ -66,6 +67,10 @@ Kromě toho existuje mnoho doplňků, kombinujících více technik ochrany souk
 
 \subsubsection*{Vyhledávací enginy}
 Pokud se chceme vyhnout sběru dat při používání vyhledávačů, je třeba se poohlédnout po alternativách k~nejpoužívanějším vyhledáváčům, jimiž jsou Google, Bing a v~česku Seznam. Variantou, která neuchovává historii a nevytváří profil uživatele (a tím pádem nenabízí personalizované výsledky), je vyhledávač DuckDuckGo.
+
+\subsection{Finanční transakce}
+Je možné, i když komplikované, chránit svoje soukromí i v~případě finančních transakcí. Běžné finanční operace probíhají přes banky, které naši identitu znají, možnost anonymní výměny peněz však přinesly v~posledních letech kryptoměny. Ty umožňují založení anonymní peněženky, na kterou je možné převést například hotovost, a pak převádět peníze mezi peněženkami bez odhalení identity osoby.
+
 
 \subsection{Šifrování dat}
 Dalším způsobem omezení možností práce s~daty, které vytváříme, je jejich šifrování. To se samozřejmě vztahuje jen na část možných digitálních služeb, zejména na komunikaci.
@@ -91,7 +96,17 @@ Jedním z~častých důvodu průniku do zařízení je neaktualizovaný software
 Zvýšenou ochranu pak uživatel získá použitím specializovaného software na odhalování rizikového kódu, například ve stažených souborech (což je jeden z~častých způsobu napadení zařízení). Nabídka antivirových a podobných bezpečnostích programů je široká, zroveň novější verze operačního systému Microsoft Windows obsahují i zabudovaný nástroj Microsoft Defender Antivirus.
 
 \subsubsection*{Phishing}
-% TODO
+Počátek phishingových útoků se datují do devadesátých let. Jde o~konkrétní formu útoků typu \textit{social engineering}, tedy typu útoků, který cílí uživatele a skrze něj se snaží prolomit zabezpečení. Phishing probíhá typicky formou e-mailů, které se vydávají za jiné osoby nebo instituce a chtějí po uživateli aby stáhl soubor či použil odkaz. Phishingové kampaně jsou stále oblíbenou formou útoků -- v~roce 2020 nahlásilo 75 \% firem, že zaregistrovali phishingový útok, a v~57 \% proběhl alespoň jeden úspěšně \citep{phishing-success}.\\
+Ochrana proti těmto útokům nemá jednoduché technické řešení, ale lze dát několik doporučení, jak phishingový útok rozpoznat:
+\begin{itemize}
+	\item Firmy nebudou požadovat osobní data (heslo, číslo OP, číslo bankovní karty) v~e-mailu ani po telefonu.
+	\item Obecně je vhodné nestahovat soubory a neotevírat odkazy z~e-mailu (ale ne vždy se tomu lze vyhnout).
+	\item Při otevírání odkazu z~e-mailu je vždy vhodné zkontrolovat, zda adresa opravdu odpovídá tomu, co očekáváme.
+	\item Je bezpečnější zkopírovat adresu z~e-mailu a vložit ji ručně do prolížeče, než kliknout na odkaz v~e-mailu.
+	\item Phishingové e-maily častěji obsahují gramatické nebo technické chyby.
+	\item Phishingové e-maily častěji tlačí příjemce k~rychlé akci (hrozí sankcemi, upozorňují na rizika).
+\end{itemize}
+
 
 % \subsubsection*{Šifrované ukládání dat}
 % TODO?
@@ -146,7 +161,6 @@ Některé služby dokonce tuto míru zabezpečnení vyžadují -- ať už ze zá
 % \subsubsection*{Bezpečnostní otázky}
 % TODO?
 
-
-\section*{Závěr}
+\section*{Shrnutí}
 V~této kapitole byly detailně rozebrány konkrétní přístupy a nástroje, které uživateli mohou pomoci zvýšit kontrolu nad digitální stopou a zabezpečit data.
 Ukázala, že možností kontroly je více, a jejich použití vychází z~potřeb a požadavků každého uživatele.

@@ -1,4 +1,4 @@
-\begin{thebibliography}{48}
+\begin{thebibliography}{51}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -39,6 +39,13 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock s. 232--246, 08 2017.
 \newblock \doi{10.1007/978-3-319-64483-7_15}.
 \newblock ISBN 978-3-319-64482-0.
+
+\bibitem[Brandom(2021)]{do-not-track-future}
+{\sc Brandom}, R.
+\newblock \emph{GLOBAL PRIVACY CONTROL WANTS TO SUCCEED WHERE DO NOT TRACK
+  FAILED} [online]. 2021. [cit.~2021-04-14].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.theverge.com/2021/1/28/22252935/global-privacy-control-personal-data-tracking-ccpa-cpra-gdpr-duckduckgo}}.
 
 \bibitem[Bryce -- Klang(2009)Bryce, Klang]{behavior-changes}
 {\sc Bryce}, J. -- {\sc Klang}, M.
@@ -127,6 +134,13 @@ Identity theft rises sharply as fraudsters target social media.
   Users} [online]. 2018. [cit.~2021-04-02].
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.nytimes.com/2018/06/07/technology/facebook-privacy-bug.html}}.
+
+\bibitem[Goodin(2021)]{incognito-tracking}
+{\sc Goodin}, D.
+\newblock \emph{New browser-tracking hack works even when you flush caches or
+  go incognito} [online]. 2021. [cit.~2021-04-14].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://arstechnica.com/information-technology/2021/02/new-browser-tracking-hack-works-even-when-you-flush-caches-or-go-incognito/}}.
 
 \bibitem[Hadnagy(2011)]{social-engineering-book}
 {\sc Hadnagy}, C.
@@ -359,6 +373,14 @@ Identity theft rises sharply as fraudsters target social media.
   [cit.~2021-04-02].
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.policie.cz/clanek/poskytovatele-internetoveho-pripojeni.aspx}}.
+
+\bibitem[Whitney(2021)]{phishing-success}
+{\sc Whitney}, L.
+\newblock \emph{How a successful phishing attack can hurt your organization}
+  [online]. 2021. [cit.~2021-04-14].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.techrepublic.com/article/how-a-successful-phishing-attack-can-hurt-your-organization/#:~:text=Some
+  57%25 said their organization,and unsuccessful--in 2020.}}
 
 \bibitem[Yang(2010)]{behavioral-profiling}
 {\sc Yang}, Y.~C.
