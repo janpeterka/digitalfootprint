@@ -230,16 +230,6 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://nypost.com/2017/08/15/uber-settles-federal-probe-over-god-view-spy-software/}}.
 
-\bibitem[Mouton et~al.(2016)Mouton, Leenen,,
-  Venter]{social-engineering-definition}
-{\sc Mouton}, F. -- {\sc Leenen}, L. -- {\sc Venter}, H.
-\newblock Social engineering attack examples, templates and scenarios.
-\newblock \emph{Computers \& Security}. 2016, 59, s.~186--209.
-\newblock ISSN 0167-4048.
-\newblock \doi{https://doi.org/10.1016/j.cose.2016.03.004}.
-\newblock Dostupn{\'{e}}~z:
-  \url{{https://www.sciencedirect.com/science/article/pii/S0167404816300268}}.
-
 \bibitem[MŠMT({\natexlab{a}})]{rvp-is}
 {\sc MŠMT}.
 \newblock \emph{Publicistika, knihovnictví a informatika} [online].
@@ -295,6 +285,17 @@ Identity theft rises sharply as fraudsters target social media.
   [online]. 2020. [cit.~2021-03-15].
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.whoishostingthis.com/resources/cookies-guide/#:~:text=Cookies}}.
+
+\bibitem[Pilton et~al.(2021)Pilton, Faily,,
+  Henriksen-Bulmer]{user-privacy-expectations}
+{\sc Pilton}, C. -- {\sc Faily}, S. -- {\sc Henriksen-Bulmer}, J.
+\newblock Evaluating privacy - determining user privacy expectations on the
+  web.
+\newblock \emph{Computers \& Security}. 2021, 105, s.~102241.
+\newblock ISSN 0167-4048.
+\newblock \doi{https://doi.org/10.1016/j.cose.2021.102241}.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S0167404821000651}}.
 
 \bibitem[Rathi(2019)]{ca-elections}
 {\sc Rathi}, R.
