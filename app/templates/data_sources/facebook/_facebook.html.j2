@@ -1,12 +1,13 @@
 <div class="row">
+	{% if with_about %}
 	<div class="col-4">
 		<h1>About you</h1>
 		{% include('data_sources/facebook/_about_me.html.j2') %}
 	</div>
+	{% endif %}
 
 	<div class="col">
 		<h1>Feed</h1>
 		{% include('data_sources/facebook/_feed.html.j2') %}
 	</div>
-
 </div>

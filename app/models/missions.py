@@ -14,6 +14,7 @@ class Mission(db.Model, BaseMixin):
     data_sources = []
     actions = []
 
+
     # WIP - just for testing purposes
     @staticmethod
     def random_mission():

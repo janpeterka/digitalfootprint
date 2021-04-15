@@ -50,25 +50,41 @@ class MissionView(FlaskView):
             # Define mission info
             mission = Mission(
                 id=1,
-                name="Uhodni heslo",
-                info="Uhodni heslo do účtu na sociální sítě na základě veřejně dostupných dat.",
+                name="Uhodni Frantovo heslo na Facebook",
+                info="""
+                    Představ si, že sis nechal ve škole na počítači přihlášený svůj Facebook účet a tvůj kamarád Martin to využil, aby si z tebe udělal srandu.<br>
+                    Napsal na tvůj profil ošklivej příspěvek, a než sis toho všiml, několik lidí už to okomentovalo a pak se ti smáli.<br>
+                    Rád bys to Martinovi vrátil. Dával jsi pozor, jestli taky někdy nezapomene přihášení na školním počítači, ale dává si na to pozor.<br>
+                    Tak tě napadlo, že zkusíš uhodnout jeho heslo, a tak se mu na profil dostat.<br> 
+                    <p>
+                    <hr>
+                    Jak na to?<br>
+                    Vzpomněl sis, že vám na informatice váš učitel jednou říkal o tom, jak snadný hesla si často lidi vymýšlí.<br>
+                    Že často používají svoje jméno, jméno někoho z rodiny, nebo třeba domácího mazlíčka.<br>
+                    Taky víš, že po tobě Facebook chce, abys měl v hesle velký písmeno a nějaký číslo.<br>
+                    Hm, jaký číslo by si tam mohl dát? A kam - na začátek, doprostřed, nakonec?<br>
+                    A co se zkusit podívat na nějaký Frantovy facebookový statusy, třeba nám to poradí..
+                    """,
             )
 
             # Define data sources
             facebook_user = FacebookUser(
-                full_name="Jakub Ryba",
+                full_name="František Ryba",
                 password="Bramburek99",
                 phone_number="+420733264215",
                 e_mail="jakub.ryba@seznam.cz",
+                profile_picture_path="mission_data/password_guesser/photos/profile.jpg",
             )
             facebook_user.posts = [
                 FacebookPost(
-                    text=f'<img src="{url_for("static", filename="mission_data/password_guesser/photos/birthday_cake.jpg")}"> Nejlepší narozeniny, je mi 22.',
+                    text=f"Nejlepší narozeniny, je mi 22.",
+                    picture_path="mission_data/password_guesser/photos/birthday_cake.jpg",
                     created_at=datetime.datetime(2021, 3, 21, 15, 12, 1),
                 ),
-                FacebookPost.random_post(),
+                # FacebookPost.random_post(),
                 FacebookPost(
-                    text=f'<img src="{url_for("static", filename="mission_data/password_guesser/photos/dog.jpg")}"> Mám psa! Jmenuje se Brambůrek a je rozkošnej.',
+                    text=f"Konečně mi rodiče dovolili psa! Jmenuje se Brambůrek a je rozkošnej.",
+                    picture_path="mission_data/password_guesser/photos/dog.jpg",
                     created_at=datetime.datetime(2020, 12, 6, 10, 13, 56),
                 ),
                 FacebookPost(

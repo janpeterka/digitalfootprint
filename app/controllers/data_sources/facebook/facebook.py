@@ -25,7 +25,10 @@ class FacebookView(FlaskView):
             user = FacebookUser.random_user()
 
         return template(
-            "data_sources/facebook/_facebook.html.j2", posts=user.posts, user=user
+            "data_sources/facebook/_facebook.html.j2",
+            posts=user.posts,
+            user=user,
+            with_about=False,
         )
 
     def login(self, user=None):

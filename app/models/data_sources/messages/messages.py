@@ -17,11 +17,11 @@ class Message(db.Model, BaseMixin):
     sent_to = db.Column(db.ForeignKey("data_users.id"), nullable=False)
 
     sender = db.relationship(
-        "User", primaryjoin="Message.created_by == User.id", backref="sent_messages",
+        "User", primaryjoin="Message.created_by == User.id", backref="sent_messages"
     )
 
     reciever = db.relationship(
-        "User", primaryjoin="Message.sent_to == User.id", backref="recieved_messages",
+        "User", primaryjoin="Message.sent_to == User.id", backref="recieved_messages"
     )
 
     # WIP - only for testing
