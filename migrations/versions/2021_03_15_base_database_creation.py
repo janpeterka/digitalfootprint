@@ -48,7 +48,7 @@ def upgrade():
         sa.Column("text", sa.Text(), nullable=False),
         sa.Column("created_at", sa.DateTime(), nullable=False),
         sa.Column("created_by", sa.Integer(), nullable=False),
-        sa.ForeignKeyConstraint(["created_by"], ["data_facebook_users.id"],),
+        sa.ForeignKeyConstraint(["created_by"], ["data_facebook_users.id"]),
         sa.PrimaryKeyConstraint("id"),
     )
     op.create_table(
@@ -57,7 +57,7 @@ def upgrade():
         sa.Column("text", sa.Text(), nullable=False),
         sa.Column("created_at", sa.DateTime(), nullable=False),
         sa.Column("created_by", sa.Integer(), nullable=False),
-        sa.ForeignKeyConstraint(["created_by"], ["data_facebook_users.id"],),
+        sa.ForeignKeyConstraint(["created_by"], ["data_facebook_users.id"]),
         sa.PrimaryKeyConstraint("id"),
     )
     op.create_table(
@@ -67,7 +67,7 @@ def upgrade():
         sa.Column("longitude", sa.Float(), nullable=False),
         sa.Column("created_at", sa.DateTime(), nullable=True),
         sa.Column("user_id", sa.Integer(), nullable=False),
-        sa.ForeignKeyConstraint(["user_id"], ["data_users.id"],),
+        sa.ForeignKeyConstraint(["user_id"], ["data_users.id"]),
         sa.PrimaryKeyConstraint("id"),
     )
     op.create_table(
@@ -77,8 +77,8 @@ def upgrade():
         sa.Column("created_at", sa.DateTime(), nullable=False),
         sa.Column("created_by", sa.Integer(), nullable=False),
         sa.Column("sent_to", sa.Integer(), nullable=False),
-        sa.ForeignKeyConstraint(["created_by"], ["data_users.id"],),
-        sa.ForeignKeyConstraint(["sent_to"], ["data_users.id"],),
+        sa.ForeignKeyConstraint(["created_by"], ["data_users.id"]),
+        sa.ForeignKeyConstraint(["sent_to"], ["data_users.id"]),
         sa.PrimaryKeyConstraint("id"),
     )
     # ### end Alembic commands ###

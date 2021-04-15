@@ -25,20 +25,21 @@ class FacebookUser(db.Model, BaseMixin):
 
     @staticmethod
     def load_by_email_or_phone_number(identifier):
-        FacebookUser.load_by_attribute("e_mail", identifier)
-        user = FacebookUser.query.filter_by(e_mail=identifier).first()
+        user = FacebookUser.load_by_attribute("e_mail", identifier)
+        # user = FacebookUser.query.filter_by(e_mail=identifier).first()
         if not user:
-            user = FacebookUser.query.filter_by(phone_number=identifier).first()
+            if not identifier[0] == "+":
+                identifier = "+420" + identifier
+            print(identifier)
+            user = FacebookUser.load_by_attribute("phone_number", identifier)
+            # user = FacebookUser.query.filter_by(phone_number=identifier).first()
         return user
 
     @property
     def profile_picture(self):
         picture = type("", (), {})()
         if self.profile_picture_path:
-            picture.src = url_for(
-                "static",
-                filename=f"data/facebook/users/images/{self.profile_picture_path}.jpg",
-            )
+            picture.src = url_for("static", filename=f"{self.profile_picture_path}")
         else:
             picture.src = url_for(
                 "static", filename="images/profile_picture_placeholder.jpg"

@@ -10,7 +10,7 @@
     {% set class_ = class_ + ' required' %}
   {% endif %}
 
-  {% if field.type in ('SubmitField', 'ButtonField', 'CancelButtonField', 'AddButtonField', 'DeleteButtonField', 'EditButtonField') %}
+  {% if field.type in ('SubmitField', 'ButtonField', 'CancelButtonField', 'AddButtonField', 'DeleteButtonField', 'EditButtonField', 'HiddenField') %}
     {% set with_label = False %}
   {% endif %}
 

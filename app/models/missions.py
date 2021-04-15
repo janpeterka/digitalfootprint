@@ -10,9 +10,11 @@ class Mission(db.Model, BaseMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255), nullable=False)
     info = db.Column(db.Text, nullable=False)
+    solution = db.Column(db.Text, nullable=False)
 
     data_sources = []
     actions = []
+
 
     # WIP - just for testing purposes
     @staticmethod

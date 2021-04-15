@@ -4,3 +4,17 @@ div.browser.url {
 	padding-left: 2rem;
 	color: grey;
 }
+
+img.profile.small {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%
+}
+
+.color-fb-blue {
+	color: #4267B2
+}
+
+.color-bg-fb-blue {
+	background-color: #4267B2
+}

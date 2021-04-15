@@ -1,11 +1,16 @@
-<div class="p-1 pl-4 pb-2 mt-3 bg-primary" style="border-radius: 1rem">
-	<div class="row mt-2" >
-		<img src="{{ post.author.profile_picture.src }}" style='width: 3rem; height: 3rem; border-radius: 50%'>
-		<span class="ml-1">{{ post.author.full_name }}<br>
-		{{ post.created_at }}</span>
+<div class="p-1 pl-4 pb-2 mt-3 color-bg-fb-blue" style="border-radius: 1rem">
+	<div class="row pt-2 ml-2">
+		<img src="{{ post.author.profile_picture.src }}" class="profile small">
+		<span class="ml-1">
+			{{ post.author.full_name }}<br>
+			{{ human_format_date(post.created_at) }}
+		</span>
 	</div>
-	<div class="row mt-2">
-		{{ post.text }}
+	<div class="row mb-2 ml-2">
+		<div style="width: 100%; margin-bottom: 0.5rem">{{ post.text }}</div>
+		{% if post.picture_path %}
+			<div><img src="{{ url_for('static', filename=post.picture_path) }}"></div>
+		{% endif %}
 	</div>
 	{% for comment in post.comments %}
 		{% include('data_sources/facebook/_comment.html.j2') %}

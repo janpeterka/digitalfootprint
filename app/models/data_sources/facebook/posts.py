@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from app import db, fake
 
 from app.models.base_mixin import BaseMixin
@@ -17,11 +19,18 @@ class FacebookPost(db.Model, BaseMixin):
 
     created_by = db.Column(db.ForeignKey("data_facebook_users.id"), nullable=False)
 
+    picture_path = db.Column(db.Text, nullable=False)
+
     author = db.relationship(
         "FacebookUser",
         primaryjoin="FacebookPost.created_by == FacebookUser.id",
         backref="posts",
     )
+
+    @property
+    def human_created_at(self):
+        return self.created_at.strftime("%d.%m.%Y %H:%M")
+        # return datetime.date(self.created_at)
 
     # WIP - only for testing
     @staticmethod
