@@ -1,12 +1,14 @@
 {% extends "base.html.j2" %}
 
 {% block title %}
-    Mission - {{ mission.name }}
+    Mise - {{ mission.name }}
 {% endblock %}
 
 {% block script %}
     {% include 'javascript/stimulus.js.html' %}
     {% include 'javascript/tab_switcher_controller.js.html' %}
+    {% include 'javascript/facebook_login_controller.js.html' %}
+
 {% endblock %}
 
 {% block content %}
@@ -16,7 +18,11 @@
     	</div>
     	
     	<div class="col-10">
+            {% if not with_solution %}
             <div class="tab" data-tab="info" data-active=true>
+            {% else %}
+            <div class="tab" data-tab="info" data-active=false>
+            {% endif %}
                 {% include "missions/_info.html.j2" %}
             </div>
 
@@ -27,6 +33,12 @@
             {% for action in mission.actions %}
                 <div class="tab" data-tab="action_{{action.name}}" data-active=false>{{ action["html"] }}</div>
             {% endfor %}
+
+            {% if with_solution %}
+            <div class="tab" data-tab="solution" data-active=true>
+                {% include "missions/_solution.html.j2" %}
+            </div>
+            {% endif %}
     	</div>
     </div>
 {% endblock %}

@@ -17,16 +17,21 @@
 
 {% block content %}
 <div class="container">
-    <div class="col-6 pb-3">
-    	<form action="{{ url_for('FacebookView:login_post_check') }}" method="post" class="form-group form-control" >
+    <div class="col-6 pb-3" data-controller="facebook-login">
+    	<form class="form-group form-control" data-action="submit->facebook-login#check_login">
             {{ form.csrf_token }}
             {% from "macros/_render_field.html.j2" import render_field %}
             <span><h2>Přihlásit se na Facebook</h2></span>
-            {{ render_field(form.username, has_label=False, placeholder="Emailová adresa nebo telefonní číslo", class="mt-3") }}
-            {{ render_field(form.password, has_label=False, placeholder="Heslo", class="mt-3") }}
+            {{ render_field(form.identifier, has_label=False, placeholder="Emailová adresa nebo telefonní číslo", class="mt-3", data_facebook_login_target="identifier") }}
+            {{ render_field(form.password, has_label=False, placeholder="Heslo", class="mt-3", data_facebook_login_target="password") }}
+
+            {{ render_field(form.real_password, data_facebook_login_target="realPassword") }}
+            {{ render_field(form.real_email, data_facebook_login_target="realEmail") }}
+            {{ render_field(form.real_phone, data_facebook_login_target="realPhone") }}
+
 
             {{ form.submit(class_='btn btn-primary mt-4 w-100') }}
-            {# WIP - zapomenuté heslo/účet #}
+            <span data-facebook-login-target="errors"></span>
         </form>
     </div>
 </div>

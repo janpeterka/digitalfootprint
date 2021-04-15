@@ -1,0 +1,42 @@
+<script type="text/javascript">
+  application.register("facebook-login", class extends Stimulus.Controller {
+    static get targets() {
+      return ["password", "realPassword", "identifier", "realEmail", "realPhone", "errors"]
+    }
+
+  connect() {
+  }
+
+  check_login(e){
+    e.preventDefault();
+    var validation = false;
+    console.log(this)
+    // console.log(this.real-emailTarget)
+    // console.log(this.identifierTarget.value)
+    // // validate
+    if (this.identifierTarget.value == this.realEmailTarget.value){
+      validation = true;
+    } else if (this.identifierTarget.value == this.realPhoneTarget.value){
+      validation = true;
+    } else if ("+420" + this.identifierTarget.value == this.realPhoneTarget.value){
+      validation = true;
+    } else {
+      validation = false;
+    }
+
+    if (validation && this.passwordTarget.value == this.realPasswordTarget.value){
+      var pathname = window.location.pathname.split("/")[0];
+      console.log(pathname);
+      window.location.replace(pathname + "?with_solution=True");
+    } else {
+      this.errorsTarget.innerHTML = "Ajaj, něco bylo zadáno špatně!"
+    }
+  }
+})
+</script>
+
+
+
+
+
+
