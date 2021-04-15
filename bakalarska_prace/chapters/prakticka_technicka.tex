@@ -5,13 +5,13 @@
 
 \section{Technické řešení}
 \subsection{Výběr technologií}
-Prototyp byl vytvořen jako webové aplikace.
-Hlavními důvody pro toto rozhodnutí bylo:
+Prototyp byl vytvořen jako webová aplikace.
+Hlavní důvody pro toto rozhodnutí jsou:
 \begin{itemize}
 	\item dostupnost pro uživatele i testery\\
 	Není potřeba nic instalovat, stačí jakýkoli moderní webový prohlížeč.
 	\item snadné vytvoření prototypu
-	\item snadná rozšiřitelnost a kooperace na projektu\\ Jako open-source projekt předpokládá možnosti další spolupráce, například s~designéry. Úprava vizuálu je v~případě webové aplikace čistě HTML+CSS(+JS), což je rozšířená dovednost, oproti jiným grafickým prostředím (jako Qt či herní enginy).
+	\item snadná rozšiřitelnost a kooperace na projektu\\ Jako open-source projekt předpokládá možnosti další spolupráce, například s~designéry. Úprava grafické stránky aplikace je v~případě webové aplikace čistě HTML+CSS(+JS), což je rozšířená dovednost, oproti jiným grafickým prostředím (jako Qt či herní enginy).
 \end{itemize}
 
 Konkrétně byl zvolen webový framework \textbf{Flask} (založeného na jazyce Python). Motivací byla osobní zkušenost s~tímto frameworkem, a tedy dostatečná představa o~realizovatelnosti tohoto typu aplikace v~daném prostředí.
@@ -36,12 +36,12 @@ Vývoj je verzován systémem \textbf{git} za použití veřejného repozitáře
 	\end{itemize}
 
 	Varianta databáze byla pro účely prototypu vyřadazena z~důvodu složitější úpravy a nahlížení dat. \\
-	Z~dlouhodobého hlediska se jeví jako vhodná forma strukturovaného dokumentu (např. JSON) -- má výhody ve snadném přidávání dalších scénářů, a jasného oddělení dat a funkcionality (kódu). Vyžaduje však vytvoření kódu pro převod těchto dat do objektové struktury, kterou používá samotná aplikace.
+	Z~dlouhodobého hlediska se jeví jako vhodná forma strukturovaného dokumentu (např. JSON) -- má výhody ve snadném přidávání dalších scénářů a jasného oddělení dat a funkcionality (kódu). Vyžaduje však vytvoření kódu pro převod těchto dat do objektové struktury, kterou používá samotná aplikace.
 	Proto byla tato varianta zařazena pro prototyp jako \textit{nice-to-have}, a v~první verzi prototypu jsou data přímo v~kódu v~kontroleru mise.
 
-	V~případě velkého objemu dat by forma nahrávání s~externího souboru nemusela být nejvhodnější, a bude možná nutné přejít na variantu s~databází, či jinou. Díky použití ORM knihovny SQLAlchemy, a abstrahování logiky do modelové/objektové vrstvy, to ovšem nebude znamenat velký zásah do kódu. 
+	V~případě velkého objemu dat by forma nahrávání externího souboru nemusela být nejvhodnější, a bude možná nutné přejít na variantu s~databází, či jinou. Díky použití ORM knihovny SQLAlchemy, a abstrahování logiky do modelové/objektové vrstvy to ovšem nebude znamenat velký zásah do kódu. 
 
-\subsubsection*{Zobrazení misi s~jednotlivými záložkami}
+\subsubsection*{Zobrazení mise s~jednotlivými záložkami}
 	\textbf{Východiska}\\
 	V~náhledu mise je třeba uživateli zobrazit následující obsah:
 	
@@ -69,15 +69,15 @@ Vývoj je verzován systémem \textbf{git} za použití veřejného repozitáře
 		\item Datové body na mapě
 		\item Souhrnné informace\\
 			například informace, které uchovávají sociální sítě o~jednotlivých uživatelích
-		\item webové stránky
+		\item Webové stránky
 	\end{itemize}
 
-	Kromě toho ale lze očekávat, že se budou v~budoucnu objevovat další typy dat, je tedy důležité, aby bylo snadné tuto nabídku rozšiřovat, a aby bylo řešení dostatečně obecné (nebo zobecnitelné), aby bylo toto přidávání snadné. 
+	Kromě toho ale lze očekávat, že se budou přidávány další typy dat, je tedy důležité, aby bylo snadné tuto nabídku rozšiřovat,a aby bylo řešení dostatečně obecné (nebo zobecnitelné), aby bylo toto přidávání snadné. 
 
 	\textbf{Řešení}\\
-	Pro jednotlivé typy dat byly vytvořeny samostatné modely, kontrolery a sadu šablon. Pro ukázku je zde struktura kódu pro zobrazování dat typu sociální síť:\\
+	Pro jednotlivé typy dat byly vytvořeny samostatné modely, kontrolery a sady šablon. Pro ukázku je zde struktura kódu pro zobrazování dat typu sociální síť:\\
 	Kontroler umožňuje zobrazovat několik základních stránek - osobní profil, sadu příspěvků (feed) a přihlašovací stránku.
-	Zobrazování sady příspěvků je realizováno pomocí několik \textit{partial} šablon - feed, post, comment. Jednotlivé šablony je pak snadné například designově upravovat, a zůstávají velice přehledné.
+	Zobrazování sady příspěvků je realizováno pomocí několik \textit{partial} šablon - feed, post, comment. Jednotlivé šablony je pak snadné například designově upravovat a zůstávají velice přehledné.
 
 	U~většiny typů dat bylo třeba si vytvořit vlastní HTML+CSS kód, který nabízí očekávanou strukturu dat v~přehledné podobě.
 	Pro zobrazování lokačních dat byla využita javascriptová knihovna SMapy.   
@@ -102,7 +102,7 @@ Mezi funkcionality, které nejsou potřebné pro fázi prototypu, ale je dobré 
 Aplikace má architekturu MVT (Model-View-Template), inspirovanou návrhem jiného webového frameworku v~jazyce Python, a to Django.
 
 \subsubsection*{Model}
-Aplikace plně využívá objektový návrh, a se všemi zdrojovými daty nakládá jako s~objekty.\\
+Aplikace plně využívá objektový návrh a se všemi zdrojovými daty nakládá jako s~objekty.\\
 Jsou tedy definované modely/třídy jako \verb|Facebook user|, \verb|Facebook post|, \verb|Location point| a další.\\
 Kromě toho je objektem i každá Mise, která obsahuje jednotlivé \verb|Mission Items|.
 
@@ -111,20 +111,20 @@ Vrstva View řeší získávání a zpracování dat, vykreslení šablony s~tě
 V~aplikaci je použito rozšíření \verb|Flask-Classful|, které usnadňuje práci s~views, například snadným vytvořením základních \verb|CRUD| operací.
 
 \subsubsection*{Template}
-Flask v~základu využívá templatovací jazyk \verb|Jinja2|, který nabízí omezené množství logiky v~šabloně, a vede k~tomu, aby většina aplikační logiky zůstávala mimo šablonu (tedy ve View).
+Flask v~základu využívá šablonovací jazyk \verb|Jinja2|, který nabízí omezené množství logiky v~šabloně, a vede k~tomu, aby většina aplikační logiky zůstávala mimo šablonu (tedy ve View).
 
 \subsection{Ověření a otestování aplikace}
 Při ověřování funkčnosti aplikace s~reálnými uživateli budou zejména kontrolovány tyto oblasti: 
 
 \begin{itemize}
-	\item \textbf{Orientace v~prostředí}
-		Bude ověřováno, zda je uživateli dostatečně jasné, co se po něm chce, a dokáže v~prostředí aplikace najít vše co potřebuje pro interakci s~ním. 
-	\item \textbf{Používání datových zdrojů}
+	\item \textbf{Orientace v~prostředí}\\
+		Bude ověřováno, zda je uživateli dostatečně jasné, co se po něm požaduje, a dokáže v~prostředí aplikace najít vše, co potřebuje pro interakci s~ním. 
+	\item \textbf{Používání datových zdrojů}\\
 		S~ohledem na to, že nahlížení datových zdrojů je v~uživatelské interakci s~aplikací hlavní činností, bude ověřováno, zda je jejich používání jasné, srozumitelné a umožňuje plnění misí. 
-	\item \textbf{Náročnost úkolů}
+	\item \textbf{Náročnost úkolů}\\
 		Další testovanou oblastí bude náročnost úkolů v~prezentovaných misích. Toto testování musí probíhat u~každé mise, jež bude do aplikace přidána. Bude ověřováno, zda dokáže uživatel z~dodaných informací vymyslet postup práce, zda má všechna potřebná data a naopak jestli není úkol příliš jednoduchý.
-	\item \textbf{Míra zaujetí}
-		Nakonec bude získán pohled uživatelů na to, zda je tato forma seznámení s~tématikou zajímavá a poutavá.
+	\item \textbf{Míra zaujetí}\\
+		Nakonec bude získán pohled uživatelů na to, zda je tato forma seznámení s~tématikou poutavá a přínosná.
 \end{itemize}
 
 Ze všech kontrolovaných oblastí lze očekávat výstupy, které poslouží k~posunutí aplikace z~fáze prototypu do produkční verze.    

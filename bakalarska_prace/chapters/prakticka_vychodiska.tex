@@ -1,7 +1,7 @@
 \chapter{Praktická část - Východiska}
 
 \section*{Úvod}
-Praktická část této balakářské práce se zabývá navržením a vytvořením prostředí (\textit{Aplikace}) pro vzdělávání této tématiky.
+Praktická část této balakářské práce se zabývá navržením a vytvořením prostředí (\textit{aplikace}) pro vzdělávání v~této tématice.
 Je rozdělena do dvou kapitol. První kapitola popisuje východiska aplikace, druhá pak její technický návrh a řešení.
 
 \section{Zařazení problematiky digitální stopy do školních výukových materiálů}
@@ -13,13 +13,13 @@ Zaměřuje se na to, jakou roli a prostor v~nich aktuálně (v~kontextu narůsta
 
 Pro snazší orientaci v~kapitole zde shrnuji použité zkratky a kódy a jejich význam:
 
-\textbf{RVP} -- Rámcový vzdělávací plán, definován \citep{rvp} je následovně:
+\textbf{RVP} -- Rámcový vzdělávací program:
 
 \begin{displayquote}
 \uv{Rámcové vzdělávací programy (RVP) tvoří obecně závazný rámec pro tvorbu školních vzdělávacích programů škol všech oborů vzdělání v~předškolním, základním, základním uměleckém, jazykovém a středním vzdělávání. Do vzdělávání v~České republice byly zavedeny zákonem č. 561/2004 Sb., o~předškolním, základním, středním, vyšším odborném a jiném vzdělávání (školský zákon).} \citep{rvp} 
 \end{displayquote}
 
-\textbf{Klasifikace SŠ} (dle \citep{stredni-vzdelavani}):
+\textbf{Klasifikace SŠ}:
 
 \textbf{Obory s~maturitou}
 
@@ -57,16 +57,16 @@ Pro snazší orientaci v~kapitole zde shrnuji použité zkratky a kódy a jejich
 
 \subsection{Vymezení dokumentů}
 
-Pro prozkoumání, jak jsou témata zařazena ve vzdělání, budou primárním zdrojem Rámcové vzdělávací plány (dále RVP). Je nutné se dívat na jejich návaznost, podobnosti a rozdíly na různých stupních a zaměřeních vzdělávání.
+Pro prozkoumání, jak jsou témata zařazena ve vzdělání, budou primárním zdrojem Rámcové vzdělávací programy (dále RVP). Je nutné se dívat na jejich návaznost, podobnosti a rozdíly na různých stupních a zaměřeních vzdělávání.
 
 Konkrétně tedy budou prozkoumány RVP pro základní vzdělávání, které definují vzdělávací oblast Informatiky a její cíle, a dále RVP pro gymnázia a vybrané odborné školy se zaměřením na Informatiku a Informační technologie. 
 
-Kromě budou rozebrány aktuální plány na revizi oblasti Informatiky a ICT, která může přinášet změny i v~této oblasti, a zároveň ukazovat na možné trendy v~pojetí vzdělávání v~oblasti digitálního světa a technologií a s~tím souvisejících témat.
+Kromě toho budou rozebrány aktuální plány na revizi oblasti Informatiky a ICT, která může přinášet změny i v~této oblasti, a zároveň ukazovat na možné trendy v~pojetí vzdělávání v~oblasti digitálního světa a technologií a s~tím souvisejících témat.
 
 Konkrétně tedy kapitola prozkoumá propojení na následující dokumenty:
 
 \begin{itemize}
-\item Rámcové vzdělávací plány
+\item Rámcové vzdělávací programy
 	\begin{itemize}
     \item RVP základní školy \citep{rvp-zs}
     \item RVP-G (kategorie L) \citep{rvp-g}
@@ -76,7 +76,7 @@ Konkrétně tedy kapitola prozkoumá propojení na následující dokumenty:
 \item Návrh revizí rámcových vzdělávacích programů v oblasti informatiky a informačních a komunikačních technologií \citep{revize}
 \end{itemize}
 
-\subsection{Rámcové vzdělávací plány}
+\subsection{Rámcové vzdělávací programy}
 
 \subsubsection*{RVP základní školy}
 
@@ -172,7 +172,7 @@ Jak se to promítá přímo do očekávaných výstupů můžeme vidět v~tabulc
 
 % TODO: přidat obrázky
 
-Na všechny typech SŠ nacházíme výstup:
+Na všech typech SŠ nacházíme výstup:
 
 \begin{displayquote}
 	\uv{\textbf{chrání} digitální zřízení, digitální obsah i \textbf{osobní údaje} v~digitálním prostředí před poškozením či zneužitím}
@@ -202,7 +202,7 @@ Téma osobních dat a digitální stopy můžeme v~aktuálních vzdělávacích 
 	\citep{rvp-g}
 \end{displayquote}
 
-Konkrétní vzdělávací výsledky s~tímto tématem se nachází pouze u~RVP odborných škol oboru Informační technologie.
+Konkrétní vzdělávací výsledky s~tímto tématem se nacházejí pouze u~RVP odborných škol oboru Informační technologie.
 
 Zároveň se však toto téma výrazněji objevuje v~návrhu revize, a lze tedy předpokládat, že se do RVP (a následně ŠVP jednotlivých škol) bude více promítat.
 
@@ -210,14 +210,14 @@ Vznik materiálů a prostředí pro zařazení této problematiky do výuky je t
 
 
 
-\section{Východiska}
-Jak vyplývá z~předchozí sekce, téma digitální stopy a osobních dat se nejspíše bude po revizích více objevovat v~RVP středních škol. Na tuto skupinu studentů tedy bude Aplikace cílit.
+\section{Východiska pro tvorbu aplikace}
+Jak vyplývá z~předchozí sekce, téma digitální stopy a osobních dat se nejspíše bude po revizích více objevovat v~RVP středních škol. Na tuto skupinu studentů tedy bude aplikace cílit.
 
-Prostředí může sloužit jako součást většího vzdělávacího oblouku, ovšem tato práce si nedává za cíl vytvoření metodik pro učitele, a tedy musí obsah Aplikace fungovat i sám o~sobě.
+Prostředí může sloužit jako součást většího vzdělávacího oblouku, ovšem tato práce si nedává za cíl vytvoření metodik pro učitele, a tedy musí obsah aplikace fungovat i sám o~sobě.
 
-Cílem je uživatele (studenty) v~Aplikaci seznámit s~tématem interaktivní, lákavou formou.
+Cílem je uživatele (studenty) v~aplikaci seznámit s~tématem atraktivní formou.
 
-Zároveň však součástí Aplikace musí být kvalitní napojení na teorii i reálné příklady, včetně informování uživatele o~tom, jak může svou digitální stopu spravovat.
+Zároveň však součástí aplikace musí být kvalitní napojení na teorii i reálné příklady, včetně informování uživatele o~tom, jak může svou digitální stopu spravovat.
 
 \subsection{Návrh aplikace z~pohledu uživatele}
 Návrh aplikace je následující:
@@ -233,17 +233,17 @@ Zjednodušený use-case tedy je:
 V~sekci \textit{Scénáře} budou popsány konkrétní možné scénáře, z~nich část bude použita v~prototypu.
 
 \subsection{Prototyp}
-Jak bylo řečeno, cílem práce je vytvoření prototypu. Ten tedy nemusí mít všechny funkce či grafické řešení aplikace, která by byla reálně veřejně použita ve vzdělávání, má za cíl pouze najít vhodnou podobu, otestovat její technickou proveditelnost a náročnost, a získat zpětnou vazbu od vybraných testerů.
+Jak bylo řečeno, cílem práce je vytvoření prototypu. Ten tedy nemusí mít všechny funkce či grafické řešení aplikace, která by byla reálně veřejně použita ve vzdělávání, má za cíl pouze najít vhodnou podobu, otestovat její technickou proveditelnost a náročnost a získat zpětnou vazbu od vybraných testerů.
 
 Prototyp bude obsahovat několik scénářů s~různými typy dat.
 
 
 \subsection{Scénáře}
-Jak bylo popsáno, jádrem Aplikace jsou Mise - tedy jednotlivé příběhy, ve kterých se uživatel seznamuje s~různými situacemi, týkajícími se osobních dat.
+Jak bylo popsáno, jádrem aplikace jsou Mise - tedy jednotlivé příběhy, ve kterých se uživatel seznamuje s~různými situacemi, týkajícími se osobních dat.
 
-Aplikace bude navržena tak, aby bylo možné snadno další scénáře přidávat, a tím rozšiřovat její vzdělávací potenciál (například v~zacílení na jiné věkové skupiny).
+aplikace bude navržena tak, aby bylo možné snadno další scénáře přidávat a tím rozšiřovat její vzdělávací potenciál (například v~zacílení na jiné věkové skupiny).
 
-Při tvorbě scénářů vycházím z~dat a rizik popsaných v~předchozích kapitolách a navrhuji následující testovací scénáře, které představují různé typy a kategorie dat.
+Při tvorbě scénářů vycházím z~dat a rizik popsaných v~předchozích kapitolách a navrhuji následující testovací scénáře, které cílí na různé typy a kategorie dat.
 
 \textit{Některé scénáře ukazují činnost, jež je ilegální. Motivací pro jejich zachování je to, že  možnost prožít si situaci z~pohledu útočníka může vést k~lepšímu prožití a přenesení do uvažování o~vlastní ochraně. Zároveň u~každého takového scénáře bude upozorněno, že jde o~simulaci a jaké trestněprávní dopady by taková činnost měla v~reálném světě.}
 
@@ -256,22 +256,22 @@ Příspěvky na sociální síti.\\
 Veřejné / veřejné pro okruh lidí.\\
 \textbf{Dodatečné informace}\\
 Informace o~tom, jak lidé tvoří hesla\\
-Případy toho, kdy lidé měli veřejně informace, jež vedly k~prolomení hesla.\\
+Případy toho, kdy lidé měli veřejně informace, jež vedly k~prolomení hesla\\
 Obecná doporučení, jak chránit svoje hesla\\
 Upozornění na nelegálnost takové činnosti v~reálním životě\\
 
-V~tomto scénáři je úkolem uhodnout heslo do sociální sítě. Scénář se odkazuje na témata vhodného zabezpečení svých účtů a sicuací, kdy člověkem sdílené informace napomáhají k~prolomení jeho obran.
+V~tomto scénáři je úkolem uhodnout heslo do sociální sítě. Scénář se odkazuje na témata vhodného zabezpečení svých účtů a situací, kdy uživatelem sdílené informace napomáhají k~prolomení jeho obran.
 
-Jde o~jednoduchý, začáteční scénář -- pracuje s~veřejnými daty z~jednoho zdroje. Je cíleně zjednodušený oproti realitě.
+Jde o~jednoduchý scénář vhodný pro seznámení s~aplikací. Je cíleně zjednodušený oproti realitě a pracuje s~veřejnými daty z~jednoho zdroje.
 
-\textit{Scénář se nezabývá hesly z~pohledu kryptografického a obecně bezpečnostního, neboť to je již mimo rozsah naší práce. Bylo by však pravděpodobně možné takový scénář do Aplikace přidat pro vzdělávání v~této oblasti.}
+\textit{Scénář se nezabývá hesly z~pohledu kryptografického a obecně bezpečnostního, neboť to je již mimo rozsah naší práce. Bylo by však pravděpodobně možné takový scénář do aplikace přidat pro vzdělávání v~této oblasti.}
 
 
 \subsubsection*{Plánování vloupání}
 \textbf{Cíl}\\
-Naplánovat vloupání dané osoby -- udělat si představu o~jejím bydlišti a době, kdy bude dům prázdný.
+Naplánovat vloupání do domu dané osoby -- udělat si představu o~jejím bydlišti a době, kdy bude dům prázdný.
 \textbf{Používané zdroje dat}\\
-Příspěvky na sociální síti
+Příspěvky na sociální síti\\
 Příspěvky z~fitness sociální sítě\\
 Stránky firmy\\
 \textbf{Typ dat}\\
@@ -313,7 +313,7 @@ Soukromé -- data sbírají aplikace.\\
 Napojení na teorii \textit{attention economy}\\
 Informace o~možnostech nastavení ochrany soukromí v~různých aplikacích.\\
 
-Tento scénář simuluje fungování vyhodnocování dat algoritmy firem jako je Facebook nebo Google, a následnou reklamní aukci. Má potenciál, aby na něj bylo navázáno šířeji tématem personalizované reklamy a \textit{attention economy}. 
+Tento scénář simuluje fungování vyhodnocování dat algoritmy firem, jako je Facebook nebo Google, a následnou reklamní aukci. Má potenciál, aby na něj bylo navázáno šířeji tématem personalizované reklamy a \textit{attention economy}. 
 
 \section*{Shrnutí}
-Tato kapitola poskytla východiska pro tvorbu aplikace, a propojila dosud získané poznatky z~této oblasti s~potřebami školství.  
+Tato kapitola představila východiska pro tvorbu aplikace a propojila dosud získané poznatky z~této oblasti s~potřebami školství.  
