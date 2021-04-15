@@ -16,14 +16,14 @@
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Missions
+                Mise
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ url_for('MissionView:index') }}">Mission control</a> 
+              <a class="dropdown-item" href="{{ url_for('MissionView:index') }}">Přehled misí</a> 
             </div>
           </li>
 
-          <li class="nav-item dropdown">
+{#           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               	Messages
             </a>
@@ -37,7 +37,6 @@
               Facebook
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              {# <a class="dropdown-item" href="{{ url_for('FacebookView:show') }}">Feed</a>  #}
               <a class="dropdown-item" href="{{ url_for('FacebookView:login') }}">Login</a> 
             </div>
           </li>
@@ -49,7 +48,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="{{ url_for('LocationView:index') }}">Index</a> 
             </div>
-          </li>
+          </li> #}
         </ul>
     </div>
   </div>
