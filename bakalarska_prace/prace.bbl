@@ -1,9 +1,14 @@
-\begin{thebibliography}{51}
+\begin{thebibliography}{58}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[ca-()]{ca-nigeria}
+ [online]. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.theguardian.com/uk-news/2018/mar/21/cambridge-analyticas-ruthless-bid-to-sway-the-vote-in-nigeria}}.
 
 \bibitem[ide(2016)]{identity-theft-rise}
 Identity theft rises sharply as fraudsters target social media.
@@ -12,6 +17,17 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock \doi{https://doi.org/10.1016/S1361-3723(16)30048-3}.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.sciencedirect.com/science/article/pii/S1361372316300483}}.
+
+\bibitem[nam()]{name}
+ [online]. [cit.~2021-04-14].
+
+\bibitem[Auxier et~al.(2019)Auxier, Rainie, Anderson, Perrin, Kumar,,
+  Turner]{lack-of-control}
+{\sc Auxier}, B. et~al.
+\newblock \emph{Americans and Privacy: Concerned, Confused and Feeling Lack of
+  Control Over Their Personal Information} [online]. 2019. [cit.~2021-03-15].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.pewresearch.org/internet/2019/11/15/americans-and-privacy-concerned-confused-and-feeling-lack-of-control-over-their-personal-information/}}.
 
 \bibitem[Azucar et~al.(2018)Azucar, Marengo,, Settanni]{big-5-predictions}
 {\sc Azucar}, D. -- {\sc Marengo}, D. -- {\sc Settanni}, M.
@@ -230,6 +246,16 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://nypost.com/2017/08/15/uber-settles-federal-probe-over-god-view-spy-software/}}.
 
+\bibitem[Mouton et~al.(2016)Mouton, Leenen,,
+  Venter]{social-engineering-definition}
+{\sc Mouton}, F. -- {\sc Leenen}, L. -- {\sc Venter}, H.
+\newblock Social engineering attack examples, templates and scenarios.
+\newblock \emph{Computers \& Security}. 2016, 59, s.~186--209.
+\newblock ISSN 0167-4048.
+\newblock \doi{https://doi.org/10.1016/j.cose.2016.03.004}.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/S0167404816300268}}.
+
 \bibitem[MŠMT({\natexlab{a}})]{rvp-is}
 {\sc MŠMT}.
 \newblock \emph{Publicistika, knihovnictví a informatika} [online].
@@ -303,12 +329,12 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://towardsdatascience.com/effect-of-cambridge-analyticas-facebook-ads-on-the-2016-us-presidential-election-dacb5462155d}}.
 
-\bibitem[Research(2019)]{lack-of-control}
-{\sc Research}, P.
-\newblock \emph{Americans and Privacy: Concerned, Confused and Feeling Lack of
-  Control Over Their Personal Information} [online]. 2019. [cit.~2021-03-15].
+\bibitem[Reuters(2018)]{myeritage-leak}
+{\sc Reuters}.
+\newblock \emph{Security breach at MyHeritage website leaks details of over 92
+  million users} [online]. 2018. [cit.~2021-04-14].
 \newblock Dostupn{\'{e}}~z:
-  \url{{https://www.pewresearch.org/internet/2019/11/15/americans-and-privacy-concerned-confused-and-feeling-lack-of-control-over-their-personal-information/}}.
+  \url{{https://www.reuters.com/article/us-myheritage-privacy-idUSKCN1J1308}}.
 
 \bibitem[Scott(2020)]{scott-cookies}
 {\sc Scott}, T.
@@ -353,12 +379,29 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.statista.com/statistics/264810/number-of-monthly-active-facebook-users-worldwide/}}.
 
+\bibitem[Temkin(2021)]{google-privacy-announcement}
+{\sc Temkin}, D.
+\newblock \emph{Charting a course towards a more privacy-first web} [online].
+  2021. [cit.~2021-04-16].
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://blog.google/products/ads-commerce/a-more-privacy-first-web/}}.
+
 \bibitem[Thompson -- Warzel(2019)Thompson, Warzel]{location-data}
 {\sc Thompson}, S.~A. -- {\sc Warzel}, C.
 \newblock \emph{Twelve Million Phones, One Dataset, Zero Privacy} [online].
   2019. [cit.~2021-04-05].
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.nytimes.com/interactive/2019/12/19/opinion/location-tracking-cell-phone.html}}.
+
+\bibitem[Timm -- Perez(2010)Timm, Perez]{identity-theft}
+{\sc Timm}, C. -- {\sc Perez}, R.
+\newblock CHAPTER 5 - Identity Theft.
+\newblock In {\sc Timm}, C. -- {\sc Perez}, R. (Ed.) \emph{Seven Deadliest
+  Social Network Attacks}. Boston: Syngress, 2010. s. 83--98.
+\newblock \doi{https://doi.org/10.1016/B978-1-59749-545-5.00005-7}.
+\newblock Dostupn{\'{e}}~z:
+  \url{{https://www.sciencedirect.com/science/article/pii/B9781597495455000057}}.
+\newblock ISBN 978-1-59749-545-5.
 
 \bibitem[Valášek -- Horák(2020)Valášek, Horák]{china-czech}
 {\sc Valášek}, L. -- {\sc Horák}, J.
@@ -390,5 +433,11 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock \doi{https://doi.org/10.1016/j.dss.2010.03.001}.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.sciencedirect.com/science/article/pii/S0167923610000497}}.
+
+\bibitem[ČESKO(2010-2021)]{zakony}
+{\sc ČESKO}.
+\newblock \emph{Zákon č. 141/1961 Sb., o trestním řízení soudním
+  (trestní řád)} [online]. 2010-2021. [cit.~2021-04-16].
+\newblock Dostupn{\'{e}}~z: \url{{https://www.zakonyprolidi.cz/cs/1961-141}}.
 
 \end{thebibliography}

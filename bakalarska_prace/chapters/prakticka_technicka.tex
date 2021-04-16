@@ -11,9 +11,9 @@ Hlavní důvody pro toto rozhodnutí jsou:
 	\item snadná rozšiřitelnost a kooperace na projektu\\ Jako open-source projekt předpokládá možnosti další spolupráce, například s~designéry. Úprava grafické stránky aplikace je v~případě webové aplikace čistě HTML+CSS(+JS), což je rozšířená dovednost, oproti jiným grafickým prostředím (jako Qt či herní enginy).
 \end{itemize}
 
-Konkrétně byl zvolen webový framework \textbf{Flask} (založeného na jazyce Python). Motivací byla osobní zkušenost s~tímto frameworkem, a tedy dostatečná představa o~realizovatelnosti tohoto typu aplikace v~daném prostředí.
+Konkrétně byl zvolen webový framework \textbf{Flask} (založený na jazyce Python). Motivací byla osobní zkušenost s~tímto frameworkem, a tedy dostatečná představa o~realizovatelnosti tohoto typu aplikace v~daném prostředí.
 
-Na frontendové straně nebyl použit žádný rozsáhlý framework a pro někde nutné části Javascriptu byly zvoleny pouze microframeworky \textbf{stimulus.js} a \textbf{jQuery}.
+Na frontendové straně nebyl použit žádný rozsáhlý framework a pro nutné části Javascriptu byly zvoleny pouze microframeworky \textbf{stimulus.js} a \textbf{jQuery}.
 
 Vývoj je verzován systémem \textbf{git} za použití veřejného repozitáře na službě GitHub.
 
@@ -69,7 +69,7 @@ Vývoj je verzován systémem \textbf{git} za použití veřejného repozitáře
 		\item Webové stránky
 	\end{itemize}
 
-	Kromě toho ale lze očekávat, že se budou přidávány další typy dat, je tedy důležité, aby bylo snadné tuto nabídku rozšiřovat,a aby bylo řešení dostatečně obecné (nebo zobecnitelné), aby bylo toto přidávání snadné. 
+	Kromě toho ale lze očekávat, že budou přidávány další typy dat, je tedy důležité, aby bylo snadné tuto nabídku rozšiřovat, a aby bylo řešení dostatečně obecné (nebo zobecnitelné), a aby bylo toto přidávání snadné. 
 
 	\textbf{Řešení}\\
 	Pro jednotlivé typy dat byly vytvořeny samostatné modely, kontrolery a sady šablon. Pro ukázku je zde struktura kódu pro zobrazování dat typu sociální síť:\\
@@ -115,7 +115,7 @@ Při ověřování funkčnosti aplikace s~reálnými uživateli budou zejména k
 
 \begin{itemize}
 	\item \textbf{Orientace v~prostředí}\\
-		Bude ověřováno, zda je uživateli dostatečně jasné, co se po něm požaduje, a dokáže v~prostředí aplikace najít vše, co potřebuje pro interakci s~ním. 
+		Bude ověřováno, zda je uživateli dostatečně jasné, co se po něm požaduje, a zda dokáže v~prostředí aplikace najít vše, co potřebuje pro interakci s~ním. 
 	\item \textbf{Používání datových zdrojů}\\
 		S~ohledem na to, že nahlížení datových zdrojů je v~uživatelské interakci s~aplikací hlavní činností, bude ověřováno, zda je jejich používání jasné, srozumitelné a umožňuje plnění misí. 
 	\item \textbf{Náročnost úkolů}\\
@@ -124,8 +124,29 @@ Při ověřování funkčnosti aplikace s~reálnými uživateli budou zejména k
 		Nakonec bude získán pohled uživatelů na to, zda je tato forma seznámení s~tématikou poutavá a přínosná.
 \end{itemize}
 
-Ze všech kontrolovaných oblastí lze očekávat výstupy, které poslouží k~posunutí aplikace z~fáze prototypu do produkční verze.    
+Ze všech kontrolovaných oblastí lze očekávat výstupy, které poslouží k~posunutí aplikace z~fáze prototypu do produkční verze.
 
 
-% \subsection{Vyhodnocení provedeného ověření a doporučení pro další rozvoj aplikace}
-% TODO?
+\subsection{Vyhodnocení provedeného ověření a doporučení pro další rozvoj aplikace}
+S~ohledem na situaci nebylo možné testovat s~většinou osob osobně (s~nahlížením na jejich interakci s~aplikací), a je ted možné se spoléhat jen na reakce, které testující poskytli. I~kvůli tomu nebylo možné získat přepodkládaný vzorek z~řad studentů, většina testujících tedy byli lidé z~věkové skupiny 23-30 let, část z~nich učitelé či studenti pedagogických směrů.
+
+Celkové reakce na prototyp byly kladné -- testující se v~aplikaci bez dalších pokynů snadno zorientovali a během několika minut zvládli misi vyřešit. To ukazuje na jednoduchost úvodní mise, to ovšem hodnotili spíše neutrálně nebo pozitivně -- náročnost jim připadala přiměřená.
+Aplikace jim přišla jako atraktivní forma seznámení s~tímto tématem.
+
+Hlavní připomínky a podněty pro další zlepšení byly následující:
+
+\begin{itemize}
+	\item \textbf{grafická stránka}
+	Testující uživatelé upozorňovali na nedokonalost grafické úpravy, která snižuje atraktivitu aplikace.
+	Konkrétním poznatkem také bylo, že aplikace není graficky optimalizovaná na mobilní zařízení.\\  
+	Vhodným řešením je tedy upravit design aplikace, nejspíše za pomoci další osoby zaměřené na design.
+	\item \textbf{}
+	\item \textbf{}
+	\item \textbf{}
+\end{itemize}
+
+Další možná zlepšení aplikace jsou následující:
+\begin{itemize}
+	\item \textbf{možnosti obtížnosti}\\
+	I když při testování tato situace nenastala, je pravděpodobné, že v reálném prostředí bude větší škála toho, jak snadno zvládne uživatel misi splnit. Mohlo by být vhodné přidat volitelnou obtížnost, případně nápovědy, které může uživatel využít, pokud je pro něj základní obtížnost příliš vysoká.
+\end{itemize}

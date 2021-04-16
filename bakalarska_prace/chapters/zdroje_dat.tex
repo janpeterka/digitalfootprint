@@ -1,14 +1,14 @@
 \chapter{Hlavní zdroje dat digitální~stopy\\ uživatele}
 
 Tato kapitola nabízí možnou kategorizaci dat podle toho, jak se uživatel podílel na jejich vytvoření, a podle jejich anonymity. Dále rozebírá konkrétní typy dat pro úplnější představu o~tom, co všechno je ukládáno a zpracováváno.\\
-Tato data budou využita v~praktické části práce pro vytváření scénářů a modelových dat podle reálných typů dat a možnostech přístupu k~nim.
+Tyto kategorie dat budou využity v~praktické části práce pro vytváření scénářů a modelových dat podle reálných typů dat a možnostech přístupu k~nim.
 
 \section{Kategorie dat}
-Data, která vytváříme používáním technologií a digitálních služeb, lze kategorizovat několik způsoby. Dělení může být například:
+Data, která vytváříme používáním technologií a digitálních služeb, lze kategorizovat několik způsoby. Dělení může být například na:
 \begin{itemize}
 	\item \textbf{aktivní} vs \textbf{pasivní} digitální stopu \citep{pew-digital-footprint}
-    \item případně doplněna o~\textbf{vědomě nevědomou} digitální stopu \citep{fish-digital-footprint}
-	\item \textbf{identifikovatelná} vs \textbf{anonymní} data 
+    \item přechozí dělení doplněno o~\textbf{vědomě nevědomou} digitální stopu \citep{fish-digital-footprint}
+	\item \textbf{identifikovatelná} vs \textbf{anonymní} data
 \end{itemize}
 
 
@@ -22,19 +22,19 @@ V~tomto pohledu nerozlišujeme, kdo je majitelem dat a jak s~nimi kdo může nak
 
 \subsubsection*{Pasivní stopa}
 
-Pasivní stopa se skládá z~typu dat, které uživatel vytváří svým používáním digitální platformy či služby bez přímého sdílení či nahrávání. Nemusí si tedy vzniku těchto dat být vůbec vědom, zejména pokud má nedostatečnou představu o~technologické stránkce používaných služeb. Obvykle jde o~analytická data, používána pro lepší technický, bezpečnostní nebo marketingo-ekonomický efekt. Může jít o~informace o~zobrazení stránky či příspěvku, IP adresu a další technické parametry připojeného uživatele (například lokaci). Může jít i o~kombinovaná data, například určení zájmů či demografické skupiny, vytvořené na základě jednotlivých dat.
+Pasivní stopa se skládá z~typu dat, která uživatel vytváří svým používáním digitální platformy či služby bez přímého sdílení či nahrávání. Nemusí si tedy vzniku těchto dat být vůbec vědom, zejména pokud má nedostatečnou představu o~technologické stránce používaných služeb. Obvykle jde o~analytická data, používaná pro lepší technický, bezpečnostní nebo marketingo-ekonomický efekt. Může jít o~informace o~zobrazení stránky či příspěvku, IP adresu a další technické parametry připojeného uživatele (například lokaci). Může jít i o~kombinovaná data, například určení zájmů či demografické skupiny, vytvořená na základě jednotlivých dat.
 
 \subsubsection*{Vědomě nevědomá stopa}
 
 Fish dále přidává kategorii vědomě nevědomé digitální stopy, která se skládá z~dat aktivně vložených jinými uživateli \citep{fish-digital-footprint}.
-Může jít o~fotografie -- na sociálních sítích, ale například i z~různých akcí (kde člověk zveřejnění dat musí v~České republice odsouhlasit), označení v~příspěvcích nebo o~data zveřejněná úřady. U~části těchto dat může mít uživatel možnost ji zpětně omezit (například Facebook umožňuje odstranění označení).
+Může jít o~fotografie -- na sociálních sítích, ale například i z~různých akcí (kde člověk zveřejnění dat musí v~České republice odsouhlasit), označení v~příspěvcích nebo o~data zveřejněná úřady. U~části těchto dat může mít uživatel možnost tuto stopu zpětně omezit (například Facebook umožňuje odstranění označení).
 
 \subsection{Identifikovatelná a anonymní data}
 Toto dělení se dívá na data z~pohledu právně-technologického.
 
 \subsubsection*{Identifikovatelná data}
 
-Sem řadíme typ dat, které jsou přímo propojitelné s~naší osobou. Jde pak o~osobní údaje podle definice GDPR:
+Sem řadíme typ dat, která jsou přímo propojitelná s~naší osobou. Jde pak o~osobní údaje podle definice GDPR:
 
 \begin{displayquote}
 	\uv{Pro účely tohoto nařízení se rozumí „osobními údaji“ veškeré informace o~identifikované nebo identifikovatelné fyzické osobě (dále jen „subjekt údajů“);
@@ -69,7 +69,7 @@ Kromě toho je možné aktivitu uživatelů napříč weby sledovat pomocí cook
 
 \subsubsection*{Cookies}
 Jak bylo zmíněno v~předchozí kapitole, cookies jsou soubory, které si stránka prostřednictvním prohlížeče ukládá do počítače uživatele, aby ho mohla identifikovat při dalších požadavcích (zde mluvíme o~\textit{first-party cookies}). V~současnosti mnoho webů obsahuje takzvané cookies třetích stran \textit{third-party cookies}, které umožňují reklamním službám (například Google Ads) sledovat aktivitu napříč webem.
-Google v~březnu 2021 oznámil postupný odchod od používání cookies třetích stran, které plánuje nahradit vlastní technologí a ve svém prohlížeči Google Chrome je zakázat (a tím následovat další prohlížeče, jako Firefox či Safari).
+Google v~březnu 2021 oznámil postupný odchod od používání cookies třetích stran, které plánuje nahradit vlastní technologí a ve svém prohlížeči Google Chrome je zakázat (a tím následovat další prohlížeče jako Firefox či Safari) \citep{google-privacy-announcement}.
 
 \subsubsection*{Device a browser fingerprinting}
 S~postupným legislativním tlakem na omezení rozsahu cookies se začaly služby přesouvat k~používání \textit{fingerprintingu}, tedy používání jakéhosi otisku zařízení nebo prohlížeče, ze kterého uživatel k~webům přistupuje. Používané techniky jsou rozmanité, od získávání informací o~prohlížeči a operačním systému (verze, jazyk, instalované doplňky a další), po \textit{canvas fingerprint} využívající specifika v~renderování webového prvku \verb|canvas|, které se liší podle GPU nebo grafických ovladačů v~daném zařízení.  
@@ -84,7 +84,7 @@ V~kombinaci s~jinými nástroji a s~rostoucími možnosti vyhodnocování těcht
 \subsection{Lokační data}
 Jak bylo zmíněno v~předchozí kapitole, jedním z~typů využívaných dat jsou data lokační.
 
-Tato data mohou například poskytnout vhled, do jakých obchodů uživatel chodí, a nabídnout tak \textit{remarketing} napříč fyzickým a digitálním světem.
+Tato data mohou například poskytnout vhled, do jakých obchodů uživatel chodí, a nabídnout tak remarketing napříč fyzickým a digitálním světem.
 
 Lokační data je v~současnostni snadné získat, zejména díky množství mobilních zařízení připojených k~internetu. I~aplikace, které reálně data pro svoje funkce nepotřebují, o~ně mohou uživatele požádat. Prodejem těchto dat pak mohou získat finance na samotný vývoj aplikace \uv{zdarma}.\\
 Je na místě říct, že možnosti prodeje dat se mohou výrazně lišit podle toho, v~jaké zemi -- a tedy pod jakou legislativou -- se uživatel pohybuje.
@@ -93,15 +93,7 @@ Lokační data dále potenciálně sdílejí aplikace, které reálně data pou�
 
 Například Google Maps uchovává lokaci a přiřazuje ji ke konkrétním místům (obchody, úřady a podobně). Zároveň uchovává informaci o~předpokládané formě aktivity (např. chůze, běh, kolo, auto, hromadná doprava) včetně důvěry (pravděpodobnosti) v~predikci.
 
-Mohlo by se zdát, že lokační data jsou anonymní (typicky obsahují nějaké náhodné ID zařízení, časovou značku a lokaci), v~realitě jsou však velmi snadno deanonymizována. Profesor Ohm z~Georgetown University říká, že přesná geolokační data je naprosto nemožné anonymizovat. Jediná méně anonymizovatelná data jsou podle něj genetická data:
-
-\begin{displayquote}
-% TODO - osekat nebo vyřadit (parafrázovat)
-	\uv{Describing location data as anonymous is “a completely false claim” that has been debunked in multiple studies, Paul Ohm, a law professor and privacy researcher at the Georgetown University Law Center, told us. “Really precise, longitudinal geolocation information is absolutely impossible to anonymize.”
-
-	“D.N.A.,” he added, “is probably the only thing that’s harder to anonymize than precise geolocation information”.}
-	\citep{location-data}
-\end{displayquote}
+Mohlo by se zdát, že lokační data jsou anonymní (typicky obsahují nějaké náhodné ID zařízení, časovou značku a lokaci), v~realitě jsou však velmi snadno deanonymizována. Profesor Ohm z~Georgetown University říká, že dostatečně přesná geolokační data je naprosto nemožné anonymizovat. Jediná méně anonymizovatelná data jsou podle něj genetická data \citep{location-data}.
 
 \subsection{Data vkládaná na sociální sítě a další platformy}
 Nejvýznamnější složkou aktivní (veřejné) digitální stopy jsou pravděpodobně v~současné době obsahy sociálních sítí.
@@ -128,9 +120,9 @@ V~datech z~Facebooku je možné vidět typy dat, o~kterých uživatel obvykle ne
 	\item \textbf{viewed}\\
 	Facebook sleduje ve speciální kategorii
 	\begin{itemize}
-		\item jaká videa, jakou část z~nich, a kolik času celkově uživatel strávil u~videí z~Facebook View
-		\item jaké zboží na Facebook Marketplace si prohlížel
-		\item na jaké zobrazené reklamy reagoval
+		\item jaká videa, jakou část z~nich, a kolik času celkově uživatel strávil u~videí z~Facebook View;
+		\item jaké zboží na Facebook Marketplace uživatel prohlížel;
+		\item na jaké zobrazené reklamy reagoval.
 	\end{itemize}
 	Celkově zde jde o~data, která jsou velmi cenná z~pohledu reklam, monetizace a udržení uživatele ve službě.
 	
@@ -167,7 +159,7 @@ U~každého bodu je pak uvedeno (pokud to je možné zjistit), skrze jakou služ
 	Služba \textit{Google Play Music} uchovává mimo jiné informaci o~počtu přehrání jednotlivých skladeb, a seznam všech spuštění nahrávek s~jejich časovou značkou. To platí i u~služby \textit{Google Podcasts}.
 
 	\item \textbf{aplikace}\\
-	Služba \textit{Google Store} -- tedy nejpoužívanější služba pro správu a instalaci aplikací na zařízeních s~operačním systémem \textit{Android} -- kromě seznamu instalovaných aplikací zaznamenává údaje o~zařízení (konkrétní model telefonu), na kterých byla instalována a telefonního operátora. Dále je uložena informace o~každé instalaci a odinstalaci aplikací.
+	Služba \textit{Google Store} -- tedy nejpoužívanější služba pro správu a instalaci aplikací na zařízeních s~operačním systémem \textit{Android} -- kromě seznamu instalovaných aplikací zaznamenává údaje o~zařízení (konkrétní model telefonu), na kterých byla instalována, a telefonního operátora. Dále je uložena informace o~každé instalaci a odinstalaci aplikací.
 	
 	\item \textbf{reklamy}\\
 	Google uchovává informaci o~všech reakcích (kliknutích) uživatele na zobrazené reklamy.
@@ -179,13 +171,13 @@ U~každého bodu je pak uvedeno (pokud to je možné zjistit), skrze jakou služ
 	Hlasové pokyny pro službu \textit{Google Assistant} jsou ukládány jako originální zvukové nahrávky. To se děje i v~případech, kdy začalo zařízení poslouchat \uv{omylem} -- kdy uživatel neřekl klíčové slovo pro začátek poslechu, ale jiný zvuk tak byl mylně interpretován. 
 
 	\item \textbf{vyhledávání}\\
-	Služba \textit{Google Search} uchovává informaci o~každém vyhledávání a o~tom, kam z~něj uživatel pokračoval
+	Služba \textit{Google Search} uchovává informaci o~každém vyhledávání a o~tom, kam z~něj uživatel pokračoval.
 \end{itemize}
 
 \subsection{E-mail}
 Velká část online komunikace se stále děje přes e-mailové služby, zejména v~případě komunikace pracovní. Ta může obsahovat mnoho (zejména pro firmu) citlivých informací, a jejich únik může mít velké následky (jak je vidět na příkladu uniklých e-mailů Hillary Clinton v~prezidentské volbě v~USA v~roce 2016).
 
-Kromě samotného obsahu e-mailu se dnes používají technologie, které umožňují sledovat uživatelovu interakci s~přijatým e-mailem. Samotná technologie e-mailu toto sledování nenabízí (oproti různým chatovacím službám, nebo protokolu RCS, postupně nahrazujícímu SMS). Často používanou technikou je \textit{pixel tracking}, který funguje pomocí vložení \uv{neviditelného} obrázku o~velikosti jednoho pixelu, který se při otevření e-mailu nahrává z~unikátní adresy, a tento dotaz na danou adresu je možné zaznamenat. U~tom, že je otevření e-mailu sledování, obvykle uživatel vůbec neví.
+Kromě samotného obsahu e-mailu se dnes používají technologie, které umožňují sledovat uživatelovu interakci s~přijatým e-mailem. Samotná technologie e-mailu toto sledování nenabízí (oproti různým chatovacím službám, nebo protokolu RCS, postupně nahrazujícímu SMS). Často používanou technikou je \textit{pixel tracking}, který funguje pomocí vložení \uv{neviditelného} obrázku o~velikosti jednoho pixelu, který se při otevření e-mailu nahrává z~unikátní adresy, a tento dotaz na danou adresu je možné zaznamenat. O~tom, že je otevření e-mailu sledováno, obvykle uživatel vůbec neví.
 
 \subsection{Finanční záznamy}
 V~době, kdy velká většina finančních transakcí neprobíhá s~fyzickými penězi (zejména v~České republice, která je k~adopci nových technologií v~oblasti převodu peněz velmi otevřená), se vytváří další část digitální stopy právě v~této oblasti.
@@ -196,18 +188,18 @@ Znatelná část finančních transakcí se rovněž přesouvá do plateb telefo
 \subsection{Zdravotní data}
 Další oblastí velmi citlivých dat jsou data zdravotní. S~postupnou digitalizací zdravotnictví bude možné tato data čím dál více propojovat, což nese nesporné výhody ve snížení zdravotnické administrativy a urychlení péče, ale i potenciální rizika v~případě úniku či zneužití těchto dat.
 
-Kromě dat ve zdravotnictví se čím dál rozmanitější typy dat sbírají skrze \textit{wearables} -- nositelnou elektroniku, často nabízející různé fitness a zdravotní funkce. Aktuálně se tedy můžeme setkat se sběrem dat o~pohybu, měřením tepu a dechu, nebo měření odporu kůže či množství kyslíku v~krvi.
+Kromě dat ve zdravotnictví se čím dál rozmanitější typy dat sbírají skrze \textit{wearables} -- nositelnou elektroniku, často nabízející různé fitness a zdravotní funkce. Aktuálně se tedy můžeme setkat se sběrem dat o~pohybu, měřením tepu a dechu, nebo měřením odporu kůže či množství kyslíku v~krvi.
 Tato data jsou pak automaticky zpracovávána pro rozpoznávání typu a intenzity pohybu či sportu, doby a kvality spánku nebo míru stresu.
 
 Dá se očekávat, že se budou objevovat další typy sledovaných dat, sensory budou přesnější a z~dat (a to i historických) bude možné vyčíst více informací -- probíhají mnohé výzkumy, které se snaží v~datech najít návaznost na různé zdravotní jevy, příkladem může být studie propojující informace o~variabilitě tepu s~psychickým i fyzickým zdravím \citep{heart-rate-health}.
 
 Tato data typicky opět sbírají soukromé firmy, často nabízející mnoho dalších služeb -- uvést můžeme Google (který v~roce 2019 koupil firmu Fitbit, jednoho z~předních výrobců fitness zařízení), Apple či Samsung.
 
-Ještě výrazně problematičtější částí problematiky zdravotních dat může být v~posledních letech velmi populární analýza DNA soukromými firmami. DNA je ze své podstaty extrémě osobní informace. Ani firmy psokytující tento typ služeb (a spravující genetická data, které jim klienti poskytují k~dalšímu využití) nejsou odolné vůči únikům dat, jak je vidět na případu firmy MyHeritage, které v~roce 2018 unikla data 92 milionů účtů. V~tomto případě nedošlo k~úniku genetických dat, to je ovšem pravděpodobně jen otázka času. Aktuálně jsou genetická data užitečná zejména pro výzkum v~oblasti medicíny a léčiv, s~rostoucím pochopením genomu je těžké odhadnout, jakými způsoby by mohla být tato data využita či zneužita.
+Ještě výrazně problematičtější částí problematiky zdravotních dat může být v~posledních letech velmi populární analýza DNA soukromými firmami. DNA je ze své podstaty extrémě osobní informace. Ani firmy poskytující tento typ služeb (a spravující genetická data, která jim klienti poskytují k~dalšímu využití) nejsou odolné vůči únikům dat, jak je vidět na případu firmy MyHeritage, které v~roce 2018 unikla data 92 milionů účtů \citep{myheritage-leak}. V~tomto případě nedošlo k~úniku genetických dat, to je ovšem pravděpodobně jen otázka času. Aktuálně jsou genetická data užitečná zejména pro výzkum v~oblasti medicíny a léčiv, s~rostoucím pochopením genomu je těžké odhadnout, jakými způsoby by mohla být tato data využita či zneužita.
 
 % \subsection{Státní rejstříky a databáze}
 % TODO?
 
 \section*{Shrnutí}
 V~této kapitole byly popsány možné způsoby kategorizace osobních dat a ukázány některé běžné typy osobních dat.
-Zároveň u~jednotlivých kategorií dat opět ukazuje rizika s~nimi spojená.
+Zároveň je u~jednotlivých kategorií dat ukázáno, jaká jsou rizika s~nimi spojená.
