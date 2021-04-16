@@ -69,11 +69,11 @@ class MissionView(FlaskView):
                     Že často používají svoje jméno, jméno někoho z rodiny, nebo třeba domácího mazlíčka.<br>
                     Taky víš, že po tobě Facebook chce, abys měl v hesle velký písmeno a nějaký číslo.<br>
                     Hm, jaký číslo by si tam mohl dát? A kam - na začátek, doprostřed, nakonec?<br>
-                    A co se zkusit podívat na nějaký Frantovy facebookový statusy, třeba nám to poradí..
+                    A co se zkusit podívat na nějaký Frantovy facebookový statusy, třeba nám to poradí...
                     """,
                 solution="""
-                    Super, přišel jsi na to, jak odhalit Frantovo heslo. Bylo by fajn Frantovi říct, aby si ho změnil na něco lepšího, protože příště by se mu do účtu mohl dostat někdo, kdo by udělal něco fakt zlýho<br>
-                    A možná nejenom do tohohle účtu..<br>
+                    Super, přišel jsi na to, jak odhalit Frantovo heslo. Bylo by fajn Frantovi říct, aby si ho změnil na něco lepšího, protože příště by se mu do účtu mohl dostat někdo, kdo by udělal něco fakt zlýho.<br>
+                    A možná nejenom do tohohle účtu...<br>
                     <hr>
                     A co ty?<br>
                     Máš na svém účtu lepší heslo?<br>
@@ -85,17 +85,13 @@ class MissionView(FlaskView):
                     Pomoct ti může několik rad, jak se svými hesly zacházet:<br>
                     <ul>
                         <li><strong>Heslo by mělo být dostatečně dlouhé.</strong></li>
-                            Tím je lépe chráněno před brute force útokem, protože počet kombinací u delších retězců je
-                            takový, že již není prakticky možné vyzkoušet všechny. Doporučovaná délka se mění s růstem
-                            výkonu počítačů i s pokrokem hashovacích algoritmů, které jsou pro uchovávání hesel používány,
-                            hrubé doporučení může být kolem 10 znaků (pokud používáme všechny ASCII znaky) až 25
-                            znaků (pokud používáme pouze velká a malá písmena).
+                            Pak jsi víc chráněn před tím, když někdo zkouší všechny kombinace písmen (říká se tomu <em>brute force attack</em>).
+                            Doporučovaná délka záleží na spoustě věcech, ale dá se říct, že pokud budeš používat jenom písmena, mělo by mít heslo třeba 25 znaků, pokud používáš i čísla a znaky, může stačit kolem deseti - proto taky často někde chtějí, aby heslo obsahovalo číslo a znak (ale sami jsme viděli, jak to funguje). 
                         <li><strong>Heslo musí být náhodné</strong></li>
-                            Pokud heslo je celé nebo z většiny existujícím slovem (větou, souslovím), výrazně to snižuje jeho
-                            bezpečnost. Heslo by mělo být náhodné – buď řetězec náhodných znaků, nebo (lépe zapamato-
-                            vatelné) kombinace více náhodně vybraných slov.
+                            Pokud je heslo celé nebo z většiny existujícím slovem (větou, souslovím), výrazně to snižuje jeho
+                            bezpečnost. Heslo by mělo být náhodné – buď řetězec náhodných znaků, nebo (lépe zapamatovatelné) kombinace více náhodně vybraných slov.
                         <li><strong>Heslo musí být unikátní</strong></li>
-                            Pokud používáme stejné heslo pro více účtů, při úniku hesla je ohrožení větší. Je tedy zásadní mít odlišná hesla v různých službách.
+                            Pokud používáš stejné heslo pro více účtů, při úniku hesla (a to se prostě stává) je ohrožení větší. Je tedy zásadní mít odlišná hesla v různých službách.
                     </ul>
 
                     Tak snad už máš lepší představu, jak se starat o svoje hesla.<br>
