@@ -36,7 +36,7 @@ Vývoj je verzován systémem \textbf{git} za použití veřejného repozitáře
 	Z~dlouhodobého hlediska se jeví jako vhodná forma strukturovaného dokumentu (např. JSON) -- má výhody ve snadném přidávání dalších scénářů a jasného oddělení dat a funkcionality (kódu). Vyžaduje však vytvoření kódu pro převod těchto dat do objektové struktury, kterou používá samotná aplikace.
 	Proto byla tato varianta zařazena pro prototyp jako \textit{nice-to-have}, a v~první verzi prototypu jsou data přímo v~kódu v~kontroleru mise.
 
-	V~případě velkého objemu dat by forma nahrávání externího souboru nemusela být nejvhodnější, a bude možná nutné přejít na variantu s~databází, či jinou. Díky použití ORM knihovny SQLAlchemy, a abstrahování logiky do modelové/objektové vrstvy to ovšem nebude znamenat velký zásah do kódu. 
+	V~případě velkého objemu dat by forma nahrávání externího souboru mohla aplikaci zpomalit, a bylo by v~tu chvíli vhodné přejít na variantu s~databází, či jinou. Díky použití ORM knihovny SQLAlchemy, a abstrahování logiky do modelové/objektové vrstvy to ovšem nebude znamenat velký zásah do kódu. 
 
 \subsubsection*{Zobrazení mise s~jednotlivými záložkami}
 	\textbf{Východiska}\\
@@ -69,7 +69,8 @@ Vývoj je verzován systémem \textbf{git} za použití veřejného repozitáře
 		\item Webové stránky
 	\end{itemize}
 
-	Kromě toho ale lze očekávat, že budou přidávány další typy dat, je tedy důležité, aby bylo snadné tuto nabídku rozšiřovat, a aby bylo řešení dostatečně obecné (nebo zobecnitelné), a aby bylo toto přidávání snadné. 
+	Kromě toho ale lze očekávat, že budou přidávány další typy dat, je tedy důležité, aby bylo snadné tuto nabídku rozšiřovat.
+	Proto by mělo být řešení dostatečně obecné (nebo zobecnitelné). 
 
 	\textbf{Řešení}\\
 	Pro jednotlivé typy dat byly vytvořeny samostatné modely, kontrolery a sady šablon. Pro ukázku je zde struktura kódu pro zobrazování dat typu sociální síť:\\
@@ -128,25 +129,25 @@ Ze všech kontrolovaných oblastí lze očekávat výstupy, které poslouží k~
 
 
 \subsection{Vyhodnocení provedeného ověření a doporučení pro další rozvoj aplikace}
-S~ohledem na situaci nebylo možné testovat s~většinou osob osobně (s~nahlížením na jejich interakci s~aplikací), a je ted možné se spoléhat jen na reakce, které testující poskytli. Zároveň nebylo možné získat přepodkládaný vzorek z~řad studentů, většina testujících tedy byli lidé z~věkové skupiny 20-30 let, část z~nich učitelé či studenti pedagogických směrů.
+S~ohledem na epidemiologickou situaci nebylo možné testování provádět osobně (s~nahlížením na interakci testujících uživatelů s~aplikací), a je tedy možné se spoléhat jen na reakce, které testující poskytli. Zároveň nebylo možné získat přepodkládaný vzorek z~řad studentů; většina testujících tedy byli lidé z~věkové skupiny 20-30 let, část z~nich učitelé či studenti pedagogických směrů.
 
-Celkové reakce na prototyp byly kladné -- testující se v~aplikaci bez dalších pokynů snadno zorientovali a během několika minut zvládli misi vyřešit. To ukazuje na jednoduchost úvodní mise, kterou hodnotili spíše neutrálně nebo pozitivně -- náročnost většině připadala přiměřená.
-Aplikace jim přišla jako atraktivní forma seznámení s~tímto tématem.
+Celkové reakce na prototyp byly kladné -- testující se v~aplikaci bez dalších pokynů snadno zorientovali a během několika minut zvládli testovací misi vyřešit. To ukazuje na jednoduchost úvodní mise, kterou hodnotili spíše neutrálně nebo pozitivně -- náročnost většině připadala přiměřená.
+Aplikace je podle jejich názoru atraktivní formou seznámení s~tímto tématem.
 
 Hlavní připomínky a podněty pro další zlepšení byly následující:
 
 \begin{itemize}
-	\item \textbf{grafická stránka}\\
+	\item \textbf{grafické aspekty uživatelského prostředí}\\
 	Testující uživatelé upozorňovali na nedokonalost grafické úpravy, která snižuje atraktivitu aplikace.
-	Konkrétním poznatkem také bylo, že aplikace není graficky optimalizovaná na mobilní zařízení.\\  
+	Zazněl též požadavek na lepší grafickou optimalizaci pro mobilní zařízení.\\  
 	Vhodným řešením je tedy upravit design aplikace, nejspíše za pomoci další osoby zaměřené na design.
 	\item \textbf{drobné UX nedostatky}\\
 	Jeden z~testujících uživatelů upozornil na to, že aplikace dobře neindikuje zadání druhého a dalšího chybného hesla -- text o~chybě zůstává beze změny.\\
 	Je vhodné upravit tento typ informací tak, aby uživatel měl potvrzeno, že aplikace jeho vstup přijala.\\
 	\item \textbf{možnosti obtížnosti}\\
 	Jeden z~uživatelů v~omezeném čase misi nedokázal vyřešit, a naopak jeden ji zhodnotil jako příliš jednoduchou. To ukazuje na možnou škálu schopností a znalostí uživatelů, která se ještě zvýší rozšířením věkové skupiny.
-	Vhodným řešením je přidat volitelnou obtížnost, případně nápovědy, které může uživatel využít, pokud je pro něj základní obtížnost příliš vysoká.
+	Vhodným řešením je volitelná obtížnost, případně možnost nápovědy.
 \end{itemize}
 
-Celkově je tedy možné říct, že prototyp splnil očekávání, a jsou dobře formulované další kroky pro jeho rozvoj.
+Celkově je tedy možné říct, že prototyp splnil očekávání a jsou dobře formulované další kroky pro jeho rozvoj.
 Zároveň bude důležité aplikaci dostatečně testovat na cílové skupině -- tedy žácích druhého stupně a studentech středních škol.   
