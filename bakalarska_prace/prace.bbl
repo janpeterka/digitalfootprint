@@ -1,14 +1,9 @@
-\begin{thebibliography}{58}
+\begin{thebibliography}{56}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[ca-()]{ca-nigeria}
- [online]. [cit.~2021-03-15].
-\newblock Dostupn{\'{e}}~z:
-  \url{{https://www.theguardian.com/uk-news/2018/mar/21/cambridge-analyticas-ruthless-bid-to-sway-the-vote-in-nigeria}}.
 
 \bibitem[ide(2016)]{identity-theft-rise}
 Identity theft rises sharply as fraudsters target social media.
@@ -17,9 +12,6 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock \doi{https://doi.org/10.1016/S1361-3723(16)30048-3}.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://www.sciencedirect.com/science/article/pii/S1361372316300483}}.
-
-\bibitem[nam()]{name}
- [online]. [cit.~2021-04-14].
 
 \bibitem[Auxier et~al.(2019)Auxier, Rainie, Anderson, Perrin, Kumar,,
   Turner]{lack-of-control}
@@ -329,7 +321,7 @@ Identity theft rises sharply as fraudsters target social media.
 \newblock Dostupn{\'{e}}~z:
   \url{{https://towardsdatascience.com/effect-of-cambridge-analyticas-facebook-ads-on-the-2016-us-presidential-election-dacb5462155d}}.
 
-\bibitem[Reuters(2018)]{myeritage-leak}
+\bibitem[Reuters(2018)]{myheritage-leak}
 {\sc Reuters}.
 \newblock \emph{Security breach at MyHeritage website leaks details of over 92
   million users} [online]. 2018. [cit.~2021-04-14].
